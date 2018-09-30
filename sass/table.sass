@@ -1,0 +1,39 @@
+.table
+  width: 100%
+
+  &--features,
+  &--character
+    border-bottom: 20px solid #555
+
+  &__row
+    display: flex
+    justify-content: space-between
+    padding: 10px 5px
+    background-color: #CCC
+
+    &:nth-child(odd)
+      background-color: #BBB
+
+  &__col
+    padding: 5px
+
+    &__feature
+      word-break: break-all
+
+    &__propertie
+      flex: 1
+      word-break: break-all
+
+    &__sample
+      width: 115px
+
+    &__value
+      text-align: center
+      width: 20px
+
+  &--character &__col__name
+    width: 50%
+
+  &--character &__col__value
+    width: auto
+    white-space: nowrap

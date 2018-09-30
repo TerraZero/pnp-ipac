@@ -1,0 +1,24 @@
+.page.page--form(v-if="display === 'form'")
+  .page__main
+    .page__header
+      .headline
+        h1
+          | {{ data.title }}
+    .page__content
+      form.form(v-on:submit.prevent="submit()")
+        .form__fields
+          .field(v-for="field in data.fields")
+            .field__label
+              | {{ field.label }}
+            .field__wrapper.form__wrapper--textfield(v-if="!field.options")
+              input.field__input(type="text", v-model="field.value")
+            .field__wrapper.form__wrapper--select(v-if="field.options")
+              select.field__input(v-model="field.value")
+                option(v-for="(value, option) in field.options", v-bind:value="option")
+                  | {{ value }}
+            .field__error(v-if="field.error")
+              .field__error__text
+                | {{ field.error.text }}
+        .form__submits
+          input.button(type="submit", v-for="button in data.buttons", v-on:click.prevent="submit(button)", v-bind:class="button.classes", v-bind:value="button.text")
+

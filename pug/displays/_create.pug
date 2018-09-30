@@ -1,0 +1,17 @@
+.page.page--create(v-if="page === 'create'")
+  .page__main
+    .page__header
+      .headline
+        h1
+          | Create User
+    .page__content
+      form.form
+        .form__fields
+          .field(v-for="field in pages.create.fields")
+            .field__label
+              | {{ field.label }}
+            input.field__input(type="text", v-model="field.value")
+        .form__submits
+          .button(v-on:click.prevent="createUser()")
+            | Submit
+

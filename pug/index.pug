@@ -1,0 +1,12 @@
+extends _page
+
+block append before
+  - libs.push('/socket.io/socket.io.js');
+  - libs.push('/js/vue.min.js');
+  - scripts.push('/js/_user.js');
+
+block app
+  include displays/_form
+  include displays/_skills
+  include ui/_loading
+  include ui/_overlay

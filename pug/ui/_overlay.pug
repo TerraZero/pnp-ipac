@@ -1,0 +1,15 @@
+.overlay(v-if="overlay")
+  .overlay__content(v-if="overlay.type == 'skill'")
+    .overlay__label
+      | {{ overlay.label }}
+    .overlay__current
+      | Derzeitiger Wert: {{ overlay.value }}
+    .overlay__points
+      | Talent Punkte: {{ data.user.points }}
+    .overlay__cost
+      | Talent Kosten: {{ overlay.cost }}
+    .overlay__buttons
+      .overlay__button(v-if="validUpdate", v-on:click.prevent="clickOverlay(true)")
+        | OK
+      .overlay__button(v-on:click.prevent="clickOverlay(false)")
+        | Abbruch

@@ -1,0 +1,12 @@
+{
+  "life": {
+    "name": "Lebenspunkte",
+    "total": 0,
+    "value": 0
+  },
+  "mental": {
+    "name": "Moral",
+    "totel": 0,
+    "value": 0
+  }
+}

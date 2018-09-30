@@ -1,0 +1,70 @@
+.page.page--skills(v-if="display === 'skills'")
+  .page__header
+    .page__navi
+      .navi
+        .navi__button(v-on:click="data.select = 'character'", v-bind:class="{'navi__button--active': 'character' == data.select}")
+          img.navi__image(v-bind:src="icon('character')")
+        .navi__button(v-for="(skillpage, key) in data.skills", v-on:click="data.select = key", v-bind:class="{'navi__button--active': key == data.select}")
+          img.navi__image(v-bind:src="icon(skillpage.icon)")
+      .headline
+        h1(v-if="data.select == 'character'")
+          | Charackter
+        h1(v-if="data.select != 'character'")
+          | {{ data.skills[data.select].name }}
+        .headline__points
+          span.headline__text
+            | {{ data.user.points }}
+  .page__content
+    .page__content__character(v-if="data.select == 'character'")
+      .table.table--character
+        .table__row
+          .table__col.table__col__name
+            | Name
+          .table__col.table__col__value
+            | {{ data.user.name }}
+        .table__row
+          .table__col.table__col__name
+            | Alter
+          .table__col.table__col__value
+            | {{ data.user.age }}
+        .table__row
+          .table__col.table__col__name
+            | Geschlecht
+          .table__col.table__col__value
+            | {{ gender(data.user.gender) }}
+        .table__row
+          .table__col.table__col__name
+            | Initiative
+          .table__col.table__col__value
+            | {{ data.user.ini }}
+        .table__row
+          .table__col.table__col__name
+            | Talent
+          .table__col.table__col__value
+            | {{ data.user.points }}
+        .table__row(v-for="health in data.healths")
+          .table__col.table__col__feature
+            | {{ health.name }}
+          .table__col.table__col__value
+            | {{ health.value }} / {{ health.total }}
+      .table.table--skills
+        .table__row(v-for="feature in data.features", v-on:click.prevent="clickSkillPoint('feature', feature)")
+          .table__col.table__col__feature
+            | {{ feature.name }} ({{ feature.symbol }})
+          .table__col.table__col__value
+            | {{ feature.value }}
+    .page__content__skills(v-if="data.select != 'character'")
+      .table.table--features
+        .table__row(v-for="feature in data.features")
+          .table__col.table__col__feature
+            | {{ feature.name }} ({{ feature.symbol }})
+          .table__col.table__col__value
+            | {{ feature.value }}
+      .table.table--skills(v-if="data.skills[data.select]")
+        .table__row(v-for="propertie in data.skills[data.select].properties", v-on:click.prevent="clickSkillPoint('skill', propertie, data.select)")
+          .table__col.table__col__propertie
+            | {{ propertie.name }}
+          .table__col.table__col__sample
+            | {{ propertie.sample.join(' / ') }}
+          .table__col.table__col__value
+            | {{ propertie.value }}

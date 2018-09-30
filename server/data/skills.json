@@ -1,0 +1,362 @@
+{
+  "knowledge": {
+    "name": "Wissen",
+    "icon": "knowledge",
+    "properties": {
+      "mechanics": {
+        "name": "Mechanik",
+        "sample": [
+          "GE",
+          "GE",
+          "IN"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "mathematics": {
+        "name": "Mathematik",
+        "sample": [
+          "IN",
+          "IN",
+          "GE"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "technical": {
+        "name": "Technisches Wissen",
+        "sample": [
+          "GE",
+          "GE",
+          "IN"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "mechanical": {
+        "name": "Mechanisches Wissen",
+        "sample": [
+          "GE",
+          "IN",
+          "IN"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "survival": {
+        "name": "Überlebenstechniken",
+        "sample": [
+          "GE",
+          "IN",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "track_read": {
+        "name": "Spurenlesen",
+        "sample": [
+          "IN",
+          "IN",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "botany": {
+        "name": "Botanik",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "medicine": {
+        "name": "Medizin",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "chemistry": {
+        "name": "Chemie",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "meteorology": {
+        "name": "Meteorologie",
+        "sample": [
+          "AU",
+          "IN",
+          "IN"
+        ],
+        "base": 0,
+        "mod": 0
+      }
+    }
+  },
+  "battle": {
+    "name": "Kampf",
+    "icon": "battle",
+    "properties": {
+      "pugilism": {
+        "name": "Faustkampf",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "combat": {
+        "name": "Nahkampf",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "throwing": {
+        "name": "Wurfwaffen",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "bladed": {
+        "name": "Klingenwaffen",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "pistol": {
+        "name": "Schusswaffen Pistole",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "rifles": {
+        "name": "Schusswaffen Gewehre",
+        "sample": [],
+        "base": 0,
+        "mod": 0
+      },
+      "weapons_technology": {
+        "name": "Waffentechnik",
+        "sample": [
+          "GE",
+          "GE",
+          "IN"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "weapons_knowledge": {
+        "name": "Waffenkenntnis",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "bomb": {
+        "name": "Bombenbau",
+        "sample": [
+          "GE",
+          "GE",
+          "AU"
+        ],
+        "base": 0,
+        "mod": 0
+      }
+    }
+  },
+  "physical": {
+    "name": "Körperliches",
+    "icon": "physical",
+    "properties": {
+      "sneak": {
+        "name": "Schleichen",
+        "sample": [
+          "KK",
+          "AU",
+          "GE"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "jump": {
+        "name": "Springen",
+        "sample": [
+          "KK",
+          "KK",
+          "AU"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "climb": {
+        "name": "Klettern",
+        "sample": [
+          "KK",
+          "KK",
+          "GE"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "throw": {
+        "name": "Werfen",
+        "sample": [
+          "KK",
+          "GE",
+          "GE"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "swim": {
+        "name": "Schwimmen",
+        "sample": [
+          "KK",
+          "KK",
+          "AU"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "endure": {
+        "name": "Schmerzen ertragen",
+        "sample": [
+          "AU",
+          "AU",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "immune": {
+        "name": "Immunsystem",
+        "sample": [
+          "KK",
+          "AU",
+          "AU"
+        ],
+        "base": 0,
+        "mod": 0
+      }
+    }
+  },
+  "social": {
+    "name": "Soziales",
+    "icon": "social",
+    "properties": {
+      "mechanics": {
+        "name": "Überreden",
+        "sample": [
+          "IN",
+          "IN",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "mathematics": {
+        "name": "Menschenkenntnis",
+        "sample": [
+          "IN",
+          "CH",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "technical": {
+        "name": "Lügen",
+        "sample": [
+          "CH",
+          "CH",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "mechanical": {
+        "name": "Beruhigen",
+        "sample": [
+          "CH",
+          "CH",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "survival": {
+        "name": "Betören",
+        "sample": [
+          "KK",
+          "CH",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "track_read": {
+        "name": "Begeistern / Führen",
+        "sample": [
+          "GS",
+          "CH",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "botany": {
+        "name": "Handeln",
+        "sample": [
+          "CH",
+          "GS",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "medicine": {
+        "name": "Manipulieren",
+        "sample": [
+          "GS",
+          "CH",
+          "CH"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "chemistry": {
+        "name": "Landliches Wissen",
+        "sample": [
+          "IN",
+          "GS",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      },
+      "meteorology": {
+        "name": "Urbanes Wissen",
+        "sample": [
+          "CH",
+          "GS",
+          "GS"
+        ],
+        "base": 0,
+        "mod": 0
+      }
+    }
+  }
+}

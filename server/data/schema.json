@@ -1,0 +1,21 @@
+{
+  "user": {
+    "name": "VARCHAR(255)",
+    "age": "VARCHAR(10)",
+    "gender": "VARCHAR(10)",
+    "points": "INT",
+    "ini": "INT"
+  },
+  "health": {
+    "user": "VARCHAR(255)",
+    "key": "VARCHAR(255)",
+    "total": "INT",
+    "value": "INT"
+  },
+  "skill": {
+    "user": "VARCHAR(255)",
+    "key": "VARCHAR(255)",
+    "base": "INT",
+    "mod": "INT"
+  }
+}
