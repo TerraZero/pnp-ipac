@@ -33,11 +33,12 @@ module.exports = class LoginForm {
 
     meta.user = request.getData().fields.user.value;
     request.sendMeta(meta);
-    const user = sys.storage.getUser(request);
+    const user = sys.storage.getUser(meta.user);
 
     if (user === null) {
       request.sendForm('RegisterForm');
     } else {
+      request._device.setUser(user);
       request.sendPage('Skills');
     }
   }

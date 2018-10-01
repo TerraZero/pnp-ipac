@@ -6,7 +6,7 @@ let meta = {
 const data = {
   display: 'none',
   data: null,
-  loading: false,
+  loading: true,
   overlay: false,
 };
 
@@ -18,6 +18,11 @@ socket.on('update:meta', (args) => {
 socket.on('update:display', (args) => {
   data.display = args.display;
   data.data = args.data;
+  data.loading = false;
+});
+
+socket.on('update:overlay', (args) => {
+  data.overlay = args.overlay;
   data.loading = false;
 });
 
@@ -44,37 +49,66 @@ const app = new Vue({
       return 'Andere';
     },
 
-    clickSkillPoint: function (type, value, category) {
-      this.overlay = {
-        type: 'skill',
-        label: value.name,
-        value: value.value,
-        cost: 2,
-      };
+    cOverlay: function (value) {
+      send('overlay', {
+        type: 'SkillOverlay',
+        value: value,
+      });
     },
 
-    clickOverlay: function (accept) {
-      if (accept) {
+    submitOverlay: function (button) {
+      send('overlay:submit', {
+        button: button || null,
+        costs: this.overlaySkillCosts,
+      });
+    },
 
-      } else {
-        this.overlay = false;
+    overlaySkillValue: function (value) {
+
+    },
+
+    overlaySkillDown: function () {
+      if (this.overlay.level.value > this.overlay.level.original) {
+        this.overlay.level.value--;
       }
+    },
+
+    overlaySkillUp: function () {
+      this.overlay.level.value++;
+      if (this.overlaySkillPoints < 0) {
+        this.overlay.level.value--;
+      }
+    },
+
+    getCosts: function (cost, value) {
+      return (Math.floor(value / 5) || 1) * cost;
     },
 
   },
 
   computed: {
 
-    validUpdate: function () {
-      return this.overlay.cost <= this.data.user.points;
+    overlaySkillCosts: function () {
+      let costs = 0;
+
+      for (let i = this.overlay.level.original; i < this.overlay.level.value; i++) {
+        costs += this.getCosts(this.overlay.value.cost, i);
+      }
+      return costs;
+    },
+
+    overlaySkillPoints: function () {
+      return this.data.user.points - this.overlaySkillCosts;
     },
 
   },
 
 });
 
-function send(event, args) {
-  data.loading = true;
+function send(event, args, loading) {
+  if (loading !== false) {
+    data.loading = true;
+  }
   socket.emit(event, {
     meta: meta,
     vue: data,

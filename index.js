@@ -7,6 +7,7 @@ global.sys = {};
 
 sys.Logger = require('./server/Logger');
 sys.Request = require('./server/Request');
+sys.AdminRequest = require('./server/AdminRequest');
 
 const Database = require('./server/Database');
 const Storage = require('./server/Storage');
@@ -48,8 +49,10 @@ sys.db.init()
 
         request.sendMeta(args.meta);
 
-        if (device._data.user === null) {
+        if (device.user() === null) {
           request.sendForm('LoginForm');
+        } else {
+          request.sendPage('Skills');
         }
       });
 
@@ -60,6 +63,35 @@ sys.db.init()
         const form = require('./server/form/' + args.vue.data.form);
 
         form.submit(request);
+      });
+
+      socket.on('overlay', (args) => {
+        const request = new sys.Request('overlay', device, args);
+
+        log.log('Request overlay [0].', request.getArgs().type);
+
+        request.sendOverlay(request.getArgs().type);
+      });
+
+      socket.on('overlay:submit', (args) => {
+        const request = new sys.Request('overlay', device, args);
+
+        log.log('Submit request overlay [0].', request.getOverlay().type);
+        const overlay = require('./server/overlay/' + request.getOverlay().type);
+
+        overlay.submit(request);
+      });
+
+      socket.on('admin:register', (args) => {
+        const request = new sys.AdminRequest(socket, args);
+
+        request.sendMenu();
+      });
+
+      socket.on('admin:menu', (args) => {
+        const request = new sys.AdminRequest(socket, args);
+
+        request.sendMenu();
       });
     });
 

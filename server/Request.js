@@ -16,6 +16,22 @@ module.exports = class Request {
     return this._args.vue.data;
   }
 
+  getOverlay() {
+    return this._args.vue.overlay;
+  }
+
+  getArgs() {
+    return this._args.args;
+  }
+
+  device() {
+    return this._device;
+  }
+
+  user() {
+    return this._device.user();
+  }
+
   resend(reason) {
     log.log('Resend - [0]', reason);
     this._device.socket().emit('update:display', this._args.vue);
@@ -50,6 +66,23 @@ module.exports = class Request {
     const form = require('./form/' + name);
 
     this.sendDisplay('form', form.build(this));
+  }
+
+  sendOverlay(name) {
+    if (name) {
+      log.log('Send overlay [0].', name);
+      const overlay = require('./overlay/' + name);
+
+      this._device.socket().emit('update:overlay', {
+        overlay: overlay.build(this),
+      });
+    } else {
+      log.log('Send close overlay.');
+
+      this._device.socket().emit('update:overlay', {
+        overlay: false,
+      });
+    }
   }
 
 }

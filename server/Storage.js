@@ -17,6 +17,10 @@ module.exports = class Storage {
     }
   }
 
+  devices() {
+    return this._devices;
+  }
+
   getDevice(uuid, socket) {
     if (this._devices[uuid] === undefined) {
       this._devices[uuid] = new Device(uuid);
@@ -58,10 +62,19 @@ module.exports = class Storage {
     return Promise.all(promises);
   }
 
-  getUser(request) {
-    const meta = request.getMeta();
+  getUser(name) {
+    return this._users[name] || null;
+  }
 
-    return this._users[meta.user] || null;
+  updatePoints(user, points) {
+    user.points = points;
+    return sys.db.update('user', 'name', user.name, {
+      points: points,
+    });
+  }
+
+  updateSkill(key, mod) {
+    return sys.db.update('skill', 'key', key, { mod: mod });
   }
 
 }

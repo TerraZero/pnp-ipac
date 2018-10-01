@@ -1,38 +1,50 @@
 {
   "body": {
+    "type": "feature",
     "name": "Körperkraft",
     "symbol": "KK",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   },
   "endurance": {
+    "type": "feature",
     "name": "Ausdauer",
     "symbol": "AU",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   },
   "skill": {
+    "type": "feature",
     "name": "Geschicklichkeit",
     "symbol": "GE",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   },
   "intelligence": {
+    "type": "feature",
     "name": "Intelligenz",
     "symbol": "IN",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   },
   "charm": {
+    "type": "feature",
     "name": "Charme",
     "symbol": "CH",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   },
   "spiritual": {
+    "type": "feature",
     "name": "Geistige Stärke",
     "symbol": "GS",
     "base": 0,
-    "mod": 0
+    "mod": 0,
+    "cost": 10
   }
 }

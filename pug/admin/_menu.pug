@@ -1,0 +1,13 @@
+.menu(v-if="menu")
+  .menu__first(v-if="menu.first")
+    .menu__button(v-for="button in menu.first.buttons", v-on:click.prevent="menuOpen('first', button)", v-bind:class="{'menu__button--active': button.type == menu.first.select}")
+      .menu__image_wrapper(v-if="button.icon")
+        img.menu__image(v-bind:src="icon(button.icon)")
+      .menu__text
+        | {{ button.text }}
+  .menu__second(v-if="menu.second")
+    .menu__button(v-for="button in menu.second.buttons", v-on:click.prevent="menuOpen('second', button)", v-bind:class="{'menu__button--active': button.type == menu.second.select}")
+      .menu__image_wrapper(v-if="button.icon")
+        img.menu__image(v-bind:src="icon(button.icon)")
+      .menu__text
+        | {{ button.text }}

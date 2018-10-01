@@ -92,6 +92,7 @@ module.exports = class RegisterForm {
 
     sys.storage.addUser(request, user)
       .then(function () {
+        request._device.setUser(user);
         request.sendPage('Skills');
       });
   }

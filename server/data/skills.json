@@ -4,6 +4,7 @@
     "icon": "knowledge",
     "properties": {
       "mechanics": {
+        "type": "skill",
         "name": "Mechanik",
         "sample": [
           "GE",
@@ -11,9 +12,11 @@
           "IN"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "mathematics": {
+        "type": "skill",
         "name": "Mathematik",
         "sample": [
           "IN",
@@ -21,9 +24,11 @@
           "GE"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "technical": {
+        "type": "skill",
         "name": "Technisches Wissen",
         "sample": [
           "GE",
@@ -31,9 +36,11 @@
           "IN"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "mechanical": {
+        "type": "skill",
         "name": "Mechanisches Wissen",
         "sample": [
           "GE",
@@ -41,9 +48,11 @@
           "IN"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "survival": {
+        "type": "skill",
         "name": "Überlebenstechniken",
         "sample": [
           "GE",
@@ -51,9 +60,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "track_read": {
+        "type": "skill",
         "name": "Spurenlesen",
         "sample": [
           "IN",
@@ -61,9 +72,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "botany": {
+        "type": "skill",
         "name": "Botanik",
         "sample": [
           "IN",
@@ -71,9 +84,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "medicine": {
+        "type": "skill",
         "name": "Medizin",
         "sample": [
           "IN",
@@ -81,9 +96,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "chemistry": {
+        "type": "skill",
         "name": "Chemie",
         "sample": [
           "IN",
@@ -91,9 +108,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "meteorology": {
+        "type": "skill",
         "name": "Meteorologie",
         "sample": [
           "AU",
@@ -101,7 +120,8 @@
           "IN"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       }
     }
   },
@@ -110,42 +130,55 @@
     "icon": "battle",
     "properties": {
       "pugilism": {
+        "type": "skill",
         "name": "Faustkampf",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "combat": {
+        "type": "skill",
         "name": "Nahkampf",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "throwing": {
+        "type": "skill",
         "name": "Wurfwaffen",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "bladed": {
+        "type": "skill",
         "name": "Klingenwaffen",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "pistol": {
+        "type": "skill",
         "name": "Schusswaffen Pistole",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "rifles": {
+        "type": "skill",
         "name": "Schusswaffen Gewehre",
         "sample": [],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 4
       },
       "weapons_technology": {
+        "type": "skill",
         "name": "Waffentechnik",
         "sample": [
           "GE",
@@ -153,9 +186,11 @@
           "IN"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "weapons_knowledge": {
+        "type": "skill",
         "name": "Waffenkenntnis",
         "sample": [
           "IN",
@@ -163,9 +198,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "bomb": {
+        "type": "skill",
         "name": "Bombenbau",
         "sample": [
           "GE",
@@ -173,7 +210,8 @@
           "AU"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       }
     }
   },
@@ -182,6 +220,7 @@
     "icon": "physical",
     "properties": {
       "sneak": {
+        "type": "skill",
         "name": "Schleichen",
         "sample": [
           "KK",
@@ -189,9 +228,11 @@
           "GE"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "jump": {
+        "type": "skill",
         "name": "Springen",
         "sample": [
           "KK",
@@ -199,9 +240,11 @@
           "AU"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "climb": {
+        "type": "skill",
         "name": "Klettern",
         "sample": [
           "KK",
@@ -209,9 +252,11 @@
           "GE"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "throw": {
+        "type": "skill",
         "name": "Werfen",
         "sample": [
           "KK",
@@ -219,9 +264,11 @@
           "GE"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "swim": {
+        "type": "skill",
         "name": "Schwimmen",
         "sample": [
           "KK",
@@ -229,9 +276,11 @@
           "AU"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "endure": {
+        "type": "skill",
         "name": "Schmerzen ertragen",
         "sample": [
           "AU",
@@ -239,9 +288,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "immune": {
+        "type": "skill",
         "name": "Immunsystem",
         "sample": [
           "KK",
@@ -249,7 +300,8 @@
           "AU"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       }
     }
   },
@@ -258,6 +310,7 @@
     "icon": "social",
     "properties": {
       "mechanics": {
+        "type": "skill",
         "name": "Überreden",
         "sample": [
           "IN",
@@ -265,9 +318,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "mathematics": {
+        "type": "skill",
         "name": "Menschenkenntnis",
         "sample": [
           "IN",
@@ -275,9 +330,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "technical": {
+        "type": "skill",
         "name": "Lügen",
         "sample": [
           "CH",
@@ -285,9 +342,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "mechanical": {
+        "type": "skill",
         "name": "Beruhigen",
         "sample": [
           "CH",
@@ -295,9 +354,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "survival": {
+        "type": "skill",
         "name": "Betören",
         "sample": [
           "KK",
@@ -305,9 +366,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "track_read": {
+        "type": "skill",
         "name": "Begeistern / Führen",
         "sample": [
           "GS",
@@ -315,9 +378,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "botany": {
+        "type": "skill",
         "name": "Handeln",
         "sample": [
           "CH",
@@ -325,9 +390,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "medicine": {
+        "type": "skill",
         "name": "Manipulieren",
         "sample": [
           "GS",
@@ -335,9 +402,11 @@
           "CH"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "chemistry": {
+        "type": "skill",
         "name": "Landliches Wissen",
         "sample": [
           "IN",
@@ -345,9 +414,11 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       },
       "meteorology": {
+        "type": "skill",
         "name": "Urbanes Wissen",
         "sample": [
           "CH",
@@ -355,7 +426,8 @@
           "GS"
         ],
         "base": 0,
-        "mod": 0
+        "mod": 0,
+        "cost": 2
       }
     }
   }

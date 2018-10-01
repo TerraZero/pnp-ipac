@@ -1,15 +1,29 @@
 .overlay(v-if="overlay")
-  .overlay__content(v-if="overlay.type == 'skill'")
-    .overlay__label
-      | {{ overlay.label }}
-    .overlay__current
-      | Derzeitiger Wert: {{ overlay.value }}
-    .overlay__points
-      | Talent Punkte: {{ data.user.points }}
-    .overlay__cost
-      | Talent Kosten: {{ overlay.cost }}
-    .overlay__buttons
-      .overlay__button(v-if="validUpdate", v-on:click.prevent="clickOverlay(true)")
-        | OK
-      .overlay__button(v-on:click.prevent="clickOverlay(false)")
-        | Abbruch
+  .overlay__content(v-if="overlay.type == 'SkillOverlay'")
+    .overlay__header
+    .headline
+      h2.headline__label
+        | {{ overlay.value.name }}: {{ overlay.value.value }}
+      .headline__points
+        span.headline__text
+          | {{ data.user.points }}
+    .overlay__main
+      .overlay__level
+        .overlay__level_sub(v-on:click.prevent="overlaySkillDown()")
+          | -
+        .overlay__level_current
+          .overlay__level_current_field.overlay__level_current_original
+            | Original Wert: {{ overlay.level.original }}
+          .overlay__level_current_field.overlay__level_current_level
+            | Neuer Wert: {{ overlay.level.value }}
+          .overlay__level_current_field.overlay__level_current_cost
+            | Nächste Kosten: {{ getCosts(overlay.value.cost, overlay.level.value) }}
+          .overlay__level_current_field.overlay__level_current_total_cost
+            | Gesamt Kosten: {{ overlaySkillCosts }}
+          .overlay__level_current_field.overlay__level_current_points
+            | Verbleibende Talent Punkte: {{ overlaySkillPoints }}
+        .overlay__level_add(v-on:click.prevent="overlaySkillUp()")
+          | +
+      .overlay__buttons
+        .overlay__button(v-for="button in overlay.buttons", v-on:click.prevent="submitOverlay(button)")
+          | {{ button.text }}

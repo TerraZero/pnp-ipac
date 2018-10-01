@@ -17,7 +17,7 @@ module.exports = class Database {
   init() {
     log.log('init database');
     this._new = !fs.existsSync(file);
-    if (!this._new) {
+    if (!this._new && false) {
       fs.unlinkSync(file);
       this._new = true;
       log.debug('Delete existing database');
@@ -66,7 +66,7 @@ module.exports = class Database {
 
   get(statement, params) {
     return new Promise((resolve, reject) => {
-      this._db.get(statement, params, function(err, row) {
+      this._db.get(statement, params, function (err, row) {
         if (err) {
           reject(err);
         } else {
@@ -90,7 +90,7 @@ module.exports = class Database {
 
   allKeyed(key, statement, params) {
     return sys.db.all(statement, params)
-      .then(function(rows) {
+      .then(function (rows) {
         const data = {};
 
         for (const row of rows) {
@@ -102,6 +102,18 @@ module.exports = class Database {
 
   insert(table, values) {
     return this.run('INSERT INTO ' + table + ' VALUES (' + '?, '.repeat(values.length - 1) + '?)', values);
+  }
+
+  update(table, where_key, where, values) {
+    const sets = [];
+    const params = [];
+
+    for (const index in values) {
+      sets.push(index + ' = ?');
+      params.push(values[index]);
+    }
+    params.push(where);
+    return this.run('UPDATE ' + table + ' SET ' + sets.join(', ') + ' WHERE ' + where_key + ' = ?', params);
   }
 
 }

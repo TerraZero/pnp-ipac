@@ -3,10 +3,8 @@ extends _page
 block append before
   - libs.push('/socket.io/socket.io.js');
   - libs.push('/js/vue.min.js');
-  - scripts.push('/js/_user.js');
+  - scripts.push('/js/_admin.js');
 
 block app
-  include displays/_form
-  include displays/_skills
-  include ui/_overlay
+  include admin/_menu
   include ui/_loading
