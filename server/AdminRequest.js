@@ -30,7 +30,7 @@ module.exports = class AdminRequest {
 
   sendMenu() {
     this.socket().emit('update:menu', {
-      menu: Menu.built(this),
+      menu: Menu.build(this),
     });
   }
 
@@ -43,4 +43,30 @@ module.exports = class AdminRequest {
     });
   }
 
+  sendPage(name) {
+    log.log('Send page [0].', name);
+
+    const Page = require('./admin/' + name);
+
+    Page.build(this)
+      .then((data) => {
+        this.socket().emit('update:display', data);
+      });
+  }
+
+  submit() {
+    const data = this.data();
+
+    const Page = require('./admin/' + data.submit);
+
+    Page.submit(this);
+  }
+
+  forceRequest(user, args) {
+    const device = sys.storage.getDeviceByUser(user);
+
+    device.socket().emit('force:request', args);
+  }
+
 }
+

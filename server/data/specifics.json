@@ -1,0 +1,202 @@
+{
+  "weapon_specialist": {
+    "type": "positive",
+    "name": "Waffenspezialist",
+    "level": 1,
+    "execute": {
+      "type": "skill",
+      "skills": {
+        "pistol": 2,
+        "rifles": 2,
+        "weapons_technology": 1
+      }
+    },
+    "description": [
+      "Kennt sich mit allen Waffenarten aus.",
+      "Schusswaffen Pistole: +2",
+      "Schusswaffen Gewehre: +2",
+      "Waffentechnik: +1"
+    ]
+  },
+  "sharpshooter": {
+    "type": "positive",
+    "name": "Scharfschütze",
+    "level": 1,
+    "execute": {
+      "type": "skill",
+      "skills": {
+        "rifles": 4,
+        "weapons_technology": 1
+      }
+    },
+    "description": [
+      "Ist als Scharfschütze ausgebildet worden.",
+      "Schusswaffen Gewehre: +4",
+      "Waffentechnik: +1"
+    ]
+  },
+  "fortune": {
+    "type": "positive",
+    "name": "Geschickt",
+    "level": 1,
+    "execute": {
+      "type": "game"
+    },
+    "description": [
+      "Bei jeder Probe muss ein d12 geworfen werden, wird eine 12 geworfen wird die Probe mit advantage geworfen."
+    ]
+  },
+  "lucky": {
+    "type": "positive",
+    "name": "Glückspilz",
+    "level": 2,
+    "execute": {
+      "type": "game"
+    },
+    "description": [
+      "Einmal am Tag, bei einer Probe, werden alle Characktereigenschaften so behandelt als wären sie auf 19."
+    ]
+  },
+  "gullible": {
+    "type": "neutral",
+    "name": "Leichtgläubig",
+    "level": 1,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "spiritual": -1,
+        "intelligence": 1
+      }
+    },
+    "description": [
+      "Hat leicht Angst im Dunkeln; glaubt schnell an Geister;",
+      "GS: -1",
+      "IN: +1"
+    ]
+  },
+  "misfortune": {
+    "type": "negative",
+    "name": "Unglückspilz",
+    "level": 1,
+    "execute": {
+      "type": "game"
+    },
+    "description": [
+      "Bei jeder Probe muss ein d8 geworfen werden, wird eine 8 geworfen muss die Probe mit disadvantage geworfen werden."
+    ]
+  },
+  "paranoid": {
+    "type": "negative",
+    "name": "Paranoid",
+    "level": 1,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "spiritual": -1
+      }
+    },
+    "description": [
+      "Du bist Paranoid; kann in einen Wahnanfall verfallen (Probe: 15);",
+      "GS: -1"
+    ]
+  },
+  "masochistic": {
+    "type": "negative",
+    "name": "Masochistisch",
+    "level": 1,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "body": -1,
+        "endurance": -1
+      }
+    },
+    "description": [
+      "KK: -1",
+      "AU: -1"
+    ]
+  },
+  "selfish": {
+    "type": "negative",
+    "name": "Selbstsüchtig",
+    "level": 2,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "charm": -3
+      }
+    },
+    "description": [
+      "Du musst dich überwinden um jemanden zu helfen (Probe: 15); Du willst bei Begegnungen immer stehlen (Probe: 13);",
+      "CH: -3"
+    ]
+  },
+  "hopeless": {
+    "type": "negative",
+    "name": "Hoffnungslos",
+    "level": 2,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "spiritual": -4
+      }
+    },
+    "description": [
+      "Du bist Hoffnungslos.",
+      "GS: -4"
+    ]
+  },
+  "insane": {
+    "type": "negative",
+    "name": "Wahnsinnig",
+    "level": 2,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "spiritual": -2,
+        "charm": -1
+      }
+    },
+    "description": [
+      "Hat leichte Wahnvorstellungen; kann in einen Wahnanfall verfallen (Probe: 10);",
+      "GS: -2",
+      "CH: -1"
+    ]
+  },
+  "physical_disability": {
+    "type": "negative",
+    "name": "Physische Behinderung",
+    "level": 3,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "body": -4,
+        "endurance": -2,
+        "spiritual": 1
+      }
+    },
+    "description": [
+      "Definiere eine Physische Behinderung",
+      "KK: -4",
+      "AU: -2",
+      "GS: +1"
+    ]
+  },
+  "speech_defect": {
+    "type": "negative",
+    "name": "Sprachfehler",
+    "level": 3,
+    "execute": {
+      "type": "feature",
+      "features": {
+        "charm": -4,
+        "spiritual": -1
+      }
+    },
+    "description": [
+      "Definiere einen Sprachfehler und benutze ihn.",
+      "CH: -4",
+      "GS: -1"
+    ]
+  }
+}

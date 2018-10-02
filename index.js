@@ -82,16 +82,22 @@ sys.db.init()
         overlay.submit(request);
       });
 
-      socket.on('admin:register', (args) => {
+      socket.on('admin:menu', (args) => {
         const request = new sys.AdminRequest(socket, args);
 
         request.sendMenu();
       });
 
-      socket.on('admin:menu', (args) => {
+      socket.on('admin:submit', (args) => {
         const request = new sys.AdminRequest(socket, args);
 
-        request.sendMenu();
+        request.submit();
+      });
+
+      socket.on('force:request', (args) => {
+        const request = new sys.Request('overlay', device, args);
+
+        request[request.getArgs().func].apply(request, request.getArgs().args);
       });
     });
 

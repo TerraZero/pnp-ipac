@@ -4,16 +4,14 @@
   left: 0
   right: 0
   bottom: 0
-  background: rgba(0, 0, 0, 0.4)
+  background: rgba(0, 0, 0, 0.6)
+  display: flex
+  justify-content: space-around
+  align-items: center
 
   &__content
-    position: absolute
-    top: 10%
-    left: 10%
-    right: 10%
-    bottom: 10%
     background: #CCC
-    border: 7px solid rgba(0, 0, 0, 0.4)
+    border: 7px solid #333
 
   &__main
     padding: 20px
@@ -42,6 +40,7 @@
       text-align: center
       line-height: 50px
       font-size: 30px
+      font-weight: bold
       border: 1px solid black
       background: #AAA
 
@@ -50,6 +49,9 @@
       padding: 10px
       border: 1px solid black
       background: #AAA
+      min-width: 300px
+      margin: 20px
+      font-size: 20px
 
       &_field + &_field
         border-top: 3px solid black

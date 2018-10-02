@@ -24,6 +24,13 @@ const app = new Vue({
       });
     },
 
+    submit: function (group, action) {
+      send('admin:submit', {
+        group: group,
+        action: action,
+      });
+    },
+
   },
 });
 
@@ -48,4 +55,4 @@ socket.on('update:display', (args) => {
   data.loading = false;
 });
 
-send('admin:register');
+send('admin:menu');

@@ -10,22 +10,6 @@ const data = {
   overlay: false,
 };
 
-socket.on('update:meta', (args) => {
-  meta = args.meta;
-  setCookie('pnp-uuid', meta.uuid);
-});
-
-socket.on('update:display', (args) => {
-  data.display = args.display;
-  data.data = args.data;
-  data.loading = false;
-});
-
-socket.on('update:overlay', (args) => {
-  data.overlay = args.overlay;
-  data.loading = false;
-});
-
 const app = new Vue({
   el: '#app',
   data: data,
@@ -61,10 +45,6 @@ const app = new Vue({
         button: button || null,
         costs: this.overlaySkillCosts,
       });
-    },
-
-    overlaySkillValue: function (value) {
-
     },
 
     overlaySkillDown: function () {
@@ -115,5 +95,25 @@ function send(event, args, loading) {
     args: args || null,
   });
 }
+
+socket.on('update:meta', (args) => {
+  meta = args.meta;
+  setCookie('pnp-uuid', meta.uuid);
+});
+
+socket.on('update:display', (args) => {
+  data.display = args.display;
+  data.data = args.data;
+  data.loading = false;
+});
+
+socket.on('update:overlay', (args) => {
+  data.overlay = args.overlay;
+  data.loading = false;
+});
+
+socket.on('force:request', (args) => {
+  send('force:request', args);
+});
 
 send('register');

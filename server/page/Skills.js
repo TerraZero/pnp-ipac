@@ -16,8 +16,8 @@ module.exports = class Skills {
     };
 
     return Promise.all([
-      sys.db.allKeyed('key', 'SELECT * FROM skill WHERE user = ?', request.user().name),
-      sys.db.allKeyed('key', 'SELECT * FROM health WHERE user = ?', request.user().name),
+      sys.db.allKeyed('key', 'SELECT * FROM skill WHERE user = ?', build.user.name),
+      sys.db.allKeyed('key', 'SELECT * FROM health WHERE user = ?', build.user.name),
     ])
       .then(function (bag) {
         const skillRows = bag[0];

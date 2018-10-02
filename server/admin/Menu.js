@@ -1,7 +1,12 @@
 module.exports = class Menu {
 
-  static built(request) {
+  static build(request) {
     const menu = request.menu();
+    const args = request.args();
+
+    if (args && args.level === 'second') {
+      request.sendPage(args.button.type);
+    }
 
     return {
       first: this.first(request, menu),
@@ -55,10 +60,13 @@ module.exports = class Menu {
     for (const index in devices) {
       const user = devices[index].user();
 
-      second.buttons[user.name] = {
-        type: user.name,
-        text: user.name,
-      };
+      if (user) {
+        second.buttons[user.name] = {
+          type: 'User',
+          user: user.name,
+          text: user.name,
+        };
+      }
     }
 
     return second;

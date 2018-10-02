@@ -8,6 +8,10 @@ module.exports = class Request {
     this._args = args;
   }
 
+  event() {
+    return this._event;
+  }
+
   getMeta() {
     return this._args.meta;
   }

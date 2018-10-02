@@ -8,7 +8,7 @@ module.exports = class RegisterForm {
       title: 'Register',
       fields: {
         age: {
-          label: 'Alter',
+          label: 'Alter [3 * d20 + 20]',
           value: '',
         },
         gender: {
@@ -30,7 +30,7 @@ module.exports = class RegisterForm {
 
     for (const index in features) {
       build.fields[index] = {
-        label: features[index].name + ' (' + features[index].symbol + ')',
+        label: features[index].name + ' (' + features[index].symbol + ') [3 * d6]',
         value: features[index].base,
       }
     }

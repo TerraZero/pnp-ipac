@@ -1,0 +1,20 @@
+.admin(v-if="display == 'user'")
+  .admin__title
+    h1.admin__headline
+      | {{ data.title }}
+  .admin__content
+    form.admin__form(v-on:submit.prevent="submit()")
+      .admin__groups
+        .admin__group(v-for="group in data.groups", v-bind:class="{ 'admin__group--active':  data.select == group.key}")
+          .admin__head(v-on:click.prevent="data.select == group.key ? data.select = null : data.select = group.key")
+            | {{ group.label }}
+          .admin__fields(v-if="data.select == group.key")
+            .admin__field(v-for="field in group.fields")
+              .admin__label
+                | {{ field.label }}
+              .admin__original
+                | {{ field.original }}
+              .admin__wrapper
+                input.admin__input(v-model="field.value")
+          .admin__actions(v-if="data.select == group.key")
+            input.admin__action(type="submit", v-for="action in group.actions", v-on:click.prevent="submit(group, action)", v-bind:value="action.text")
