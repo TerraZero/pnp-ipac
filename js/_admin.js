@@ -31,6 +31,12 @@ const app = new Vue({
       });
     },
 
+    submitSpecific: function (specific) {
+      send('admin:submit:specific', {
+        specific: specific,
+      });
+    },
+
   },
 });
 

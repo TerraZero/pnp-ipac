@@ -1,0 +1,9 @@
+.page__content__specifics(v-if="data.select == 'specifics'")
+  .table.table--specifics
+    .table__row(v-for="specific in data.specifics", v-if="specific.active")
+      h3.table__col.table__col--title(v-on:click.prevent="specific.open = !specific.open")
+        | {{ specific.name }} | {{ specific.orientation }} | Level: {{ specific.level }}
+      .table__col(v-if="specific.open")
+        ul
+          li(v-for="line in specific.description")
+            | {{ line }}

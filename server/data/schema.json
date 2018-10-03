@@ -17,5 +17,9 @@
     "key": "VARCHAR(255)",
     "base": "INT",
     "mod": "INT"
+  },
+  "specific": {
+    "user": "VARCHAR(255)",
+    "key": "VARCHAR(255)"
   }
 }

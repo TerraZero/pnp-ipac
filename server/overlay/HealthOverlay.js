@@ -1,13 +1,12 @@
-module.exports = class SkillOverlay {
+module.exports = class HealthOverlay {
 
   static build(request) {
+    const args = request.getArgs();
+
     const data = {
-      type: 'SkillOverlay',
-      value: request.getArgs().value,
-      level: {
-        original: request.getArgs().value.calc_value,
-        value: request.getArgs().value.calc_value,
-      },
+      type: 'HealthOverlay',
+      value: args.value,
+      current: args.value.value,
       buttons: [
         {
           text: 'OK',
@@ -27,15 +26,13 @@ module.exports = class SkillOverlay {
     const args = request.getArgs();
     const button = args.button;
 
-    if (button.type == 'cancel' || args.costs === 0) {
+    if (button.type == 'cancel') {
       request.sendOverlay();
-    } else if (button.type == 'update') {
+    } else {
       const overlay = request.getOverlay();
       const user = request.user();
 
-      sys.storage.updatePoints(user, user.points - args.costs);
-
-      sys.storage.updateSkill(user, overlay.value.key, overlay.level.value - overlay.value.base)
+      sys.storage.updateHealth(user, overlay.value.key, overlay.current)
         .then(() => {
           request.sendPage('Skills');
           request.sendOverlay();

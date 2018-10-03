@@ -1,9 +1,9 @@
 .table
   width: 100%
+  border-bottom: 20px solid #555
 
-  &--features,
-  &--character
-    border-bottom: 20px solid #555
+  &--form
+    border: 0
 
   &__row
     display: flex
@@ -13,6 +13,14 @@
 
     &:nth-child(odd)
       background-color: #BBB
+
+  &--specifics &__row
+    flex-wrap: wrap
+    padding: 0
+
+  &--specifics &__col
+    width: 100%
+    padding: 10px
 
   &__col
     padding: 5px
@@ -31,9 +39,17 @@
       text-align: center
       width: 20px
 
+    &--title
+      margin: 0
+      border-bottom: 1px solid black
+
   &--character &__col__name
     width: 50%
 
   &--character &__col__value
     width: auto
     white-space: nowrap
+
+  &__actions
+    text-align: right
+    border-top: 1px solid black

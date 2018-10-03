@@ -4,6 +4,7 @@ module.exports = class RegisterForm {
     const features = sys.loadData('features');
 
     const build = {
+      points: 20,
       form: 'RegisterForm',
       title: 'Register',
       fields: {
@@ -20,6 +21,7 @@ module.exports = class RegisterForm {
           }
         },
       },
+      specifics: this.getSpecifics(),
       buttons: {
         submit: {
           text: 'Register',
@@ -31,11 +33,21 @@ module.exports = class RegisterForm {
     for (const index in features) {
       build.fields[index] = {
         label: features[index].name + ' (' + features[index].symbol + ') [3 * d6]',
-        value: features[index].base,
+        value: '',
       }
     }
 
     return build;
+  }
+
+  static getSpecifics() {
+    const specifics = sys.loadData('specifics');
+
+    for (const key in specifics) {
+      specifics[key].open = false;
+      specifics[key].active = false;
+    }
+    return specifics;
   }
 
   static submit(request) {
@@ -56,10 +68,10 @@ module.exports = class RegisterForm {
     }
 
     const age = parseInt(data.fields.age.value);
-    if (!data.fields.age.error && (age + '' != data.fields.age.value || age < 20 || age > 60)) {
+    if (!data.fields.age.error && (age + '' != data.fields.age.value || age < 20 || age > 80)) {
       error = true;
       data.fields.age.error = {
-        text: 'Alter muss eine Zahl von 20 - 60 sein.',
+        text: 'Alter muss eine Zahl von 20 - 80 sein.',
       };
     }
 

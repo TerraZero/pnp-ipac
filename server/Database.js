@@ -104,16 +104,35 @@ module.exports = class Database {
     return this.run('INSERT INTO ' + table + ' VALUES (' + '?, '.repeat(values.length - 1) + '?)', values);
   }
 
-  update(table, where_key, where, values) {
+  update(table, where, values) {
     const sets = [];
+    const wheres = [];
     const params = [];
 
     for (const index in values) {
       sets.push(index + ' = ?');
       params.push(values[index]);
     }
+
+    for (const index in where) {
+      wheres.push(index + ' = ?');
+      params.push(where[index]);
+    }
+
     params.push(where);
-    return this.run('UPDATE ' + table + ' SET ' + sets.join(', ') + ' WHERE ' + where_key + ' = ?', params);
+    return this.run('UPDATE ' + table + ' SET ' + sets.join(', ') + ' WHERE ' + wheres.join(' AND '), params);
+  }
+
+  delete(table, where) {
+    const wheres = [];
+    const params = [];
+
+    for (const index in where) {
+      wheres.push(index + ' = ?');
+      params.push(where[index]);
+    }
+
+    return this.run('DELETE FROM ' + table + ' WHERE ' + wheres.join(' AND '), params);
   }
 
 }

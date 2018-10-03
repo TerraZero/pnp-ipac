@@ -1,11 +1,10 @@
 {
   "weapon_specialist": {
-    "type": "positive",
+    "orientation": "positive",
     "name": "Waffenspezialist",
     "level": 1,
     "execute": {
-      "type": "skill",
-      "skills": {
+      "skill": {
         "pistol": 2,
         "rifles": 2,
         "weapons_technology": 1
@@ -19,12 +18,11 @@
     ]
   },
   "sharpshooter": {
-    "type": "positive",
+    "orientation": "positive",
     "name": "Scharfschütze",
     "level": 1,
     "execute": {
-      "type": "skill",
-      "skills": {
+      "skill": {
         "rifles": 4,
         "weapons_technology": 1
       }
@@ -36,77 +34,102 @@
     ]
   },
   "fortune": {
-    "type": "positive",
+    "orientation": "positive",
     "name": "Geschickt",
     "level": 1,
+    "execute": {},
+    "description": [
+      "Bei jeder Probe muss ein d12 geworfen werden, wird eine 12 geworfen, wird die Probe mit advantage geworfen."
+    ]
+  },
+  "courageous": {
+    "orientation": "positive",
+    "name": "Mutig",
+    "level": 2,
     "execute": {
-      "type": "game"
+      "feature": {
+        "spiritual": 3,
+        "charm": 1
+      }
     },
     "description": [
-      "Bei jeder Probe muss ein d12 geworfen werden, wird eine 12 geworfen wird die Probe mit advantage geworfen."
+      "Du bist besonders Mutig.",
+      "GS: +3",
+      "CH: +1"
+    ]
+  },
+  "focused": {
+    "orientation": "positive",
+    "name": "Konzentriert",
+    "level": 2,
+    "execute": {
+      "feature": {
+        "intelligence": 2,
+        "spiritual": 1
+      }
+    },
+    "description": [
+      "Behalte auch im Chaos den Überblick.",
+      "IN: +2",
+      "GS: +1"
     ]
   },
   "lucky": {
-    "type": "positive",
+    "orientation": "positive",
     "name": "Glückspilz",
     "level": 2,
-    "execute": {
-      "type": "game"
-    },
+    "execute": {},
     "description": [
-      "Einmal am Tag, bei einer Probe, werden alle Characktereigenschaften so behandelt als wären sie auf 19."
+      "Einmal am Tag, bei einer Probe, werden alle Charaktereigenschaften so behandelt als wären sie auf 19."
     ]
   },
   "gullible": {
-    "type": "neutral",
+    "orientation": "neutral",
     "name": "Leichtgläubig",
     "level": 1,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "spiritual": -1,
         "intelligence": 1
       }
     },
     "description": [
-      "Hat leicht Angst im Dunkeln; glaubt schnell an Geister;",
+      "Hat leicht Angst im Dunkeln",
+      "Glaubt schnell an Geister",
       "GS: -1",
       "IN: +1"
     ]
   },
   "misfortune": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Unglückspilz",
     "level": 1,
-    "execute": {
-      "type": "game"
-    },
+    "execute": {},
     "description": [
-      "Bei jeder Probe muss ein d8 geworfen werden, wird eine 8 geworfen muss die Probe mit disadvantage geworfen werden."
+      "Bei jeder Probe muss ein d8 geworfen werden, wird eine 8 geworfen, muss die Probe mit disadvantage geworfen werden."
     ]
   },
   "paranoid": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Paranoid",
     "level": 1,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "spiritual": -1
       }
     },
     "description": [
-      "Du bist Paranoid; kann in einen Wahnanfall verfallen (Probe: 15);",
+      "Du bist Paranoid",
+      "Kann in einen Wahnanfall verfallen (Probe: 15)",
       "GS: -1"
     ]
   },
   "masochistic": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Masochistisch",
     "level": 1,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "body": -1,
         "endurance": -1
       }
@@ -117,27 +140,26 @@
     ]
   },
   "selfish": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Selbstsüchtig",
     "level": 2,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "charm": -3
       }
     },
     "description": [
-      "Du musst dich überwinden um jemanden zu helfen (Probe: 15); Du willst bei Begegnungen immer stehlen (Probe: 13);",
+      "Du musst dich überwinden um jemanden zu helfen (Probe: 15)",
+      "Du willst bei Begegnungen immer stehlen (Probe: 13)",
       "CH: -3"
     ]
   },
   "hopeless": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Hoffnungslos",
     "level": 2,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "spiritual": -4
       }
     },
@@ -147,29 +169,28 @@
     ]
   },
   "insane": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Wahnsinnig",
     "level": 2,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "spiritual": -2,
         "charm": -1
       }
     },
     "description": [
-      "Hat leichte Wahnvorstellungen; kann in einen Wahnanfall verfallen (Probe: 10);",
+      "Hat leichte Wahnvorstellungen",
+      "Kann in einen Wahnanfall verfallen (Probe: 10)",
       "GS: -2",
       "CH: -1"
     ]
   },
   "physical_disability": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Physische Behinderung",
     "level": 3,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "body": -4,
         "endurance": -2,
         "spiritual": 1
@@ -183,12 +204,11 @@
     ]
   },
   "speech_defect": {
-    "type": "negative",
+    "orientation": "negative",
     "name": "Sprachfehler",
     "level": 3,
     "execute": {
-      "type": "feature",
-      "features": {
+      "feature": {
         "charm": -4,
         "spiritual": -1
       }

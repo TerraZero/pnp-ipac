@@ -94,6 +94,14 @@ sys.db.init()
         request.submit();
       });
 
+      socket.on('admin:submit:specific', (args) => {
+        const request = new sys.AdminRequest(socket, args);
+
+        const page = require('./server/admin/User');
+
+        page.submitSpecific(request);
+      });
+
       socket.on('force:request', (args) => {
         const request = new sys.Request('overlay', device, args);
 

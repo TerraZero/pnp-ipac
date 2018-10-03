@@ -13,8 +13,10 @@
               .admin__label
                 | {{ field.label }}
               .admin__original
-                | {{ field.original }}
+                | {{ field.original }} / {{ field.calculated }}
               .admin__wrapper
                 input.admin__input(v-model="field.value")
           .admin__actions(v-if="data.select == group.key")
             input.admin__action(type="submit", v-for="action in group.actions", v-on:click.prevent="submit(group, action)", v-bind:value="action.text")
+      .admin__specifics
+        include _adminSpecifics

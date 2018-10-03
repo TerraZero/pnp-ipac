@@ -40,11 +40,32 @@ const app = new Vue({
       });
     },
 
+    hOverlay: function (value) {
+      send('overlay', {
+        type: 'HealthOverlay',
+        value: value,
+      });
+    },
+
     submitOverlay: function (button) {
       send('overlay:submit', {
         button: button || null,
         costs: this.overlaySkillCosts,
       });
+    },
+
+    submitOverlayHealth: function (button) {
+      send('overlay:submit', {
+        button: button || null,
+      });
+    },
+
+    overlayHealthDown: function () {
+      this.overlay.current = Math.max(this.overlay.current - 1, 0);
+    },
+
+    overlayHealthUp: function () {
+      this.overlay.current = Math.min(this.overlay.current + 1, this.overlay.value.total);
     },
 
     overlaySkillDown: function () {
@@ -64,6 +85,25 @@ const app = new Vue({
       return (Math.floor(value / 5) || 1) * cost;
     },
 
+    getExtraPoints: function (specific) {
+      switch (specific.orientation) {
+        case 'negative':
+          return '+ ' + (specific.level * 5) + ' Talent';
+        case 'neutral':
+          return '+/- 0 Talent';
+        case 'positive':
+          return '- ' + (specific.level * 10) + ' Talent';
+      }
+    },
+
+    validSpecific: function (specific) {
+      if (specific.active) {
+        return this.calcPoints - getExtraPoints(specific) >= 0;
+      } else {
+        return this.calcPoints + getExtraPoints(specific) >= 0;
+      }
+    },
+
   },
 
   computed: {
@@ -81,6 +121,18 @@ const app = new Vue({
       return this.data.user.points - this.overlaySkillCosts;
     },
 
+    calcPoints: function () {
+      let points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
+
+      for (const key in this.data.specifics) {
+        if (this.data.specifics[key].active) {
+          points += getExtraPoints(this.data.specifics[key]);
+        }
+      }
+      this.data.calc_points = points;
+      return points;
+    },
+
   },
 
 });
@@ -96,12 +148,23 @@ function send(event, args, loading) {
   });
 }
 
+function getExtraPoints(specific) {
+  switch (specific.orientation) {
+    case 'negative':
+      return specific.level * 5;
+    case 'positive':
+      return specific.level * -10;
+  }
+  return 0;
+}
+
 socket.on('update:meta', (args) => {
   meta = args.meta;
   setCookie('pnp-uuid', meta.uuid);
 });
 
 socket.on('update:display', (args) => {
+  console.log('update:display', args);
   data.display = args.display;
   data.data = args.data;
   data.loading = false;

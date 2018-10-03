@@ -1,9 +1,12 @@
 .page.page--form(v-if="display === 'form'")
   .page__main
-    .page__header
+    .page__header.page__header--sticky
       .headline
         h1.headline__label
           | {{ data.title }}
+        .headline__points(v-if="data.points")
+          span.headline__text
+            | {{ calcPoints }}
     .page__content
       form.form(v-on:submit.prevent="submit()")
         .form__fields
@@ -19,6 +22,7 @@
             .field__error(v-if="field.error")
               .field__error__text
                 | {{ field.error.text }}
+        include _formSpecifics
         .form__submits
           input.button(type="submit", v-for="button in data.buttons", v-on:click.prevent="submit(button)", v-bind:class="button.classes", v-bind:value="button.text")
 

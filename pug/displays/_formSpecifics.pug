@@ -1,0 +1,18 @@
+.form__specifics
+  .table.table--specifics.table--form
+    .table__row(v-for="specific in data.specifics")
+      h3.table__col.table__col--title(v-on:click.prevent="specific.open = !specific.open")
+        | {{ specific.name }} | {{ specific.orientation }} | Level: {{ specific.level }}
+        span.marker.marker__active(v-if="specific.active")
+          img.marker__icon(v-bind:src="icon('check')")
+      .table__col(v-if="specific.open")
+        ul
+          li(v-for="line in specific.description")
+            | {{ line }}
+          li
+            | {{ getExtraPoints(specific) }}
+      .table__col.table__actions(v-if="specific.open && validSpecific(specific)")
+        .button(v-if="!specific.active", v-on:click.prevent="specific.active = true")
+          | Aktivieren
+        .button(v-if="specific.active", v-on:click.prevent="specific.active = false")
+          | Deaktivieren

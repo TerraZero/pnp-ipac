@@ -7,43 +7,33 @@ module.exports = class Skills {
   static build(request) {
     const data = request.getData();
 
-    const build = {
-      select: data && data.select || null,
-      features: sys.loadData('features'),
-      skills: sys.loadData('skills'),
-      healths: sys.loadData('healths'),
-      user: request.user(),
-    };
+    return sys.storage.getSkills(request.user())
+      .then((skills) => {
+        skills.select = data && data.select || 'character';
+        skills.menu = {
+          character: {
+            name: 'Charakter',
+            icon: 'character',
+            key: 'character',
+          },
+        };
+        for (const skillPage in skills.skills) {
+          skills.menu[skillPage] = {
+            name: skills.skills[skillPage].name,
+            icon: skills.skills[skillPage].icon,
+            key: skillPage,
+          };
+        }
+        skills.menu.specifics = {
+          name: 'Besonderheiten',
+          icon: 'dna',
+          key: 'specifics',
+        };
 
-    return Promise.all([
-      sys.db.allKeyed('key', 'SELECT * FROM skill WHERE user = ?', build.user.name),
-      sys.db.allKeyed('key', 'SELECT * FROM health WHERE user = ?', build.user.name),
-    ])
-      .then(function (bag) {
-        const skillRows = bag[0];
-        const healthRows = bag[1];
-
-        for (const feature in build.features) {
-          build.features[feature].key = feature;
-          build.features[feature].base = skillRows[feature].base;
-          build.features[feature].mod = skillRows[feature].mod;
-          build.features[feature].value = skillRows[feature].base + skillRows[feature].mod;
+        for (const key in skills.specifics) {
+          skills.specifics[key].open = false;
         }
-        for (const health in build.healths) {
-          build.healths[health].key = health;
-          build.healths[health].total = healthRows[health].total;
-          build.healths[health].value = healthRows[health].value;
-        }
-        for (const page in build.skills) {
-          build.select = build.select || page;
-          for (const property in build.skills[page].properties) {
-            build.skills[page].properties[property].key = property;
-            build.skills[page].properties[property].base = skillRows[property].base;
-            build.skills[page].properties[property].mod = skillRows[property].mod;
-            build.skills[page].properties[property].value = skillRows[property].base + skillRows[property].mod;
-          }
-        }
-        return build;
+        return skills;
       });
   }
 

@@ -26,6 +26,7 @@
     text-align: center
     border: 1px solid black
     background: #AAA
+    cursor: pointer
 
   &__level
     display: flex
@@ -43,6 +44,7 @@
       font-weight: bold
       border: 1px solid black
       background: #AAA
+      cursor: pointer
 
     &_current
       width: calc(100% - 250px)
@@ -55,3 +57,17 @@
 
       &_field + &_field
         border-top: 3px solid black
+
+  &__health
+    display: flex
+    margin: 10px 0
+
+    &_current
+      min-width: 50px
+      height: 50px
+      border: 1px solid black
+      background: #EEE
+      font-size: 30px
+      text-align: center
+      line-height: 50px
+      margin: 0 20px

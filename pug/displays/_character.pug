@@ -1,0 +1,33 @@
+.page__content__character(v-if="data.select == 'character'")
+  .table.table--character
+    .table__row
+      .table__col.table__col__name
+        | Name
+      .table__col.table__col__value
+        | {{ data.user.name }}
+    .table__row
+      .table__col.table__col__name
+        | Alter
+      .table__col.table__col__value
+        | {{ data.user.age }}
+    .table__row
+      .table__col.table__col__name
+        | Geschlecht
+      .table__col.table__col__value
+        | {{ gender(data.user.gender) }}
+    .table__row
+      .table__col.table__col__name
+        | Initiative
+      .table__col.table__col__value
+        | {{ data.user.ini }}
+    .table__row
+      .table__col.table__col__name
+        | Talent
+      .table__col.table__col__value
+        | {{ data.user.points }}
+    .table__row(v-for="health in data.healths", v-on:click.prevent="hOverlay(health)")
+      .table__col.table__col__feature
+        | {{ health.name }}
+      .table__col.table__col__value
+        | {{ health.value }} / {{ health.total }}
+  include _features
