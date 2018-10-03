@@ -107,6 +107,18 @@ sys.db.init()
 
         request[request.getArgs().func].apply(request, request.getArgs().args);
       });
+
+      socket.on('scene:register', (args) => {
+        sys.storage._scene = socket;
+      });
+
+      socket.on('admin:stage', (args) => {
+        if (sys.storage.scene()) {
+          sys.storage.scene().emit('update:data', {
+            data: args.args,
+          });
+        }
+      });
     });
 
     log.log('Ready');

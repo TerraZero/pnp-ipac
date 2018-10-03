@@ -37,6 +37,12 @@ const app = new Vue({
       });
     },
 
+    setStage: function (stage) {
+      send('admin:stage', {
+        stage: stage,
+      }, false);
+    },
+
   },
 });
 

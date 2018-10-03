@@ -9,6 +9,7 @@ module.exports = class Storage {
 
     this._devices = {};
     this._users = {};
+    this._scene = null;
   }
 
   async setup() {
@@ -19,6 +20,10 @@ module.exports = class Storage {
 
   devices() {
     return this._devices;
+  }
+
+  scene() {
+    return this._scene;
   }
 
   getDevice(uuid, socket) {

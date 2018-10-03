@@ -4,6 +4,14 @@ module.exports = class Menu {
     const menu = request.menu();
     const args = request.args();
 
+    if (args && args.button.type === 'Stages') {
+      request.sendPage(args.button.type);
+      return {
+        first: this.first(request, menu),
+        second: null,
+      };
+    }
+
     if (args && args.level === 'second') {
       request.sendPage(args.button.type);
     }
@@ -19,7 +27,7 @@ module.exports = class Menu {
       select: menu && menu.first.select || null,
       buttons: {
         stages: {
-          type: 'stages',
+          type: 'Stages',
           icon: 'stage',
           text: 'Stages',
         },

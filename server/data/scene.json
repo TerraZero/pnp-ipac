@@ -1,0 +1,26 @@
+{
+  "stages": [
+    {
+      "image": "https://cdn2.unrealengine.com/Unreal+Engine%2Fblog%2Fepic-announces-unreal-engine-marketplace-88-12-revenue-share%2FFEATURE_UEMarketplace_RevenuShare-1920x960-0b8bb62bee720e2f5c3e4fca10e6d31e080f9266.jpg",
+      "text": "Wald"
+    },
+    {
+      "image": "https://stmed.net/sites/default/files/epic-wallpapers-29528-3170941.jpg",
+      "text": "Erde"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/BmV93RqVYKE/maxresdefault.jpg",
+      "text": "Red"
+    },
+    {
+      "image": "https://i.ytimg.com/vi/e0gSvSUtZWQ/maxresdefault.jpg",
+      "text": "Sun"
+    },
+    {
+      "image": "http://s1.1zoom.me/big3/532/352179-sepik.jpg",
+      "text": "Soldat"
+    }
+  ],
+  "sounds": {},
+  "chapter": {}
+}

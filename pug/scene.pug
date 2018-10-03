@@ -1,0 +1,11 @@
+extends _page
+
+block append before
+  - libs.push('/socket.io/socket.io.js');
+  - libs.push('/js/vue.min.js');
+  - scripts.push('/js/_scene.js');
+
+block app
+  .scene
+    .scene__stage(v-if="data && data.stage")
+      .scene__image(v-bind:style="{'background-image': 'url(' + data.stage.image + ')'}")
