@@ -164,7 +164,6 @@ socket.on('update:meta', (args) => {
 });
 
 socket.on('update:display', (args) => {
-  console.log('update:display', args);
   data.display = args.display;
   data.data = args.data;
   data.loading = false;

@@ -44,13 +44,13 @@
     border: 0
     font-size: 25px
 
-  &__stages
+  &__flex
     display: flex
     flex-wrap: wrap
 
-  &__stage
-    width: 25vw
-    height: 15vw
+  &__item
+    width: 50%
+    height: 30vw
     position: relative
 
   &__image
@@ -69,3 +69,22 @@
     font-size: 35px
     font-weight: bold
     line-height: 50px
+
+    &--chapter
+      position: static
+      width: 100%
+      height: initial
+      left: initial
+      right: initial
+      bottom: initial
+      padding: 20px
+      box-sizing: border-box
+      font-size: 20px
+      text-align: left
+      line-height: 22px
+      height: 100%
+      border: 1px solid white
+
+  &__chapter
+    width: 25%
+    height: initial

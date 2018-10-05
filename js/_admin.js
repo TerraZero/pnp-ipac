@@ -38,9 +38,28 @@ const app = new Vue({
     },
 
     setStage: function (stage) {
+      this.data.select = stage;
       send('admin:stage', {
         stage: stage,
       }, false);
+    },
+
+    setSound: function (sound) {
+      send('admin:sound', {
+        sound: sound,
+      }, false);
+    },
+
+    setChapter: function (chapter) {
+      this.data.select = chapter;
+      send('admin:chapter', {
+        chapter: chapter,
+      }, false);
+    },
+
+    getYTImage: function (id, resolution) {
+      resolution = resolution || 'sddefault';
+      return 'http://img.youtube.com/vi/' + id + '/' + resolution + '.jpg';
     },
 
   },

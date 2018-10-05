@@ -1,0 +1,11 @@
+.admin(v-if="display == 'chapters'")
+  .admin__title
+    h1.admin__headline
+      | Chapters
+  .admin__content
+    .admin__chapters.admin__flex
+      .admin__chapter.admin__item(v-for="chapter in data.chapters", v-on:click.prevent="setChapter(chapter)")
+        span.marker.marker__active.marker--chapters(v-if="data.select == chapter")
+          img.marker__icon(v-bind:src="icon('check')")
+        .admin__text.admin__text--chapter
+          | {{ chapter.text }}

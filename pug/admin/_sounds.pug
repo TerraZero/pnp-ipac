@@ -1,0 +1,25 @@
+.admin(v-if="display == 'sounds'")
+  .admin__title
+    h1.admin__headline
+      | Musics
+  .admin__content
+    .admin__sounds.admin__flex
+      .admin__sound.admin__item(v-for="music in data.musics", v-on:click.prevent="setSound(music)")
+        //-
+          span.marker.marker__active.marker--stages(v-if="data.select == stage")
+            img.marker__icon(v-bind:src="icon('check')")
+        img.admin__image(v-bind:src="getYTImage(music.video)")
+        .admin__text
+          | {{ music.text }}
+  .admin__title
+    h1.admin__headline
+      | Sounds
+  .admin__content
+    .admin__sounds.admin__flex
+      .admin__sound.admin__item(v-for="sound in data.sounds", v-on:click.prevent="setSound(sound)")
+        //-
+          span.marker.marker__active.marker--stages(v-if="data.select == stage")
+            img.marker__icon(v-bind:src="icon('check')")
+        img.admin__image(v-bind:src="getYTImage(sound.video)")
+        .admin__text
+          | {{ sound.text }}

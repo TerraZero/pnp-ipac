@@ -119,6 +119,22 @@ sys.db.init()
           });
         }
       });
+
+      socket.on('admin:sound', (args) => {
+        if (sys.storage.scene()) {
+          sys.storage.scene().emit('update:video', {
+            data: args.args,
+          });
+        }
+      });
+
+      socket.on('admin:chapter', (args) => {
+        if (sys.storage.scene()) {
+          sys.storage.scene().emit('update:chapter', {
+            data: args.args,
+          });
+        }
+      });
     });
 
     log.log('Ready');

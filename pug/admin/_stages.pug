@@ -1,0 +1,12 @@
+.admin(v-if="display == 'stages'")
+  .admin__title
+    h1.admin__headline
+      | Stages
+  .admin__content
+    .admin__stages.admin__flex
+      .admin__stage.admin__item(v-for="stage in data.stages", v-on:click.prevent="setStage(stage)")
+        span.marker.marker__active.marker--stages(v-if="data.select == stage")
+          img.marker__icon(v-bind:src="icon('check')")
+        img.admin__image(v-bind:src="stage.image")
+        .admin__text
+          | {{ stage.text }}

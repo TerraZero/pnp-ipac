@@ -4,14 +4,6 @@ module.exports = class Menu {
     const menu = request.menu();
     const args = request.args();
 
-    if (args && args.button.type === 'Stages') {
-      request.sendPage(args.button.type);
-      return {
-        first: this.first(request, menu),
-        second: null,
-      };
-    }
-
     if (args && args.level === 'second') {
       request.sendPage(args.button.type);
     }
@@ -26,15 +18,10 @@ module.exports = class Menu {
     return {
       select: menu && menu.first.select || null,
       buttons: {
-        stages: {
-          type: 'Stages',
+        scenes: {
+          type: 'scene',
           icon: 'stage',
-          text: 'Stages',
-        },
-        sounds: {
-          type: 'sounds',
-          icon: 'sound',
-          text: 'Sounds',
+          text: 'Scene',
         },
         users: {
           type: 'users',
@@ -76,6 +63,28 @@ module.exports = class Menu {
         };
       }
     }
+
+    return second;
+  }
+
+  static scene(request, menu) {
+    const second = {
+      select: menu && menu.second && menu.second.select || null,
+      buttons: {
+        stages: {
+          type: 'Stages',
+          text: 'Stages',
+        },
+        sounds: {
+          type: 'Sounds',
+          text: 'Sounds',
+        },
+        chapters: {
+          type: 'Chapters',
+          text: 'Chapters',
+        },
+      },
+    };
 
     return second;
   }

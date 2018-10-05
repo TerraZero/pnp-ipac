@@ -35,7 +35,7 @@ module.exports = class SkillOverlay {
 
       sys.storage.updatePoints(user, user.points - args.costs);
 
-      sys.storage.updateSkill(user, overlay.value.key, overlay.level.value - overlay.value.base)
+      sys.storage.updateSkill(user, overlay.value.key, overlay.value.mod + overlay.level.value - overlay.value.calc_value)
         .then(() => {
           request.sendPage('Skills');
           request.sendOverlay();

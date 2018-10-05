@@ -1,11 +1,11 @@
-module.exports = class Stages {
+module.exports = class Chapters {
 
   static build(request) {
     return Promise.resolve({
-      display: 'stages',
+      display: 'chapters',
       data: {
         select: null,
-        stages: sys.loadData('stages'),
+        chapters: sys.loadData('chapters'),
       },
     });
   }
