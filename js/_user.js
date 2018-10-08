@@ -7,7 +7,6 @@ const data = {
   display: 'none',
   data: null,
   loading: true,
-  overlay: false,
   frames: {
     update: {
       current: null,
@@ -92,54 +91,6 @@ const app = new Vue({
       });
     },
 
-    cOverlay: function (value) {
-      send('overlay', {
-        type: 'SkillOverlay',
-        value: value,
-      });
-    },
-
-    hOverlay: function (value) {
-      send('overlay', {
-        type: 'HealthOverlay',
-        value: value,
-      });
-    },
-
-    submitOverlay: function (button) {
-      send('overlay:submit', {
-        button: button || null,
-        costs: this.overlaySkillCosts,
-      });
-    },
-
-    submitOverlayHealth: function (button) {
-      send('overlay:submit', {
-        button: button || null,
-      });
-    },
-
-    overlayHealthDown: function () {
-      this.overlay.current = Math.max(this.overlay.current - 1, 0);
-    },
-
-    overlayHealthUp: function () {
-      this.overlay.current = Math.min(this.overlay.current + 1, this.overlay.value.total);
-    },
-
-    overlaySkillDown: function () {
-      if (this.overlay.level.value > this.overlay.level.original) {
-        this.overlay.level.value--;
-      }
-    },
-
-    overlaySkillUp: function () {
-      this.overlay.level.value++;
-      if (this.overlaySkillPoints < 0) {
-        this.overlay.level.value--;
-      }
-    },
-
     getCostsTotal: function (from, to, cost) {
       let costs = 0;
 
@@ -166,9 +117,9 @@ const app = new Vue({
 
     validSpecific: function (specific) {
       if (specific.active) {
-        return this.calcPoints - getExtraPoints(specific) >= 0;
+        return this.calcPoints - this.getExtraPoints(specific) >= 0;
       } else {
-        return this.calcPoints + getExtraPoints(specific) >= 0;
+        return this.calcPoints + this.getExtraPoints(specific) >= 0;
       }
     },
 
@@ -176,25 +127,12 @@ const app = new Vue({
 
   computed: {
 
-    overlaySkillCosts: function () {
-      let costs = 0;
-
-      for (let i = this.overlay.level.original; i < this.overlay.level.value; i++) {
-        costs += this.getCosts(this.overlay.value.cost, i);
-      }
-      return costs;
-    },
-
-    overlaySkillPoints: function () {
-      return this.data.user.points - this.overlaySkillCosts;
-    },
-
     calcPoints: function () {
       let points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
 
       for (const key in this.data.specifics) {
         if (this.data.specifics[key].active) {
-          points += getExtraPoints(this.data.specifics[key]);
+          points += this.getExtraPoints(this.data.specifics[key]);
         }
       }
       this.data.calc_points = points;
@@ -234,11 +172,6 @@ socket.on('update:meta', (args) => {
 socket.on('update:display', (args) => {
   data.display = args.display;
   data.data = args.data;
-  data.loading = false;
-});
-
-socket.on('update:overlay', (args) => {
-  data.overlay = args.overlay;
   data.loading = false;
 });
 

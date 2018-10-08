@@ -65,23 +65,6 @@ sys.db.init()
         form.submit(request);
       });
 
-      socket.on('overlay', (args) => {
-        const request = new sys.Request('overlay', device, args);
-
-        log.log('Request overlay [0].', request.getArgs().type);
-
-        request.sendOverlay(request.getArgs().type);
-      });
-
-      socket.on('overlay:submit', (args) => {
-        const request = new sys.Request('overlay', device, args);
-
-        log.log('Submit request overlay [0].', request.getOverlay().type);
-        const overlay = require('./server/overlay/' + request.getOverlay().type);
-
-        overlay.submit(request);
-      });
-
       socket.on('submit:skill', (args) => {
         const request = new sys.Request('submit:skill', device, args);
       });
@@ -113,7 +96,7 @@ sys.db.init()
       });
 
       socket.on('force:request', (args) => {
-        const request = new sys.Request('overlay', device, args);
+        const request = new sys.Request('force:request', device, args);
 
         request[request.getArgs().func].apply(request, request.getArgs().args);
       });
