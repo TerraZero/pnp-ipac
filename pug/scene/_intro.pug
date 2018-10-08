@@ -1,0 +1,8 @@
+include _video
+
+.intro
+  .intro__background
+    .intro__video
+      +video('intro')
+  .intro__layer
+    img.intro__image(v-bind:class="introClasses()", v-bind:style="introStyles()", v-bind:src="introSrc()")

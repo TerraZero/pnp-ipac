@@ -39,6 +39,23 @@ const app = new Vue({
       return style;
     },
 
+    introSrc: function () {
+      return Intro.images[0].image;
+    },
+
+    introClasses: function () {
+      return [];
+    },
+
+    introStyles: function () {
+      return {
+        top: '50px',
+        left: '50px',
+        width: '500px',
+        height: '500px',
+      };
+    },
+
   },
 });
 
@@ -51,8 +68,20 @@ function send(event, args, loading) {
     args: args || null,
   });
 }
-
+let t = 0;
 function onYouTubeIframeAPIReady() {
+  t = new YT.Player('video__intro', {
+    width: '100%',
+    height: '100%',
+    videoId: Intro.background.id,
+    playerVars: Intro.background.playerVars,
+    events: {
+      onReady: function (event) {
+        event.target.setVolume(0);
+        event.target.playVideo();
+      },
+    },
+  });
   videos.music.player = new YT.Player('music', {
     width: '128',
     height: '96',

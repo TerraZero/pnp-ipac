@@ -4,10 +4,12 @@ block append before
   - libs.push('/socket.io/socket.io.js');
   - libs.push('/js/vue.min.js');
   - libs.push('https://www.youtube.com/iframe_api');
+  - scripts.push('/js/_intro.js')
   - scripts.push('/js/_scene.js');
 
 block app
   .scene
+    include scene/_intro
     .scene__stage(v-if="data && data.stage")
       .scene__image(v-bind:style="{'background-image': 'url(' + data.stage.image + ')'}")
     .scene__chapter(v-if="chapter")
