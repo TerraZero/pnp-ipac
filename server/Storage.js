@@ -50,7 +50,7 @@ module.exports = class Storage {
     promises.push(sys.db.insert('user', [user.name, user.age, user.gender, user.points, user.ini]));
     for (const feature in user.features) {
       log.debug('Add feature [0] with value [1] for user [2]', feature, user.features[feature], user.name);
-      promises.push(sys.db.insert('skill', [user.name, feature, user.features[feature], 0]));
+      promises.push(sys.db.insert('skill', [user.name, feature, user.features[feature]]));
     }
 
     const features = sys.loadData('features');
@@ -65,7 +65,7 @@ module.exports = class Storage {
         const base = this._getSkillBase(symbols, skills[page].properties[skill]);
 
         log.debug('Add skill [0] with value [1] for user [2]', skill, base, user.name);
-        promises.push(sys.db.insert('skill', [user.name, skill, base, 0]));
+        promises.push(sys.db.insert('skill', [user.name, skill, base]));
       }
     }
 
@@ -130,9 +130,8 @@ module.exports = class Storage {
       for (const key in data.features) {
         data.features[key].type = 'feature';
         data.features[key].key = key;
-        data.features[key].base = skills[key].base;
-        data.features[key].mod = skills[key].mod;
-        data.features[key].calc_value = skills[key].base + skills[key].mod;
+        data.features[key].value = skills[key].value;
+        data.features[key].total = skills[key].value;
         this._executeModifier(modifiers, data.features[key], age_mod);
       }
 
@@ -150,9 +149,8 @@ module.exports = class Storage {
         for (const key in data.skills[page].properties) {
           data.skills[page].properties[key].type = 'skill';
           data.skills[page].properties[key].key = key;
-          data.skills[page].properties[key].base = skills[key].base;
-          data.skills[page].properties[key].mod = skills[key].mod;
-          data.skills[page].properties[key].calc_value = skills[key].base + skills[key].mod;
+          data.skills[page].properties[key].value = skills[key].value;
+          data.skills[page].properties[key].total = skills[key].value;
           this._executeModifier(modifiers, data.skills[page].properties[key], age_mod);
         }
       }
@@ -166,14 +164,14 @@ module.exports = class Storage {
       const execute = modifier.execute[value.type];
 
       if (execute && execute[value.key]) {
-        value.calc_value += execute[value.key];
+        value.total += execute[value.key];
       }
     }
     if (value.key === 'body') {
-      value.calc_value -= Math.floor(age_mod / 2);
+      value.total -= Math.floor(age_mod / 2);
     }
     if (value.key === 'spiritual') {
-      value.calc_value += Math.floor(age_mod / 2);
+      value.total += Math.floor(age_mod / 2);
     }
   }
 
@@ -199,8 +197,8 @@ module.exports = class Storage {
     });
   }
 
-  updateSkill(user, key, mod) {
-    return sys.db.update('skill', { user: user.name, key: key }, { mod: mod });
+  updateSkill(user, key, value) {
+    return sys.db.update('skill', { user: user.name, key: key }, { value: value });
   }
 
   updateHealth(user, key, value) {

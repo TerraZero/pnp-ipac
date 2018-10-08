@@ -56,8 +56,8 @@ sys.db.init()
         }
       });
 
-      socket.on('submit', (args) => {
-        const request = new sys.Request('submit', device, args);
+      socket.on('submit:form', (args) => {
+        const request = new sys.Request('submit:form', device, args);
 
         log.log('Submit form [0]', args.vue.data.form);
         const form = require('./server/form/' + args.vue.data.form);
@@ -80,6 +80,16 @@ sys.db.init()
         const overlay = require('./server/overlay/' + request.getOverlay().type);
 
         overlay.submit(request);
+      });
+
+      socket.on('submit:skill', (args) => {
+        const request = new sys.Request('submit:skill', device, args);
+      });
+
+      socket.on('submit', (args) => {
+        const request = new sys.Request('submit', device, args);
+
+        request.submit();
       });
 
       socket.on('admin:menu', (args) => {

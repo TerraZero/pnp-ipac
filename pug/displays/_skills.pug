@@ -1,17 +1,18 @@
 .page.page--skills(v-if="display === 'skills'")
   .page__header
-    .page__navi
-      .navi
-        .navi__button(v-for="page in data.menu", v-on:click="data.select = page.key", v-bind:class="{'navi__button--active': page.key == data.select}")
-          img.navi__image(v-bind:src="icon(page.icon)")
-      .headline
-        h1.headline__label
-          | {{ data.menu[data.select].name }}
-        .headline__points
-          span.headline__text
-            | {{ data.user.points }}
+    .headline
+      h1.headline__label
+        | {{ data.menu[data.select].name }}
+      .headline__points
+        span.headline__text
+          | {{ data.user.points }}
 
   .page__content
     include _character
     include _skillPages
     include _specifics
+
+  .page__navi
+    .navi
+      .navi__button(v-for="page in data.menu", v-on:click="data.select = page.key", v-bind:class="{'navi__button--active': page.key == data.select}")
+        img.navi__image(v-bind:src="icon(page.icon)")

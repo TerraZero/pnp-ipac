@@ -1,10 +1,13 @@
+include _updateFrame
+
 .page__content__skills(v-if="data.select != 'character' && data.select != 'specifics'")
   include _features
   .table.table--skills(v-if="data.skills[data.select]")
-    .table__row(v-for="propertie in data.skills[data.select].properties", v-on:click.prevent="cOverlay(propertie)")
+    .table__row(v-for="propertie in data.skills[data.select].properties", v-on:click.prevent="onClickSkill(propertie)")
       .table__col.table__col__propertie
         | {{ propertie.name }}
       .table__col.table__col__sample
         | {{ propertie.sample.join(' / ') }}
       .table__col.table__col__value
-        | {{ propertie.calc_value }}
+        | {{ propertie.total }}
+      +updateSkillFrame('propertie')

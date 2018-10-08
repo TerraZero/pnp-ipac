@@ -1,0 +1,33 @@
+mixin updateSkillFrame(key)
+  .update-frame(v-if="frames.update.current === " + key, v-on:click.stop)
+    .update-frame__content
+      .update-frame__points.update-frame--bordered
+        | Talentpunkte: {{ data.user.points }}
+      .update-frame__costs.update-frame--bordered
+        | Talentkosten: {{ frames.update.state.costs }}
+      .update-frame__total.update-frame--bordered
+        | Rest Talentpunkte: {{ data.user.points - frames.update.state.costs }}
+      .update-frame__value
+        .update-frame__sub(v-on:click.prevent="onClickSkillChange(-1)")
+          | -
+        .update-frame__current
+          | {{ frames.update.state.current }}
+        .update-frame__add(v-on:click.prevent="onClickSkillChange(1)")
+          | +
+    .update-frame__actions
+      .update-frame__action(v-on:click.prevent="onSubmit('SkillSubmit', 'userUpdate')")
+        | OK
+
+mixin updateHealthFrame(key)
+  .update-frame(v-if="frames.update.current === " + key, v-on:click.stop)
+    .update-frame__content
+      .update-frame__value
+        .update-frame__sub(v-on:click.prevent="onClickHealthChange(-1)")
+          | -
+        .update-frame__current
+          | {{ frames.update.state.current }}
+        .update-frame__add(v-on:click.prevent="onClickHealthChange(1)")
+          | +
+    .update-frame__actions
+      .update-frame__action(v-on:click.prevent="onSubmit('HealthSubmit', 'userUpdate')")
+        | OK

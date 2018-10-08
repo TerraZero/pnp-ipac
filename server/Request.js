@@ -28,6 +28,10 @@ module.exports = class Request {
     return this._args.args;
   }
 
+  getFrame(name) {
+    return this._args.vue.frames[name];
+  }
+
   device() {
     return this._device;
   }
@@ -87,6 +91,15 @@ module.exports = class Request {
         overlay: false,
       });
     }
+  }
+
+  submit() {
+    const struckt = this.getArgs().struckt;
+    const func = this.getArgs().func;
+
+    const object = require('./submit/' + struckt);
+
+    object[func](this);
   }
 
 }

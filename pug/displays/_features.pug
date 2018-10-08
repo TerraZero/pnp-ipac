@@ -1,6 +1,9 @@
+include _updateFrame
+
 .table.table--skills
-  .table__row(v-for="feature in data.features", v-on:click.prevent="cOverlay(feature)")
+  .table__row(v-for="feature in data.features", v-on:click.prevent="onClickSkill(feature)")
     .table__col.table__col__feature
       | {{ feature.name }} ({{ feature.symbol }})
     .table__col.table__col__value
-      | {{ feature.calc_value }}
+      | {{ feature.total }}
+    +updateSkillFrame('feature')

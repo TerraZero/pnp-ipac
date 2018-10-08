@@ -8,6 +8,12 @@ const data = {
   data: null,
   loading: true,
   overlay: false,
+  frames: {
+    update: {
+      current: null,
+      state: null,
+    },
+  },
 };
 
 const app = new Vue({
@@ -17,8 +23,7 @@ const app = new Vue({
   methods: {
 
     submit: function (button) {
-      console.log('submit', button);
-      send('submit', {
+      send('submit:form', {
         button: button || null,
       });
     },
@@ -31,6 +36,60 @@ const app = new Vue({
       if (gender == 'male') return 'Männlich';
       if (gender == 'female') return 'Weiblich';
       return 'Andere';
+    },
+
+    onClickSkill: function (value) {
+      if (this.frames.update.current === value) {
+        this.frames.update.current = null;
+        this.frames.update.state = null;
+      } else {
+        this.frames.update.current = value;
+        this.frames.update.state = {
+          costs: 0,
+          current: value.total,
+          delta: 0,
+        };
+      }
+    },
+
+    onClickHealth: function (value) {
+      if (this.frames.update.current === value) {
+        this.frames.update.current = null;
+        this.frames.update.state = null;
+      } else {
+        this.frames.update.current = value;
+        this.frames.update.state = {
+          current: value.value,
+        };
+      }
+    },
+
+    onClickSkillChange: function (delta) {
+      const frame = this.frames.update;
+      const newCurrent = frame.state.current + delta;
+      const total = this.getCostsTotal(frame.current.total, newCurrent, frame.current.cost);
+
+      if (frame.current.total <= newCurrent && this.data.user.points - total >= 0) {
+        frame.state.current = newCurrent;
+        frame.state.costs = total;
+        frame.state.delta = newCurrent - frame.current.total;
+      }
+    },
+
+    onClickHealthChange: function (delta) {
+      const frame = this.frames.update;
+      const newCurrent = frame.state.current + delta;
+
+      if (newCurrent >= 0 && newCurrent <= frame.current.total) {
+        frame.state.current = newCurrent;
+      }
+    },
+
+    onSubmit: function (struckt, func) {
+      send('submit', {
+        struckt: struckt,
+        func: func,
+      });
     },
 
     cOverlay: function (value) {
@@ -79,6 +138,15 @@ const app = new Vue({
       if (this.overlaySkillPoints < 0) {
         this.overlay.level.value--;
       }
+    },
+
+    getCostsTotal: function (from, to, cost) {
+      let costs = 0;
+
+      for (let i = from; i < to; i++) {
+        costs += this.getCosts(cost, i);
+      }
+      return costs;
     },
 
     getCosts: function (cost, value) {

@@ -1,3 +1,5 @@
+include _updateFrame
+
 .page__content__character(v-if="data.select == 'character'")
   .table.table--character
     .table__row
@@ -25,9 +27,10 @@
         | Talent
       .table__col.table__col__value
         | {{ data.user.points }}
-    .table__row(v-for="health in data.healths", v-on:click.prevent="hOverlay(health)")
+    .table__row(v-for="health in data.healths", v-on:click.prevent="onClickHealth(health)")
       .table__col.table__col__feature
         | {{ health.name }}
       .table__col.table__col__value
         | {{ health.value }} / {{ health.total }}
+      +updateHealthFrame('health')
   include _features
