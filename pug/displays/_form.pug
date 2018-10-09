@@ -18,7 +18,10 @@
             .field__wrapper.form__wrapper--select(v-if="field.options")
               select.field__input(v-model="field.value")
                 option(v-for="(value, option) in field.options", v-bind:value="option")
-                  | {{ value }}
+                  | {{ value.value }}
+              .field__option__descriptions(v-if="field.value && field.options[field.value].description")
+                .field__option__descriptions__line(v-for="line in field.options[field.value].description")
+                  | {{ line }}
             .field__error(v-if="field.error")
               .field__error__text
                 | {{ field.error.text }}

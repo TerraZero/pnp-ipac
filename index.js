@@ -16,18 +16,18 @@ const log = new sys.Logger('System');
 sys.db = new Database(new sys.Logger('DB'));
 sys.storage = new Storage(new sys.Logger('storage'));
 
-sys.loadData = function (name) {
+sys.loadData = function(name) {
   const path = './server/data/' + name + '.json';
 
   delete require.cache[require.resolve(path)];
   return require(path);
 };
 
-app.get('*', function (req, res) {
+app.get('*', function(req, res) {
   res.sendFile(__dirname + '/web/' + req.url);
 });
 
-http.listen(3000, function () {
+http.listen(3000, function() {
   log.log('listening on *:3000');
 });
 

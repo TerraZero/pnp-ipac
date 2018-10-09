@@ -1,6 +1,7 @@
 module.exports = class RegisterForm {
 
   static build(request) {
+    const professions = sys.loadData('professions');
     const features = sys.loadData('features');
 
     const build = {
@@ -16,11 +17,21 @@ module.exports = class RegisterForm {
           label: 'Geschlecht',
           value: 'male',
           options: {
-            male: 'Männlich',
-            female: 'Weiblich',
+            male: {
+              value: 'Männlich',
+            },
+            female: {
+              value: 'Weiblich',
+            },
           }
         },
+        profession: {
+          label: 'Clan',
+          value: '',
+          options: {},
+        },
       },
+      professions: professions,
       specifics: this.getSpecifics(),
       buttons: {
         submit: {
@@ -30,13 +41,20 @@ module.exports = class RegisterForm {
       },
     };
 
+    for (const profession in professions) {
+      build.fields.profession.options[profession] = {
+        value: professions[profession].name,
+        description: professions[profession].description,
+      };
+    }
+
     for (const index in features) {
       build.fields[index] = {
         label: features[index].name + ' (' + features[index].symbol + ') [3 * d6]',
         value: '',
       }
     }
-
+    console.log('send build');
     return build;
   }
 
@@ -103,7 +121,7 @@ module.exports = class RegisterForm {
     }
 
     sys.storage.addUser(request, user)
-      .then(function () {
+      .then(function() {
         request._device.setUser(user);
         request.sendPage('Skills');
       });

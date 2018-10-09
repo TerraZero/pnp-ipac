@@ -21,23 +21,23 @@ const app = new Vue({
 
   methods: {
 
-    submit: function (button) {
+    submit: function(button) {
       send('submit:form', {
         button: button || null,
       });
     },
 
-    icon: function (name) {
+    icon: function(name) {
       return '/img/icons/' + name + '.svg';
     },
 
-    gender: function (gender) {
+    gender: function(gender) {
       if (gender == 'male') return 'Männlich';
       if (gender == 'female') return 'Weiblich';
       return 'Andere';
     },
 
-    onClickSkill: function (value) {
+    onClickSkill: function(value) {
       if (this.frames.update.current === value) {
         this.frames.update.current = null;
         this.frames.update.state = null;
@@ -51,7 +51,7 @@ const app = new Vue({
       }
     },
 
-    onClickHealth: function (value) {
+    onClickHealth: function(value) {
       if (this.frames.update.current === value) {
         this.frames.update.current = null;
         this.frames.update.state = null;
@@ -63,7 +63,7 @@ const app = new Vue({
       }
     },
 
-    onClickSkillChange: function (delta) {
+    onClickSkillChange: function(delta) {
       const frame = this.frames.update;
       const newCurrent = frame.state.current + delta;
       const total = this.getCostsTotal(frame.current.total, newCurrent, frame.current.cost);
@@ -75,7 +75,7 @@ const app = new Vue({
       }
     },
 
-    onClickHealthChange: function (delta) {
+    onClickHealthChange: function(delta) {
       const frame = this.frames.update;
       const newCurrent = frame.state.current + delta;
 
@@ -84,14 +84,14 @@ const app = new Vue({
       }
     },
 
-    onSubmit: function (struckt, func) {
+    onSubmit: function(struckt, func) {
       send('submit', {
         struckt: struckt,
         func: func,
       });
     },
 
-    getCostsTotal: function (from, to, cost) {
+    getCostsTotal: function(from, to, cost) {
       let costs = 0;
 
       for (let i = from; i < to; i++) {
@@ -100,11 +100,11 @@ const app = new Vue({
       return costs;
     },
 
-    getCosts: function (cost, value) {
+    getCosts: function(cost, value) {
       return (Math.floor(value / 5) || 1) * cost;
     },
 
-    getExtraPoints: function (specific) {
+    getExtraPoints: function(specific) {
       switch (specific.orientation) {
         case 'negative':
           return '+ ' + (specific.level * 5) + ' Talent';
@@ -115,7 +115,7 @@ const app = new Vue({
       }
     },
 
-    validSpecific: function (specific) {
+    validSpecific: function(specific) {
       if (specific.active) {
         return this.calcPoints - this.getExtraPoints(specific) >= 0;
       } else {
@@ -127,7 +127,7 @@ const app = new Vue({
 
   computed: {
 
-    calcPoints: function () {
+    calcPoints: function() {
       let points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
 
       for (const key in this.data.specifics) {
@@ -144,6 +144,7 @@ const app = new Vue({
 });
 
 function send(event, args, loading) {
+  console.log('-> send:', event);
   if (loading !== false) {
     data.loading = true;
   }

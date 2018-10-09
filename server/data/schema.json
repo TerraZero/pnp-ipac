@@ -4,7 +4,8 @@
     "age": "VARCHAR(10)",
     "gender": "VARCHAR(10)",
     "points": "INT",
-    "ini": "INT"
+    "ini": "INT",
+    "profession": "VARCHAR(255)"
   },
   "health": {
     "user": "VARCHAR(255)",
