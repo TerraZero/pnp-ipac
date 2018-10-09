@@ -28,11 +28,6 @@ module.exports = class Menu {
           icon: 'social',
           text: 'Users',
         },
-        chat: {
-          type: 'chat',
-          icon: 'chat',
-          text: 'Chat',
-        },
       },
     };
   }

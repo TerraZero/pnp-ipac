@@ -105,6 +105,8 @@ module.exports = class RegisterForm {
       field.value = number;
     }
 
+
+
     if (error) return request.resend('Form error.');
 
     const meta = request.getMeta();
@@ -114,6 +116,7 @@ module.exports = class RegisterForm {
       age: data.fields.age.value,
       gender: data.fields.gender.value,
       features: {},
+      profession: data.fields.profession.value,
     };
 
     for (const feature in features) {

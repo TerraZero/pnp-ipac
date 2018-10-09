@@ -10,7 +10,7 @@
           li(v-for="line in specific.description")
             | {{ line }}
           li
-            | {{ getExtraPoints(specific) }}
+            | {{ getExtraPointsLabel(specific) }}
       .table__col.table__actions(v-if="specific.open && validSpecific(specific)")
         .button(v-if="!specific.active", v-on:click.prevent="specific.active = true")
           | Aktivieren

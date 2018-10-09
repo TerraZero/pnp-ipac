@@ -107,11 +107,24 @@ const app = new Vue({
     getExtraPoints: function(specific) {
       switch (specific.orientation) {
         case 'negative':
-          return '+ ' + (specific.level * 5) + ' Talent';
+          return specific.level * 5;
         case 'neutral':
-          return '+/- 0 Talent';
+          return 0;
         case 'positive':
-          return '- ' + (specific.level * 10) + ' Talent';
+          return specific.level * -10;
+      }
+    },
+
+    getExtraPointsLabel: function(specific) {
+      const extraPoints = this.getExtraPoints(specific);
+
+      switch (specific.orientation) {
+        case 'negative':
+          return '+ ' + extraPoints + ' Talent';
+        case 'neutral':
+          return '+/- ' + extraPoints + ' Talent';
+        case 'positive':
+          return '- ' + extraPoints + ' Talent';
       }
     },
 

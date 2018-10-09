@@ -31,6 +31,7 @@ module.exports = class User {
       fields: {
         age: this.getField('age', 'Alter', skills.user.age),
         gender: this.getField('gender', 'Geschlecht', skills.user.gender),
+        profession: this.getField('profession', 'Clan', skills.user.profession),
         ini: this.getField('ini', 'Initiative', skills.user.ini),
         points: this.getField('points', 'Talent', skills.user.points),
       },
@@ -55,8 +56,7 @@ module.exports = class User {
       actions: this.getActions('skill', 'features'),
     };
     for (const key in skills.features) {
-      data.groups.feature.fields[key + ':base'] = this.getField(key, skills.features[key].name + ' - Base', skills.features[key].base, skills.features[key].calc_value);
-      data.groups.feature.fields[key + ':mod'] = this.getField(key, skills.features[key].name + ' - Modifier', skills.features[key].mod, skills.features[key].calc_value);
+      data.groups.feature.fields[key] = this.getField(key, skills.features[key].name, skills.features[key].value, skills.features[key].total);
     }
 
     for (const group in skills.skills) {
@@ -68,8 +68,7 @@ module.exports = class User {
       };
 
       for (const key in skills.skills[group].properties) {
-        data.groups[group].fields[key + ':base'] = this.getField(key, skills.skills[group].properties[key].name + ' - Base', skills.skills[group].properties[key].base, skills.skills[group].properties[key].calc_value);
-        data.groups[group].fields[key + ':mod'] = this.getField(key, skills.skills[group].properties[key].name + ' - Modifier', skills.skills[group].properties[key].mod, skills.skills[group].properties[key].calc_value);
+        data.groups[group].fields[key] = this.getField(key, skills.skills[group].properties[key].name, skills.skills[group].properties[key].value, skills.skills[group].properties[key].total);
       }
     }
 
@@ -115,8 +114,7 @@ module.exports = class User {
   }
 
   static submit_user(request, args) {
-    const data = request.data();
-    const user = data.user;
+    const user = request.data().user;
 
     for (const field in args.group.fields) {
       user[field] = args.group.fields[field].value;
@@ -126,11 +124,12 @@ module.exports = class User {
   }
 
   static submit_health(request, args) {
+    const user = request.data().user;
     const updates = [];
     const healths = sys.loadData('healths');
 
     for (const key in healths) {
-      updates.push(sys.db.update('health', { key: key }, {
+      updates.push(sys.db.update('health', { key: key, user: user.name }, {
         total: args.group.fields[key + ':total'].value,
         value: args.group.fields[key + ':value'].value,
       }));
@@ -139,6 +138,7 @@ module.exports = class User {
   }
 
   static submit_skill(request, args) {
+    const user = request.data().user;
     const updates = [];
     let data = sys.loadData(args.action.data);
 
@@ -147,10 +147,7 @@ module.exports = class User {
     }
 
     for (const key in data) {
-      updates.push(sys.db.update('skill', { key: key }, {
-        base: args.group.fields[key + ':base'].value,
-        mod: args.group.fields[key + ':mod'].value,
-      }));
+      updates.push(sys.storage.updateSkill(user, key, args.group.fields[key].value));
     }
     return Promise.all(updates);
   }

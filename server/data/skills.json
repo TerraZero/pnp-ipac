@@ -119,45 +119,58 @@
     "name": "Kampf",
     "icon": "battle",
     "properties": {
-      "pugilism": {
-        "type": "skill",
-        "name": "Faustkampf",
-        "sample": [],
-        "value": 0,
-        "cost": 4
-      },
       "combat": {
         "type": "skill",
         "name": "Nahkampf",
-        "sample": [],
+        "sample": [
+          "KF"
+        ],
         "value": 0,
         "cost": 4
       },
       "throwing": {
         "type": "skill",
         "name": "Wurfwaffen",
-        "sample": [],
+        "sample": [
+          "KP"
+        ],
         "value": 0,
         "cost": 4
       },
       "bladed": {
         "type": "skill",
         "name": "Klingenwaffen",
-        "sample": [],
+        "sample": [
+          "KP"
+        ],
         "value": 0,
         "cost": 4
       },
       "pistol": {
         "type": "skill",
         "name": "Schusswaffen Pistole",
-        "sample": [],
+        "sample": [
+          "KF"
+        ],
         "value": 0,
         "cost": 4
       },
       "rifles": {
         "type": "skill",
         "name": "Schusswaffen Gewehre",
-        "sample": [],
+        "sample": [
+          "KF"
+        ],
+        "value": 0,
+        "cost": 4
+      },
+      "exotic": {
+        "type": "skill",
+        "name": "Exotische Waffen",
+        "sample": [
+          "KF",
+          "KP"
+        ],
         "value": 0,
         "cost": 4
       },

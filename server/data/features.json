@@ -40,5 +40,19 @@
     "symbol": "GS",
     "value": 0,
     "cost": 10
+  },
+  "fight": {
+    "type": "feature",
+    "name": "Kampf",
+    "symbol": "KF",
+    "value": 0,
+    "cost": 10
+  },
+  "parade": {
+    "type": "feature",
+    "name": "Parade",
+    "symbol": "KP",
+    "value": 0,
+    "cost": 10
   }
 }

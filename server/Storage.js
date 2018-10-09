@@ -40,14 +40,24 @@ module.exports = class Storage {
     this._users[user.name] = user;
     log.log('Add user [0]', user.name);
 
+    const modifiers = [this.getUserProfession(user).modify];
+
     for (const index in user.features) {
       user.features[index] = Math.floor((user.features[index] - 10) / 2) + 10;
     }
 
-    user.points = data.calc_points;
-    user.ini = user.features.body + user.features.body - user.features.endurance;
+    const ini = {
+      type: 'user',
+      key: 'ini',
+      total: user.features.body + user.features.body - user.features.endurance,
+    };
 
-    promises.push(sys.db.insert('user', [user.name, user.age, user.gender, user.points, user.ini]));
+    this._applyModifiers(modifiers, ini);
+
+    user.points = data.calc_points;
+    user.ini = ini.total;
+
+    promises.push(sys.db.insert('user', [user.name, user.age, user.gender, user.points, user.ini, user.profession]));
     for (const feature in user.features) {
       log.debug('Add feature [0] with value [1] for user [2]', feature, user.features[feature], user.name);
       promises.push(sys.db.insert('skill', [user.name, feature, user.features[feature]]));
@@ -76,13 +86,25 @@ module.exports = class Storage {
       }
     }
 
-    const life = user.features.body + user.features.body + user.features.endurance + user.features.skill;
-    log.debug('Add health [0] with value [1] for user [2]', 'life', life, user.name);
-    promises.push(sys.db.insert('health', [user.name, 'life', life, life]));
+    const life = {
+      type: 'user',
+      key: 'life',
+      total: user.features.body + user.features.body + user.features.endurance + user.features.skill,
+    };
 
-    const mental = user.features.spiritual + user.features.spiritual + user.features.intelligence + user.features.charm;
-    log.debug('Add health [0] with value [1] for user [2]', 'mental', mental, user.name);
-    promises.push(sys.db.insert('health', [user.name, 'mental', mental, mental]));
+    this._applyModifiers(modifiers, life);
+    log.debug('Add health [0] with value [1] for user [2]', 'life', life.total, user.name);
+    promises.push(sys.db.insert('health', [user.name, 'life', life.total, life.total]));
+
+    const mental = {
+      type: 'user',
+      key: 'mental',
+      total: user.features.spiritual + user.features.spiritual + user.features.intelligence + user.features.charm,
+    };
+
+    this._applyModifiers(modifiers, mental);
+    log.debug('Add health [0] with value [1] for user [2]', 'mental', mental.total, user.name);
+    promises.push(sys.db.insert('health', [user.name, 'mental', mental.total, mental.total]));
 
     return Promise.all(promises);
   }
@@ -96,6 +118,11 @@ module.exports = class Storage {
     return Math.max(Math.floor(base / define.sample.length) - 8, 0);
   }
 
+  getUserProfession(user) {
+    const professions = sys.loadData('professions');
+    return professions[user.profession];
+  }
+
   getSkills(user) {
     const data = {
       user: user,
@@ -103,6 +130,7 @@ module.exports = class Storage {
       skills: {},
       healths: {},
       specifics: {},
+      profession: this.getUserProfession(user),
     };
     return Promise.all([
       sys.db.allKeyed('key', 'SELECT * FROM skill WHERE user = ?', user.name),
@@ -112,8 +140,9 @@ module.exports = class Storage {
       const skills = bag[0];
       const healths = bag[1];
       const specifics = bag[2];
-      const age_mod = Math.floor((parseInt(user.age) - 20) / 5);
-      const modifiers = {};
+      const modifiers = {
+        profession: data.profession.modify,
+      };
 
       data.specifics = sys.loadData('specifics');
       for (const key in data.specifics) {
@@ -122,9 +151,16 @@ module.exports = class Storage {
         data.specifics[key].active = specifics[key] !== undefined;
 
         if (data.specifics[key].active) {
-          modifiers[key] = data.specifics[key];
+          modifiers[key] = data.specifics[key].modify;
         }
       }
+
+      modifiers['age_mod'] = {
+        feature: {
+          body: -Math.floor((parseInt(user.age) - 20) / 10),
+          spiritual: Math.floor((parseInt(user.age) - 20) / 10),
+        }
+      };
 
       data.features = sys.loadData('features');
       for (const key in data.features) {
@@ -132,7 +168,7 @@ module.exports = class Storage {
         data.features[key].key = key;
         data.features[key].value = skills[key].value;
         data.features[key].total = skills[key].value;
-        this._executeModifier(modifiers, data.features[key], age_mod);
+        this._applyModifiers(modifiers, data.features[key]);
       }
 
       data.healths = sys.loadData('healths');
@@ -151,27 +187,21 @@ module.exports = class Storage {
           data.skills[page].properties[key].key = key;
           data.skills[page].properties[key].value = skills[key].value;
           data.skills[page].properties[key].total = skills[key].value;
-          this._executeModifier(modifiers, data.skills[page].properties[key], age_mod);
+          this._applyModifiers(modifiers, data.skills[page].properties[key]);
         }
       }
       return data;
     });
   }
 
-  _executeModifier(modifiers, value, age_mod) {
+  _applyModifiers(modifiers, value) {
     for (const key in modifiers) {
       const modifier = modifiers[key];
-      const execute = modifier.execute[value.type];
+      const execute = modifier[value.type];
 
       if (execute && execute[value.key]) {
         value.total += execute[value.key];
       }
-    }
-    if (value.key === 'body') {
-      value.total -= Math.floor(age_mod / 2);
-    }
-    if (value.key === 'spiritual') {
-      value.total += Math.floor(age_mod / 2);
     }
   }
 

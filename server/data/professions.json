@@ -2,8 +2,25 @@
   "paladin": {
     "name": "Paladin",
     "description": [
-      "Stärke: 10",
-      "Parade: 10"
-    ]
+      "Stärke: +1",
+      "Parade: +2",
+      "Initiative: +10 (Negativ)",
+      "Lebenspunkte: +10",
+      "Moral: +5"
+    ],
+    "modify": {
+      "user": {
+        "ini": 10,
+        "life": 10,
+        "mental": 5
+      },
+      "feature": {
+        "fight": 1,
+        "parade": 2
+      },
+      "skill": {
+        "bladed": 3
+      }
+    }
   }
 }
