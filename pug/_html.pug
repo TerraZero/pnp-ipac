@@ -2,6 +2,7 @@ block before
   - var libs = [];
   - var scripts = [];
   - var favicon = '/img/favicon';
+  - var body = '';
 
 doctype html
 
@@ -33,7 +34,7 @@ html
         block title
     block css
       link(rel='stylesheet', type='text/css' href='/css/style.css')
-  body
+  body(class=body)
     block body
     block js
       each src in libs

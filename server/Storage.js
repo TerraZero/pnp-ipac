@@ -22,6 +22,10 @@ module.exports = class Storage {
     return this._devices;
   }
 
+  users() {
+    return this._users;
+  }
+
   scene() {
     return this._scene;
   }
@@ -237,7 +241,11 @@ module.exports = class Storage {
 
   adminUser(user) {
     this._users[user.name] = user;
-    this.getDeviceByUser(user.name).setUser(user);
+    const device = this.getDeviceByUser(user.name);
+
+    if (device !== null) {
+      device.setUser(user);
+    }
 
     return sys.db.update('user', { name: user.name }, {
       age: user.age,

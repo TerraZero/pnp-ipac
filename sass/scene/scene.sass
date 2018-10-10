@@ -4,31 +4,13 @@
   height: 100vh
   overflow: hidden
 
-  &__image
-    width: 100vw
-    height: 100vh
-    background-size: cover
-    background-position: center center
-
-  &__sound_wrapper
-    position: absolute
-    top: 7%
-    right: 0
-    display: flex
-
-  &__player
+  &__sound
     opacity: 0
-    transition: opacity .5s ease-in-out
+    height: 0
 
-    &--show
-      opacity: 1
-
-  &__chapter
+  &__stage
     position: absolute
-    top: 5%
-    left: 5%
-    right: 5%
-    font-size: 100px
+    top: 0
+    left: 0
+    right: 0
     bottom: 0
-    overflow: hidden
-    text-shadow: black 5px 5px 10px

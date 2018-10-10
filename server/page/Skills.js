@@ -12,7 +12,7 @@ module.exports = class Skills {
         skills.select = data && data.select || 'character';
         skills.menu = {
           character: {
-            name: 'Charakter',
+            name: 'Eigenschaften',
             icon: 'character',
             key: 'character',
           },

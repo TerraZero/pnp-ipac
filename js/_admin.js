@@ -1,22 +1,22 @@
-const socket = io();
+var socket = io();
 
-const data = {
+var data = {
   menu: null,
   display: 'none',
   data: null,
   loading: true,
 };
 
-const app = new Vue({
+var app = new Vue({
   el: '#app',
   data: data,
   methods: {
 
-    icon: function (name) {
+    icon: function(name) {
       return '/img/icons/' + name + '.svg';
     },
 
-    menuOpen: function (level, button) {
+    menuOpen: function(level, button) {
       this.menu[level].select = button.type;
       send('admin:menu', {
         level: level,
@@ -24,40 +24,40 @@ const app = new Vue({
       });
     },
 
-    submit: function (group, action) {
+    submit: function(group, action) {
       send('admin:submit', {
         group: group,
         action: action,
       });
     },
 
-    submitSpecific: function (specific) {
+    submitSpecific: function(specific) {
       send('admin:submit:specific', {
         specific: specific,
       });
     },
 
-    setStage: function (stage) {
+    setStage: function(stage) {
       this.data.select = stage;
       send('admin:stage', {
         stage: stage,
       }, false);
     },
 
-    setSound: function (sound) {
+    setSound: function(sound) {
       send('admin:sound', {
         sound: sound,
       }, false);
     },
 
-    setChapter: function (chapter) {
+    setChapter: function(chapter) {
       this.data.select = chapter;
       send('admin:chapter', {
         chapter: chapter,
       }, false);
     },
 
-    getYTImage: function (id, resolution) {
+    getYTImage: function(id, resolution) {
       resolution = resolution || 'sddefault';
       return 'http://img.youtube.com/vi/' + id + '/' + resolution + '.jpg';
     },

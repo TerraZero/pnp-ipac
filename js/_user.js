@@ -1,12 +1,13 @@
-const socket = io();
+var socket = io();
 
-let meta = {
+var meta = {
   uuid: getCookie('pnp-uuid') || null,
 };
-const data = {
+var data = {
   display: 'none',
   data: null,
   loading: true,
+  fullscreen: false,
   frames: {
     update: {
       current: null,
@@ -15,7 +16,7 @@ const data = {
   },
 };
 
-const app = new Vue({
+var app = new Vue({
   el: '#app',
   data: data,
 
@@ -64,9 +65,9 @@ const app = new Vue({
     },
 
     onClickSkillChange: function(delta) {
-      const frame = this.frames.update;
-      const newCurrent = frame.state.current + delta;
-      const total = this.getCostsTotal(frame.current.total, newCurrent, frame.current.cost);
+      var frame = this.frames.update;
+      var newCurrent = frame.state.current + delta;
+      var total = this.getCostsTotal(frame.current.total, newCurrent, frame.current.cost);
 
       if (frame.current.total <= newCurrent && this.data.user.points - total >= 0) {
         frame.state.current = newCurrent;
@@ -76,8 +77,8 @@ const app = new Vue({
     },
 
     onClickHealthChange: function(delta) {
-      const frame = this.frames.update;
-      const newCurrent = frame.state.current + delta;
+      var frame = this.frames.update;
+      var newCurrent = frame.state.current + delta;
 
       if (newCurrent >= 0 && newCurrent <= frame.current.total) {
         frame.state.current = newCurrent;
@@ -92,9 +93,9 @@ const app = new Vue({
     },
 
     getCostsTotal: function(from, to, cost) {
-      let costs = 0;
+      var costs = 0;
 
-      for (let i = from; i < to; i++) {
+      for (var i = from; i < to; i++) {
         costs += this.getCosts(cost, i);
       }
       return costs;
@@ -116,7 +117,7 @@ const app = new Vue({
     },
 
     getExtraPointsLabel: function(specific) {
-      const extraPoints = this.getExtraPoints(specific);
+      var extraPoints = this.getExtraPoints(specific);
 
       switch (specific.orientation) {
         case 'negative':
@@ -136,14 +137,23 @@ const app = new Vue({
       }
     },
 
+    onClickFullscreen: function() {
+      if (this.fullscreen) {
+        exitFullScreen();
+      } else {
+        enterFullScreen();
+      }
+      this.fullscreen = !this.fullscreen;
+    },
+
   },
 
   computed: {
 
     calcPoints: function() {
-      let points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
+      var points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
 
-      for (const key in this.data.specifics) {
+      for (var key in this.data.specifics) {
         if (this.data.specifics[key].active) {
           points += this.getExtraPoints(this.data.specifics[key]);
         }

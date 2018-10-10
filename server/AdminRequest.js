@@ -65,7 +65,9 @@ module.exports = class AdminRequest {
   forceRequest(user, args) {
     const device = sys.storage.getDeviceByUser(user);
 
-    device.socket().emit('force:request', args);
+    if (device !== null) {
+      device.socket().emit('force:request', args);
+    }
   }
 
 }

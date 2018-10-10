@@ -6,3 +6,14 @@ include _video
       +video('intro')
   .intro__layer
     img.intro__image(v-bind:class="introClasses()", v-bind:style="introStyles()", v-bind:src="introSrc()")
+
+.scene__stage(v-if="data && data.stage")
+    .scene__image(v-bind:style="{'background-image': 'url(' + data.stage.image + ')'}")
+  .scene__chapter(v-if="chapter")
+    .scene__chapter_text(v-bind:style="getChapterStyle()")
+      | {{ chapter.text }}
+  .scene__sound_wrapper
+    .scene__sound.scene__player(v-bind:class="videos.sound")
+      #sound
+    .scene__music.scene__player(v-bind:class="videos.music")
+      #music

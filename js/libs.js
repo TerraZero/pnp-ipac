@@ -22,9 +22,17 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function enterFullScreen() {
-  this.funcRequestFullScreen = this.$element.requestFullScreen || this.$element.webkitRequestFullScreen || this.$element.mozRequestFullScreen || this.$element.msRequestFullScreen || null;
+  var funcRequestFullScreen = document.body.requestFullScreen || document.body.webkitRequestFullScreen || document.body.mozRequestFullScreen || document.body.msRequestFullScreen || null;
+
+  if (funcRequestFullScreen) {
+    funcRequestFullScreen.call(document.body);
+  }
 }
 
 function exitFullScreen() {
-  this.funcExitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitCancelFullScreen || document.msExitFullscreen || null;
+  var funcExitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitCancelFullScreen || document.msExitFullscreen || null;
+
+  if (funcExitFullscreen) {
+    funcExitFullscreen.call(document);
+  }
 }

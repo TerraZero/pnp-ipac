@@ -45,10 +45,10 @@ module.exports = class Menu {
       buttons: {},
     };
 
-    const devices = sys.storage.devices();
+    const users = sys.storage.users();
 
-    for (const index in devices) {
-      const user = devices[index].user();
+    for (const index in users) {
+      const user = users[index];
 
       if (user) {
         second.buttons[user.name] = {

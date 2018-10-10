@@ -4,19 +4,13 @@ block append before
   - libs.push('/socket.io/socket.io.js');
   - libs.push('/js/vue.min.js');
   - libs.push('https://www.youtube.com/iframe_api');
-  - scripts.push('/js/_intro.js')
+  - scripts.push('/js/scene/_animation.js')
+  - scripts.push('/js/scene/_ani_intro.js')
+  - scripts.push('/js/scene/_video.js')
   - scripts.push('/js/_scene.js');
+  - body = 'scene';
 
 block app
   .scene
-    include scene/_intro
-    .scene__stage(v-if="data && data.stage")
-      .scene__image(v-bind:style="{'background-image': 'url(' + data.stage.image + ')'}")
-    .scene__chapter(v-if="chapter")
-      .scene__chapter_text(v-bind:style="getChapterStyle()")
-        | {{ chapter.text }}
-    .scene__sound_wrapper
-      .scene__sound.scene__player(v-bind:class="videos.sound")
-        #sound
-      .scene__music.scene__player(v-bind:class="videos.music")
-        #music
+    include scene/_sound
+    include scene/_stage
