@@ -119,6 +119,15 @@
     "name": "Kampf",
     "icon": "battle",
     "properties": {
+      "ram": {
+        "type": "skill",
+        "name": "Rammen",
+        "sample": [
+          "KK"
+        ],
+        "value": 0,
+        "cost": 4
+      },
       "combat": {
         "type": "skill",
         "name": "Nahkampf",

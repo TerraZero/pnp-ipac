@@ -20,3 +20,11 @@ function setCookie(cname, cvalue, exdays) {
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
+
+function enterFullScreen() {
+  this.funcRequestFullScreen = this.$element.requestFullScreen || this.$element.webkitRequestFullScreen || this.$element.mozRequestFullScreen || this.$element.msRequestFullScreen || null;
+}
+
+function exitFullScreen() {
+  this.funcExitFullscreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitCancelFullScreen || document.msExitFullscreen || null;
+}
