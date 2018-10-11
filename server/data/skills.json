@@ -14,9 +14,9 @@
         "value": 0,
         "cost": 2
       },
-      "mathematics": {
+      "logical": {
         "type": "skill",
-        "name": "Mathematik",
+        "name": "Logisches Denken",
         "sample": [
           "IN",
           "IN",
@@ -25,31 +25,9 @@
         "value": 0,
         "cost": 2
       },
-      "technical": {
-        "type": "skill",
-        "name": "Technisches Wissen",
-        "sample": [
-          "GE",
-          "GE",
-          "IN"
-        ],
-        "value": 0,
-        "cost": 2
-      },
-      "mechanical": {
-        "type": "skill",
-        "name": "Mechanisches Wissen",
-        "sample": [
-          "GE",
-          "IN",
-          "IN"
-        ],
-        "value": 0,
-        "cost": 2
-      },
       "survival": {
         "type": "skill",
-        "name": "Überlebenstechniken",
+        "name": "Techniken des Überlebens",
         "sample": [
           "GE",
           "IN",
@@ -97,26 +75,37 @@
         "sample": [
           "IN",
           "IN",
-          "GS"
+          "GE"
         ],
         "value": 0,
         "cost": 2
       },
-      "meteorology": {
+      "architecture": {
         "type": "skill",
-        "name": "Meteorologie",
+        "name": "Architektur",
         "sample": [
-          "AU",
           "IN",
-          "IN"
+          "IN",
+          "CH"
+        ],
+        "value": 0,
+        "cost": 2
+      },
+      "trap": {
+        "type": "skill",
+        "name": "Fallen",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
         ],
         "value": 0,
         "cost": 2
       }
     }
   },
-  "battle": {
-    "name": "Kampf",
+  "body": {
+    "name": "Körperliches",
     "icon": "battle",
     "properties": {
       "ram": {
@@ -194,17 +183,6 @@
         "value": 0,
         "cost": 2
       },
-      "weapons_knowledge": {
-        "type": "skill",
-        "name": "Waffenkenntnis",
-        "sample": [
-          "IN",
-          "IN",
-          "GS"
-        ],
-        "value": 0,
-        "cost": 2
-      },
       "bomb": {
         "type": "skill",
         "name": "Bombenbau",
@@ -215,20 +193,14 @@
         ],
         "value": 0,
         "cost": 2
-      }
-    }
-  },
-  "physical": {
-    "name": "Körperliches",
-    "icon": "physical",
-    "properties": {
+      },
       "sneak": {
         "type": "skill",
         "name": "Schleichen",
         "sample": [
-          "KK",
-          "AU",
-          "GE"
+          "GE",
+          "GE",
+          "GS"
         ],
         "value": 0,
         "cost": 2
@@ -260,7 +232,7 @@
         "name": "Werfen",
         "sample": [
           "KK",
-          "GE",
+          "AU",
           "GE"
         ],
         "value": 0,
@@ -270,9 +242,20 @@
         "type": "skill",
         "name": "Schwimmen",
         "sample": [
-          "KK",
-          "KK",
-          "AU"
+          "AU",
+          "AU",
+          "KK"
+        ],
+        "value": 0,
+        "cost": 2
+      },
+      "run": {
+        "type": "skill",
+        "name": "Rennen",
+        "sample": [
+          "AU",
+          "AU",
+          "GE"
         ],
         "value": 0,
         "cost": 2
@@ -294,7 +277,7 @@
         "sample": [
           "KK",
           "AU",
-          "AU"
+          "IN"
         ],
         "value": 0,
         "cost": 2
@@ -305,7 +288,7 @@
     "name": "Soziales",
     "icon": "social",
     "properties": {
-      "mechanics": {
+      "persuade": {
         "type": "skill",
         "name": "Überreden",
         "sample": [
@@ -316,9 +299,9 @@
         "value": 0,
         "cost": 2
       },
-      "mathematics": {
+      "people": {
         "type": "skill",
-        "name": "Menschenkenntnis",
+        "name": "Gestik und Mimik",
         "sample": [
           "IN",
           "CH",
@@ -327,29 +310,29 @@
         "value": 0,
         "cost": 2
       },
-      "technical": {
+      "lie": {
         "type": "skill",
         "name": "Lügen",
         "sample": [
-          "CH",
+          "IN",
           "CH",
           "GS"
         ],
         "value": 0,
         "cost": 2
       },
-      "mechanical": {
+      "calm": {
         "type": "skill",
         "name": "Beruhigen",
         "sample": [
           "CH",
           "CH",
-          "GS"
+          "AU"
         ],
         "value": 0,
         "cost": 2
       },
-      "survival": {
+      "bewitch": {
         "type": "skill",
         "name": "Betören",
         "sample": [
@@ -360,18 +343,18 @@
         "value": 0,
         "cost": 2
       },
-      "track_read": {
+      "inspire": {
         "type": "skill",
         "name": "Begeistern / Führen",
         "sample": [
-          "GS",
+          "AU",
           "CH",
           "CH"
         ],
         "value": 0,
         "cost": 2
       },
-      "botany": {
+      "trading": {
         "type": "skill",
         "name": "Handeln",
         "sample": [
@@ -382,35 +365,13 @@
         "value": 0,
         "cost": 2
       },
-      "medicine": {
+      "manipulate": {
         "type": "skill",
         "name": "Manipulieren",
         "sample": [
           "GS",
           "CH",
           "CH"
-        ],
-        "value": 0,
-        "cost": 2
-      },
-      "chemistry": {
-        "type": "skill",
-        "name": "Landliches Wissen",
-        "sample": [
-          "IN",
-          "GS",
-          "GS"
-        ],
-        "value": 0,
-        "cost": 2
-      },
-      "meteorology": {
-        "type": "skill",
-        "name": "Urbanes Wissen",
-        "sample": [
-          "CH",
-          "GS",
-          "GS"
         ],
         "value": 0,
         "cost": 2

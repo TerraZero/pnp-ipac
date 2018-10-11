@@ -1,12 +1,37 @@
 {
+  "antiquarian": {
+    "name": "Antiquar",
+    "description": [
+      "- Sie sucht, wo andere verzweifeln ... und sieht, was andere zerbricht. -"
+    ],
+    "modify": []
+  },
+  "arbalest": {
+    "name": "Arblast",
+    "description": [
+      "- Schießen, Bandagen und Plündern: die Tanzschritte des Kriegers. -"
+    ],
+    "modify": []
+  },
+  "bounty_hunter": {
+    "name": "Kopfgeldjäger",
+    "description": [
+      "The thrill of the hunt... The promise of payment..."
+    ],
+    "modify": []
+  },
   "paladin": {
     "name": "Paladin",
     "description": [
+      "- Eine mächtige Schwerthand, verankert durch einen heiligen Zweck. Ein eifriger Krieger. -",
+      "Ein Gläubiger Ritter der seinem Kodex treu bleibt: beschütze die Unschuldigen und bestrafe die Schuldigen.",
+      "Geschicklichkeit: -3",
       "Stärke: +1",
       "Parade: +2",
       "Initiative: +10 (Negativ)",
       "Lebenspunkte: +10",
-      "Moral: +5"
+      "Moral: +5",
+      "Spezifika: Gläubig"
     ],
     "modify": {
       "user": {
@@ -15,6 +40,7 @@
         "mental": 5
       },
       "feature": {
+        "skill": -3,
         "fight": 1,
         "parade": 2
       },
@@ -22,5 +48,75 @@
         "bladed": 3
       }
     }
+  },
+  "grave_robber": {
+    "name": "Grabräuber",
+    "description": [
+      "To those with the keen eye, gold gleams like a dagger's point."
+    ],
+    "modify": []
+  },
+  "hellion": {
+    "name": "Barbar",
+    "description": [
+      "Barbaric rage and unrelenting savagery make for a powerful ally."
+    ],
+    "modify": []
+  },
+  "highwayman": {
+    "name": "Bandit",
+    "description": [
+      "Elusive, evasive, persistent. Righteous traits for a rogue."
+    ],
+    "modify": []
+  },
+  "houndmaster": {
+    "name": "Hundemeister",
+    "description": [
+      "A lawman and his faithful beast. A bond forged by battle and bloodshed."
+    ],
+    "modify": []
+  },
+  "jester": {
+    "name": "Joker",
+    "description": [
+      "He will be laughing still... at the end."
+    ],
+    "modify": []
+  },
+  "leper": {
+    "name": "Verstoßener",
+    "description": [
+      "This man understands that adversity and existence are one and the same."
+    ],
+    "modify": []
+  },
+  "man_at_arms": {
+    "name": "Waffenmeister",
+    "description": [
+      "The raw strength of youth may be spent, but his eyes hold the secrets of a hundred campaigns."
+    ],
+    "modify": []
+  },
+  "occultist": {
+    "name": "Okkultist",
+    "description": [
+      "To fight the abyss, one must know it..."
+    ],
+    "modify": []
+  },
+  "plague_doctor": {
+    "name": "Pestdoktor",
+    "description": [
+      "What better laboratory than the blood-soaked battlefield?"
+    ],
+    "modify": []
+  },
+  "Vestal": {
+    "name": "Nonne",
+    "description": [
+      "A sister of battle. Pious and unrelenting."
+    ],
+    "modify": []
   }
 }
