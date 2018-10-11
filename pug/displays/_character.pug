@@ -1,6 +1,12 @@
 include _updateFrame
 
 .page__content__character(v-if="data.select == 'character'")
+  .character
+    .character__image_wrapper
+      img.character__image(v-bind:src="data.profession.image")
+    .character__descriptions
+      .character__description(v-for="line in data.profession.description", v-bind:class="{italic: line.endsWith('-'), bold: line.endsWith('.') || line.endsWith('!')}")
+        | {{ line }}
   .table.table--character
     .table__row
       .table__col.table__col__name

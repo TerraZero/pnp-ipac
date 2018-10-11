@@ -9,6 +9,11 @@ module.exports = class RegisterForm {
       form: 'RegisterForm',
       title: 'Register',
       fields: {
+        profession: {
+          label: 'Clan',
+          value: '',
+          options: {},
+        },
         age: {
           label: 'Alter [3 * d20 + 20]',
           value: '',
@@ -25,11 +30,6 @@ module.exports = class RegisterForm {
             },
           }
         },
-        profession: {
-          label: 'Clan',
-          value: '',
-          options: {},
-        },
       },
       professions: professions,
       specifics: this.getSpecifics(),
@@ -45,6 +45,7 @@ module.exports = class RegisterForm {
       build.fields.profession.options[profession] = {
         value: professions[profession].name,
         description: professions[profession].description,
+        image: professions[profession].image,
       };
     }
 

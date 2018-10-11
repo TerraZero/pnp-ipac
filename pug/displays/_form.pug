@@ -20,6 +20,7 @@
                 option(v-for="(value, option) in field.options", v-bind:value="option")
                   | {{ value.value }}
               .field__option__descriptions(v-if="field.value && field.options[field.value].description")
+                img.field__option__image(v-if="field.options[field.value].image", v-bind:src="field.options[field.value].image")
                 .field__option__descriptions__line(v-for="line in field.options[field.value].description", v-bind:class="{italic: line.endsWith('-'), bold: line.endsWith('.') || line.endsWith('!')}")
                   | {{ line }}
             .field__error(v-if="field.error")
