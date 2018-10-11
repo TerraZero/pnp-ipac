@@ -16,7 +16,7 @@
   "bounty_hunter": {
     "name": "Kopfgeldjäger",
     "description": [
-      "The thrill of the hunt... The promise of payment..."
+      "- Der Nervenkitzel der Jagd ... Das Versprechen der Zahlung ... -"
     ],
     "modify": []
   },
@@ -52,21 +52,21 @@
   "grave_robber": {
     "name": "Grabräuber",
     "description": [
-      "To those with the keen eye, gold gleams like a dagger's point."
+      "- Für jene mit dem scharfen Auge, schimmert Gold wie eine Dolchspitze. -"
     ],
     "modify": []
   },
   "hellion": {
     "name": "Barbar",
     "description": [
-      "Barbaric rage and unrelenting savagery make for a powerful ally."
+      "- Barbarische Wut und unerbittliche Brutalität machen einen mächtigen Verbündeten. -"
     ],
     "modify": []
   },
   "highwayman": {
     "name": "Bandit",
     "description": [
-      "Elusive, evasive, persistent. Righteous traits for a rogue."
+      "- Trügerisch, ausweichend, ausdauernd. Rechtschaffene Züge für einen Schurken. -"
     ],
     "modify": []
   },
