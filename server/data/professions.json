@@ -73,49 +73,49 @@
   "houndmaster": {
     "name": "Hundemeister",
     "description": [
-      "A lawman and his faithful beast. A bond forged by battle and bloodshed."
+      "- Ein Gesetzeshüter und sein treues Tier. Eine Verbindung geschweißt durch Kampf und Blutvergießen. -"
     ],
     "modify": []
   },
   "jester": {
     "name": "Joker",
     "description": [
-      "He will be laughing still... at the end."
+      "- Er wird immer noch lachen ... am Ende. -"
     ],
     "modify": []
   },
   "leper": {
     "name": "Verstoßener",
     "description": [
-      "This man understands that adversity and existence are one and the same."
+      "- Dieser Mann versteht, dass Bitternis und Existenz ein und dasselbe sind. -"
     ],
     "modify": []
   },
   "man_at_arms": {
     "name": "Waffenmeister",
     "description": [
-      "The raw strength of youth may be spent, but his eyes hold the secrets of a hundred campaigns."
+      "- Die rohe Kraft der Jugend mag vergangen sein, aber seine Augen halten die Geheimnisse von hundert Leben. -"
     ],
     "modify": []
   },
   "occultist": {
     "name": "Okkultist",
     "description": [
-      "To fight the abyss, one must know it..."
+      "- Um den Abgrund zu bekämpfen, muss man ihn kennen ... -"
     ],
     "modify": []
   },
   "plague_doctor": {
     "name": "Pestdoktor",
     "description": [
-      "What better laboratory than the blood-soaked battlefield?"
+      "- Was macht ein besseres Labor als das blutgetränkte Schlachtfeld? -"
     ],
     "modify": []
   },
   "Vestal": {
     "name": "Nonne",
     "description": [
-      "A sister of battle. Pious and unrelenting."
+      "- Eine Schwester der Schlacht. Fromm und unerbittlich. -"
     ],
     "modify": []
   }
