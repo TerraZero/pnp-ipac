@@ -2,21 +2,27 @@
   "antiquarian": {
     "name": "Antiquar",
     "description": [
-      "- Sie sucht, wo andere verzweifeln ... und sieht, was andere zerbricht. -"
+      "- Sie sucht, wo andere verzweifeln ... und sieht, was andere zerbricht. -",
+      "Der Antiquarian trägt keine Rüstung, sondern verlässt sich auf die Kraft der unzähligen antiken Reliquien, die sie auf ihren Reisen gesammelt hat. Ihr Blick für Raritäten wird durch die beunruhigenden Eigenschaften der Dämpfe ihres Räucherofens verstärkt, die der Gruppe bei ... problematischen Begegnungen helfen können.",
+      "Spezifika: Gläubig"
     ],
     "modify": []
   },
   "arbalest": {
     "name": "Arblast",
     "description": [
-      "- Schießen, Bandagen und Plündern: die Tanzschritte des Kriegers. -"
+      "- Schießen, Bandagen und Plündern: die Tanzschritte des Kriegers. -",
+      "Die Arbalest hat ihren Namen von der massiven Armbrust, die sie in die Schlacht trägt. Sie ist in der Lage, Gegner mit einer schwindelerregenden Munitionsmenge aus der Entfernung zu dezimieren. Sie trägt eine mittlere Rüstung für erhöhten Schutz vor den Salven die zurück kommen ...",
+      "Spezifika: Scharfschütze"
     ],
     "modify": []
   },
   "bounty_hunter": {
     "name": "Kopfgeldjäger",
     "description": [
-      "- Der Nervenkitzel der Jagd ... Das Versprechen der Zahlung ... -"
+      "- Der Nervenkitzel der Jagd ... Das Versprechen der Zahlung ... -",
+      "Der Kopfgeldjäger bevorzugt einen Handaxt und einen Enterhaken, eine Kombination, die es ihm ermöglicht, seine Beute mit professioneller Effizienz zu fangen und zu vollstrecken. Seine robuste Leder- und Skalenpanzerung gewährt angemessenen Schutz, ohne dabei auf Mobilität zu verzichten.",
+      "Spezifika: Ungläübig"
     ],
     "modify": []
   },
@@ -24,7 +30,7 @@
     "name": "Paladin",
     "description": [
       "- Eine mächtige Schwerthand, verankert durch einen heiligen Zweck. Ein eifriger Krieger. -",
-      "Ein Gläubiger Ritter der seinem Kodex treu bleibt: beschütze die Unschuldigen und bestrafe die Schuldigen.",
+      "Der Paladin trägt eine schwere Rüstung und führt ein Langschwert. Während ihm das ausgezeichneten Schutz und Schaden gewährt, beschränkt seine Rüstung die Bewegung.",
       "Geschicklichkeit: -3",
       "Stärke: +1",
       "Parade: +2",
@@ -52,70 +58,80 @@
   "grave_robber": {
     "name": "Grabräuber",
     "description": [
-      "- Für jene mit dem scharfen Auge, schimmert Gold wie eine Dolchspitze. -"
+      "- Für jene mit dem scharfen Auge, schimmert Gold wie eine Dolchspitze. -",
+      "Ein leichter Mantel ist alles, was ein Grabräuber braucht, er bevorzugt Mobilität und Geschicklichkeit gegenüber Schutz. In ihrem Gewand verbergen sich messerscharfe Wurfdolche und an ihrem rücken geschmiegt siehe da - eine Spitzhacke!"
     ],
     "modify": []
   },
   "hellion": {
     "name": "Barbar",
     "description": [
-      "- Barbarische Wut und unerbittliche Brutalität machen einen mächtigen Verbündeten. -"
+      "- Barbarische Wut und unerbittliche Brutalität machen einen mächtigen Verbündeten. -",
+      "Rohleder und Pelze bieten zwar wenig Schutz, aber der Barbar trägt die Narben der Schlacht mit stolz. Seine Priorität ist es, sein gewaltigen Speer im Blut seiner Gegner zu baden."
     ],
     "modify": []
   },
   "highwayman": {
     "name": "Bandit",
     "description": [
-      "- Trügerisch, ausweichend, ausdauernd. Rechtschaffene Züge für einen Schurken. -"
+      "- Trügerisch, ausweichend, ausdauernd. Rechtschaffene Züge für einen Schurken. -",
+      "Der verstärkte Überzieher des Banditen einige Schläge dämpfen, aber er verlässt sich mehr auf seine ausgezeichneten Ausweichmanöver. Seine Pistole und sein Kurzschwert bieten ihm eine große Vielseitigkeit. Er wird nie Überrascht oder gar Überrumpelt."
     ],
     "modify": []
   },
   "houndmaster": {
     "name": "Hundemeister",
     "description": [
-      "- Ein Gesetzeshüter und sein treues Tier. Eine Verbindung geschweißt durch Kampf und Blutvergießen. -"
+      "- Ein Gesetzeshüter und sein treues Tier. Eine Verbindung geschweißt durch Kampf und Blutvergießen. -",
+      "Immer noch in seiner abgetragenen Gendarmenuniform, vertraut der Hundemeister auf seine Ausweichenkünste anstatt auf seine Rüstung. Seine Keule ist ein wirkungsvolles Betäubungsmittel, aber es ist der Hund, der die lähmendsten Schläge des Paares liefert, besonders wenn er mit einem belebenden Snack gefüttert wurde!"
     ],
     "modify": []
   },
   "jester": {
-    "name": "Joker",
+    "name": "Narr",
     "description": [
-      "- Er wird immer noch lachen ... am Ende. -"
+      "- Er wird immer noch lachen ... am Ende. -",
+      "Der Narr, der nur mit einem schimmeligem Tuch bekleidet ist, verspottet die Schlacht. Nur ein Idiot würde die brutale Ader seiner geschärften Sichel oder das disharmonische Gedränge seiner Laute unterschätzen."
     ],
     "modify": []
   },
   "leper": {
     "name": "Verstoßener",
     "description": [
-      "- Dieser Mann versteht, dass Bitternis und Existenz ein und dasselbe sind. -"
+      "- Dieser Mann versteht, dass Bitternis und Existenz ein und dasselbe sind. -",
+      "Schwer und einschränkend kann die bronzierte Rüstung des Verstoßenen alle Arten von Bestrafungen aufnehmen. Sein schweres Schwert schwingt nur langsam, aber er fügt jedem, der in seinem unaufhaltbaren Bogen gefangen ist, einen vernichtenden Schlag zu."
     ],
     "modify": []
   },
   "man_at_arms": {
     "name": "Waffenmeister",
     "description": [
-      "- Die rohe Kraft der Jugend mag vergangen sein, aber seine Augen halten die Geheimnisse von hundert Leben. -"
+      "- Die rohe Kraft der Jugend mag vergangen sein, aber seine Augen halten die Geheimnisse von hundert Leben. -",
+      "In der schwersten Rüstung ist der Waffenmeister ein Keulen schwingender schwerer Schläger. Schnelles reagieren und anpassen ist seine Trumpfkarte im Kampf. Am effektivsten, mit seinem unzerbrechlichen Schild, ist er im Schützen seiner Begleiter."
     ],
     "modify": []
   },
   "occultist": {
     "name": "Okkultist",
     "description": [
-      "- Um den Abgrund zu bekämpfen, muss man ihn kennen ... -"
+      "- Um den Abgrund zu bekämpfen, muss man ihn kennen ... -",
+      "Wissenschaftliche Gewänder, die besser in die Bibliothek passen als in die harte Realität des Abenteuers, sind alles, was der Okkultist mitgebracht hat. Seine Rituale und Gesänge erfordern geschickte Bewegungen von Hand und Finger um die Kraft seines krankhaften Fetischs zu kanalisieren: den polierten Schädel eines Toten."
     ],
     "modify": []
   },
   "plague_doctor": {
     "name": "Pestdoktor",
     "description": [
-      "- Was macht ein besseres Labor als das blutgetränkte Schlachtfeld? -"
+      "- Was macht ein besseres Labor als das blutgetränkte Schlachtfeld? -",
+      "Der Pestdoktor trägt nur ein leichtes Tuch, um möglichst weit vom Nahkampf entfernt zu sein. Aus der Entfernung schlägt er mit giftigen Beutel, die ihre Feinde blenden, desorientieren und vergiften können zu."
     ],
     "modify": []
   },
   "Vestal": {
     "name": "Nonne",
     "description": [
-      "- Eine Schwester der Schlacht. Fromm und unerbittlich. -"
+      "- Eine Schwester der Schlacht. Fromm und unerbittlich. -",
+      "Eine gesegnete Rüstung umhüllt die Nonne, da sie gleichermaßen schreckliche Gewalt und heilenden Komfort liefert. Eine Keule in der einen Hand und ein heiliges Buch in der anderen - ein effektiver Kontrast für die heiligen!"
     ],
     "modify": []
   }
