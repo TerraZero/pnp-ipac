@@ -124,7 +124,10 @@ module.exports = class Storage {
 
   getUserProfession(user) {
     const professions = sys.loadData('professions');
-    return professions[user.profession];
+    const profession = professions[user.profession];
+
+    profession.description = this.getProfessionDescription(profession);
+    return profession;
   }
 
   getSkills(user) {
@@ -253,6 +256,74 @@ module.exports = class Storage {
       points: user.points,
       ini: user.ini,
     });
+  }
+
+  getSkillsFlatten() {
+    const skills = sys.loadData('skills');
+    const flatten = {};
+
+    for (const page in skills) {
+      for (const key in skills[page].properties) {
+        flatten[key] = skills[page].properties[key];
+      }
+    }
+    return flatten;
+  }
+
+  getProfessions() {
+    const skills = this.getSkillsFlatten();
+    const features = sys.loadData('features');
+    const professions = sys.loadData('professions');
+
+    for (const index in professions) {
+      professions[index].description = this.getProfessionDescription(professions[index], skills, features);
+    }
+    return professions;
+  }
+
+  getProfessionDescription(profession, skills = null, features = null) {
+    if (skills === null) skills = this.getSkillsFlatten();
+    if (features === null) features = sys.loadData('features');
+    const descriptions = [];
+
+    for (const line of profession.description) {
+      descriptions.push(line);
+    }
+
+    if (profession.modify.user) {
+      const user = profession.modify.user;
+
+      if (user.live) descriptions.push('Lebenspunkte: ' + this._getNumber(user.live));
+      if (user.mental) descriptions.push('Moral: ' + this._getNumber(user.mental));
+      if (user.ini) {
+        if (user.ini > 0) {
+          descriptions.push('Initiative: ' + this._getNumber(user.ini) + ' (Negativ)');
+        } else {
+          descriptions.push('Initiative: ' + this._getNumber(user.ini) + ' (Positiv)')
+        }
+      }
+    }
+    if (profession.modify.feature) {
+      for (const key in profession.modify.feature) {
+        descriptions.push(features[key].name + ': ' + this._getNumber(profession.modify.feature[key]));
+      }
+    }
+    if (profession.modify.skill) {
+      for (const key in profession.modify.skill) {
+        descriptions.push(skills[key].name + ': ' + this._getNumber(profession.modify.skill[key]));
+      }
+    }
+    return descriptions;
+  }
+
+  _getNumber(number) {
+    if (number > 0) {
+      return '+' + Math.abs(number);
+    } else if (number < 0) {
+      return '-' + Math.abs(number);
+    } else {
+      return '+/- 0';
+    }
   }
 
 }

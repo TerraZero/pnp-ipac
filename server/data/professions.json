@@ -3,14 +3,7 @@
     "name": "Antiquar",
     "description": [
       "- Sie sucht, wo andere verzweifeln ... und sieht, was andere zerbricht. -",
-      "Der Antiquarian trägt keine Rüstung, sondern verlässt sich auf die Kraft der unzähligen antiken Reliquien, die sie auf ihren Reisen gesammelt hat. Ihr Blick für Raritäten wird durch die beunruhigenden Eigenschaften der Dämpfe ihres Räucherofens verstärkt, die der Gruppe bei ... problematischen Begegnungen helfen können.",
-      "Parade: -3",
-      "Ausdauer: +1",
-      "Geistige Stärke: +3",
-      "Körperkraft: -1",
-      "Wurfwaffen: +2",
-      "Chemie: +2",
-      "Exotische Waffen: +1"
+      "Der Antiquarian trägt keine Rüstung, sondern verlässt sich auf die Kraft der unzähligen antiken Reliquien, die sie auf ihren Reisen gesammelt hat. Ihr Blick für Raritäten wird durch die beunruhigenden Eigenschaften der Dämpfe ihres Räucherofens verstärkt, die der Gruppe bei ... problematischen Begegnungen helfen können."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2f3x2f34x2fBoujrvbsjbo.qohx3fwfstjpox3d0c6b5e7e0b47gg8d17d3e1743eeeec08_$/$/$/$/$?i10c.ua=1&i10c.dv=14",
     "modify": {
@@ -31,14 +24,7 @@
     "name": "Arblast",
     "description": [
       "- Schießen, Bandagen und Plündern: die Tanzschritte des Kriegers. -",
-      "Die Arbalest hat ihren Namen von der massiven Armbrust, die sie in die Schlacht trägt. Sie ist in der Lage, Gegner mit einer schwindelerregenden Munitionsmenge aus der Entfernung zu dezimieren. Sie trägt eine mittlere Rüstung für erhöhten Schutz vor den Salven die zurück kommen ...",
-      "Körperkraft: -2",
-      "Parade: +2",
-      "Schusswaffen Gewehre: +3",
-      "Exotische Waffen: +2",
-      "Waffentechnik: +3",
-      "Charme: +3",
-      "Initiative: +5 (Negativ)"
+      "Die Arbalest hat ihren Namen von der massiven Armbrust, die sie in die Schlacht trägt. Sie ist in der Lage, Gegner mit einer schwindelerregenden Munitionsmenge aus der Entfernung zu dezimieren. Sie trägt eine mittlere Rüstung für erhöhten Schutz vor den Salven die zurück kommen ..."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fgx2fggx2fBscbmftu.qohx2f561qy-Bscbmftu.qohx3fwfstjpox3d60bd2g54f4392b016gbebge5252bg582x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
@@ -61,15 +47,7 @@
     "name": "Kopfgeldjäger",
     "description": [
       "- Der Nervenkitzel der Jagd ... Das Versprechen der Zahlung ... -",
-      "Der Kopfgeldjäger bevorzugt einen Handaxt und einen Enterhaken, eine Kombination, die es ihm ermöglicht, seine Beute mit professioneller Effizienz zu fangen und zu vollstrecken. Seine robuste Leder- und Skalenpanzerung gewährt angemessenen Schutz, ohne dabei auf Mobilität zu verzichten.",
-      "Kampf: +1",
-      "Parade: +1",
-      "Körperkraft: +1",
-      "Charme: -1",
-      "Exotische Waffen: +4",
-      "Fallen: +2",
-      "Moral: -5",
-      "Handeln: +3"
+      "Der Kopfgeldjäger bevorzugt einen Handaxt und einen Enterhaken, eine Kombination, die es ihm ermöglicht, seine Beute mit professioneller Effizienz zu fangen und zu vollstrecken. Seine robuste Leder- und Skalenpanzerung gewährt angemessenen Schutz, ohne dabei auf Mobilität zu verzichten."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f2x2f24x2fCpvouzIvoufs.qohx2f561qy-CpvouzIvoufs.qohx3fwfstjpox3d80d9gd9gc60e0cg0c440g022b1b99792x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
@@ -93,16 +71,7 @@
     "name": "Paladin",
     "description": [
       "- Eine mächtige Schwerthand, verankert durch einen heiligen Zweck. Ein eifriger Krieger. -",
-      "Der Paladin trägt eine schwere Rüstung und führt ein Langschwert. Während ihm das ausgezeichneten Schutz und Schaden gewährt, beschränkt seine Rüstung die Bewegung.",
-      "Geschicklichkeit: -4",
-      "Klingenwaffen: +4",
-      "Ausdauer: -2",
-      "Charme: +2",
-      "Parade: +3",
-      "Initiative: +10 (Negativ)",
-      "Lebenspunkte: +10",
-      "Moral: +5",
-      "Begeistern / Führen: +2"
+      "Der Paladin trägt eine schwere Rüstung und führt ein Langschwert. Während ihm das ausgezeichneten Schutz und Schaden gewährt, beschränkt seine Rüstung die Bewegung."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2ffx2ffcx2fDsvtbefs.qohx2f561qy-Dsvtbefs.qohx3fwfstjpox3dge8f15884cd9fd04eecfgf897463fgeex26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
@@ -127,14 +96,7 @@
     "name": "Grabräuber",
     "description": [
       "- Für jene mit dem scharfen Auge, schimmert Gold wie eine Dolchspitze. -",
-      "Ein leichter Mantel ist alles, was ein Grabräuber braucht, er bevorzugt Mobilität und Geschicklichkeit gegenüber Schutz. In ihrem Gewand verbergen sich messerscharfe Wurfdolche und an ihrem rücken geschmiegt siehe da - eine Spitzhacke!",
-      "Parade: -1",
-      "Charme: -2",
-      "Geistige Stärke: +3",
-      "Wurfwaffen: +2",
-      "Exotische Waffen: +2",
-      "Immunsystem: +3",
-      "Initiative: -5 (Positiv)"
+      "Ein leichter Mantel ist alles, was ein Grabräuber braucht, er bevorzugt Mobilität und Geschicklichkeit gegenüber Schutz. In ihrem Gewand verbergen sich messerscharfe Wurfdolche und an ihrem rücken geschmiegt siehe da - eine Spitzhacke!"
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f1x2f14x2fHsbwf_Spccfs.qohx2f561qy-Hsbwf_Spccfs.qohx3fwfstjpox3d81b0f98526308d26eddfbge4e91b8670x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
@@ -157,36 +119,50 @@
     "name": "Barbar",
     "description": [
       "- Barbarische Wut und unerbittliche Brutalität machen einen mächtigen Verbündeten. -",
-      "Rohleder und Pelze bieten zwar wenig Schutz, aber der Barbar trägt die Narben der Schlacht mit stolz. Seine Priorität ist es, sein gewaltigen Speer im Blut seiner Gegner zu baden.",
-      "Körperkraft: +3",
-      "Lebenspunkte: +15",
-      "Klingenwaffen: +2",
-      "Exotische Waffen: +1",
-      "Geschicklichkeit: -2",
-      "Initiative: -5 (Positiv)",
-      "Kampf: +2",
-      "Parade: -1"
+      "Rohleder und Pelze bieten zwar wenig Schutz, aber der Barbar trägt die Narben der Schlacht mit stolz. Seine Priorität ist es, sein gewaltigen Speer im Blut seiner Gegner zu baden."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fdx2fdgx2fIfmmjpo.qohx2f561qy-Ifmmjpo.qohx3fwfstjpox3db342g6802f07dd91e973508b34d28d47x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": {}
+    "modify": {
+      "user": {
+        "live": 15,
+        "ini": -5
+      },
+      "feature": {
+        "body": 3,
+        "fight": 2,
+        "parade": -1,
+        "skill": -2
+      },
+      "skill": {
+        "bladed": 2,
+        "exotic": 1
+      }
+    }
   },
   "highwayman": {
     "name": "Bandit",
     "description": [
       "- Trügerisch, ausweichend, ausdauernd. Rechtschaffene Züge für einen Schurken. -",
-      "Der verstärkte Überzieher des Banditen einige Schläge dämpfen, aber er verlässt sich mehr auf seine ausgezeichneten Ausweichmanöver. Seine Pistole und sein Kurzschwert bieten ihm eine große Vielseitigkeit. Er wird nie Überrascht oder gar Überrumpelt.",
-      "Parade: +1",
-      "Schusswaffen Pistole: +4",
-      "Waffentechnik: +1",
-      "Fallen: +2",
-      "Charme: +1",
-      "Körperkraft: -1",
-      "Initiative: -5 (Positiv)",
-      "Geschicklichkeit: +1",
-      "Ausdauer: -2"
+      "Der verstärkte Überzieher des Banditen einige Schläge dämpfen, aber er verlässt sich mehr auf seine ausgezeichneten Ausweichmanöver. Seine Pistole und sein Kurzschwert bieten ihm eine große Vielseitigkeit. Er wird nie Überrascht oder gar Überrumpelt."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f7x2f78x2fIx78znbo.qohx2f561qy-Ix78znbo.qohx3fwfstjpox3dcg5c24fg1d7775742371b4886f4947b7x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "user": {
+        "ini": -5
+      },
+      "feature": {
+        "charm": 1,
+        "skill": 1,
+        "parade": 1,
+        "body": -1,
+        "endurance": -2
+      },
+      "skill": {
+        "pistol": 4,
+        "trap": 2,
+        "weapons_technology": 1
+      }
+    }
   },
   "houndmaster": {
     "name": "Hundemeister",
@@ -203,7 +179,7 @@
       "Spurenlesen: +3"
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fex2fe7x2fIpvoe_Nbtufs.qohx2f561qy-Ipvoe_Nbtufs.qohx3fwfstjpox3db0419b6c79e490e9ce36955g19412546x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {}
   },
   "jester": {
     "name": "Narr",

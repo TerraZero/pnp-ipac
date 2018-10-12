@@ -1,7 +1,7 @@
 module.exports = class RegisterForm {
 
   static build(request) {
-    const professions = sys.loadData('professions');
+    const professions = sys.storage.getProfessions();
     const features = sys.loadData('features');
 
     const build = {
