@@ -146,7 +146,7 @@
       },
       "pistol": {
         "type": "skill",
-        "name": "Schusswaffen Pistole",
+        "name": "Schusswaffen Nah",
         "sample": [
           "KF"
         ],
@@ -155,7 +155,7 @@
       },
       "rifles": {
         "type": "skill",
-        "name": "Schusswaffen Gewehre",
+        "name": "Schusswaffen Fern",
         "sample": [
           "KF"
         ],

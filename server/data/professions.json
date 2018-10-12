@@ -8,15 +8,16 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2f3x2f34x2fBoujrvbsjbo.qohx3fwfstjpox3d0c6b5e7e0b47gg8d17d3e1743eeeec08_$/$/$/$/$?i10c.ua=1&i10c.dv=14",
     "modify": {
       "feature": {
+        "body": -1,
         "endurance": 1,
         "parade": -3,
-        "body": -1,
+        "skill": 1,
         "spiritual": 3
       },
       "skill": {
         "chemistry": 2,
-        "throwing": 2,
-        "exotic": 1
+        "exotic": 2,
+        "throwing": 2
       }
     }
   },
@@ -29,17 +30,18 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fgx2fggx2fBscbmftu.qohx2f561qy-Bscbmftu.qohx3fwfstjpox3d60bd2g54f4392b016gbebge5252bg582x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
       "user": {
-        "ini": 5
+        "ini": 5,
+        "life": 10
       },
       "feature": {
-        "parade": 2,
         "body": -2,
-        "charm": 3
+        "intelligence": 1,
+        "parade": 1
       },
       "skill": {
-        "rifles": 3,
         "exotic": 2,
-        "weapons_technology": 3
+        "rifles": 3,
+        "weapons_technology": 4
       }
     }
   },
@@ -55,15 +57,15 @@
         "mental": -5
       },
       "feature": {
-        "body": 1,
-        "parade": 1,
-        "fight": 1,
-        "charm": -1
+        "charm": -3,
+        "fight": 2,
+        "parade": 1
       },
       "skill": {
-        "trap": 2,
         "exotic": 4,
-        "trading": 3
+        "trading": 2,
+        "trap": 4,
+        "weapons_technology": 1
       }
     }
   },
@@ -77,14 +79,14 @@
     "modify": {
       "user": {
         "ini": 10,
-        "life": 10,
+        "life": 5,
         "mental": 5
       },
       "feature": {
-        "skill": -3,
+        "charm": 1,
+        "endurance": -1,
         "parade": 3,
-        "charm": 2,
-        "endurance": -1
+        "skill": -2
       },
       "skill": {
         "bladed": 4,
@@ -104,14 +106,15 @@
         "ini": -5
       },
       "feature": {
-        "parade": -1,
         "charm": -2,
+        "parade": -1,
         "spiritual": 3
       },
       "skill": {
-        "exotic": 2,
-        "throwing": 2,
-        "immune": 3
+        "exotic": 1,
+        "immune": 4,
+        "throwing": 1,
+        "trading": 3
       }
     }
   },
@@ -124,13 +127,13 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fdx2fdgx2fIfmmjpo.qohx2f561qy-Ifmmjpo.qohx3fwfstjpox3db342g6802f07dd91e973508b34d28d47x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
       "user": {
-        "live": 15,
-        "ini": -5
+        "ini": -5,
+        "life": 10
       },
       "feature": {
         "body": 3,
         "fight": 2,
-        "parade": -1,
+        "parade": -2,
         "skill": -2
       },
       "skill": {
@@ -151,16 +154,15 @@
         "ini": -5
       },
       "feature": {
-        "charm": 1,
-        "skill": 1,
-        "parade": 1,
         "body": -1,
-        "endurance": -2
+        "endurance": -2,
+        "parade": 2,
+        "skill": 1
       },
       "skill": {
         "pistol": 4,
-        "trap": 2,
-        "weapons_technology": 1
+        "trap": 3,
+        "weapons_technology": 2
       }
     }
   },
@@ -168,114 +170,160 @@
     "name": "Hundemeister",
     "description": [
       "- Ein Gesetzeshüter und sein treues Tier. Eine Verbindung geschweißt durch Kampf und Blutvergießen. -",
-      "Immer noch in seiner abgetragenen Gendarmenuniform, vertraut der Hundemeister auf seine Ausweichenkünste anstatt auf seine Rüstung. Seine Keule ist ein wirkungsvolles Betäubungsmittel, aber es ist der Hund, der die lähmendsten Schläge des Paares liefert, besonders wenn er mit einem belebenden Snack gefüttert wurde!",
-      "Charme: +3",
-      "Parade: +1",
-      "Begeistern / Führen: +1",
-      "Initiative: -5 (Positiv)",
-      "Beruhigen: +2",
-      "Geistige Stärke: +1",
-      "Moral: +5",
-      "Spurenlesen: +3"
+      "Immer noch in seiner abgetragenen Gendarmenuniform, vertraut der Hundemeister auf seine Ausweichenkünste anstatt auf seine Rüstung. Seine Keule ist ein wirkungsvolles Betäubungsmittel, aber es ist der Hund, der die lähmendsten Schläge des Paares liefert, besonders wenn er mit einem belebenden Snack gefüttert wurde!"
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fex2fe7x2fIpvoe_Nbtufs.qohx2f561qy-Ipvoe_Nbtufs.qohx3fwfstjpox3db0419b6c79e490e9ce36955g19412546x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": {}
+    "modify": {
+      "user": {
+        "ini": -5
+      },
+      "feature": {
+        "charm": 3,
+        "endurance": 1,
+        "parade": 1,
+        "skill": -2,
+        "spiritual": -2
+      },
+      "skill": {
+        "calm": 2,
+        "inspire": 1,
+        "track_read": 3
+      }
+    }
   },
   "jester": {
     "name": "Narr",
     "description": [
       "- Er wird immer noch lachen ... am Ende. -",
-      "Der Narr, der nur mit einem schimmeligem Tuch bekleidet ist, verspottet die Schlacht. Nur ein Idiot würde die brutale Ader seiner geschärften Sichel oder das disharmonische Gedränge seiner Laute unterschätzen.",
-      "Parade: +3",
-      "Exotische Waffen: +2",
-      "Manipulieren: +2",
-      "Lügen / Täuschen: +4",
-      "Gestik und Mimik: +2",
-      "Charme: +2",
-      "Geistige Stärke: -2",
-      "Körperkraft: -2"
+      "Der Narr, der nur mit einem schimmeligem Tuch bekleidet ist, verspottet die Schlacht. Nur ein Idiot würde die brutale Ader seiner geschärften Sichel oder das disharmonische Gedränge seiner Laute unterschätzen."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2ffx2ff1x2fKftufs.qohx2f561qy-Kftufs.qohx3fwfstjpox3dc614231b13f8723b1792g9eb69387635x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "feature": {
+        "body": -2,
+        "charm": 2,
+        "parade": 3,
+        "spiritual": -2
+      },
+      "skill": {
+        "exotic": 2,
+        "lie": 4,
+        "manipulate": 2,
+        "people": 2
+      }
+    }
   },
   "leper": {
     "name": "Verstoßener",
     "description": [
       "- Dieser Mann versteht, dass Bitternis und Existenz ein und dasselbe sind. -",
-      "Schwer und einschränkend kann die bronzierte Rüstung des Verstoßenen alle Arten von Bestrafungen aufnehmen. Sein schweres Schwert schwingt nur langsam, aber er fügt jedem, der in seinem unaufhaltbaren Bogen gefangen ist, einen vernichtenden Schlag zu.",
-      "Charme: -4",
-      "Moral: -5",
-      "Klingenwaffen: +3",
-      "Parade: +1",
-      "Kampf: +2",
-      "Geistige Stärke: +2"
+      "Schwer und einschränkend kann die bronzierte Rüstung des Verstoßenen alle Arten von Bestrafungen aufnehmen. Sein schweres Schwert schwingt nur langsam, aber er fügt jedem, der in seinem unaufhaltbaren Bogen gefangen ist, einen vernichtenden Schlag zu."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fex2fe0x2fMfqfs.qohx2f486qy-Mfqfs.qohx3fwfstjpox3dg86fb1e1e6fggcbggbb17d9d646f4b9fx26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "user": {
+        "mental": -5
+      },
+      "feature": {
+        "charm": -4,
+        "fight": 2,
+        "parade": 1,
+        "spiritual": 2
+      },
+      "skill": {
+        "bladed": 3
+      }
+    }
   },
   "man_at_arms": {
     "name": "Waffenmeister",
     "description": [
       "- Die rohe Kraft der Jugend mag vergangen sein, aber seine Augen halten die Geheimnisse von hundert Leben. -",
-      "In der schwersten Rüstung ist der Waffenmeister ein Keulen schwingender schwerer Schläger. Schnelles reagieren und anpassen ist seine Trumpfkarte im Kampf. Am effektivsten, mit seinem unzerbrechlichen Schild, ist er im Schützen seiner Begleiter.",
-      "Initiative: +10 (Negativ)",
-      "Waffentechnik: +4",
-      "Exotische Waffen: +2",
-      "Klingenwaffen: +2",
-      "Nahkampf: +2",
-      "Wurfwaffen: +2",
-      "Geschicklichkeit: -2",
-      "Parade: +2",
-      "Kampf: +1"
+      "In der schwersten Rüstung ist der Waffenmeister ein Keulen schwingender schwerer Schläger. Schnelles reagieren und anpassen ist seine Trumpfkarte im Kampf. Am effektivsten, mit seinem unzerbrechlichen Schild, ist er im Schützen seiner Begleiter."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f5x2f53x2fNbo-Bu-Bsnt.qohx2f561qy-Nbo-Bu-Bsnt.qohx3fwfstjpox3dcbggc87g23f4f8164f2897f95ge020c1x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "user": {
+        "ini": 10
+      },
+      "feature": {
+        "fight": 1,
+        "parade": 2,
+        "skill": -2
+      },
+      "skill": {
+        "bladed": 2,
+        "combat": 2,
+        "exotic": 2,
+        "throwing": 2,
+        "weapons_technology": 4
+      }
+    }
   },
   "occultist": {
     "name": "Okkultist",
     "description": [
       "- Um den Abgrund zu bekämpfen, muss man ihn kennen ... -",
-      "Wissenschaftliche Gewänder, die besser in die Bibliothek passen als in die harte Realität des Abenteuers, sind alles, was der Okkultist mitgebracht hat. Seine Rituale und Gesänge erfordern geschickte Bewegungen von Hand und Finger um die Kraft seines krankhaften Fetischs zu kanalisieren: den polierten Schädel eines Toten.",
-      "Charme: -2",
-      "Parade: -1",
-      "Exotische Waffen: +2",
-      "Lügen / Täuschen: +2",
-      "Manipulieren: +2"
+      "Wissenschaftliche Gewänder, die besser in die Bibliothek passen als in die harte Realität des Abenteuers, sind alles, was der Okkultist mitgebracht hat. Seine Rituale und Gesänge erfordern geschickte Bewegungen von Hand und Finger um die Kraft seines krankhaften Fetischs zu kanalisieren: den polierten Schädel eines Toten."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2ffx2ff9x2fPddvmujtu.qohx2f561qy-Pddvmujtu.qohx3fwfstjpox3d7g4ddcgbgfdec5b1ed609de2bb29bcg7x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "feature": {
+        "charm": -2,
+        "parade": -1
+      },
+      "skill": {
+        "exotic": 2,
+        "lie": 2,
+        "manipulate": 2
+      }
+    }
   },
   "plague_doctor": {
     "name": "Pestdoktor",
     "description": [
       "- Was macht ein besseres Labor als das blutgetränkte Schlachtfeld? -",
-      "Der Pestdoktor trägt nur ein leichtes Tuch, um möglichst weit vom Nahkampf entfernt zu sein. Aus der Entfernung schlägt er mit giftigen Beutel, die ihre Feinde blenden, desorientieren und vergiften können zu.",
-      "Parade: -2",
-      "Medizin: +3",
-      "Körperkraft: -1",
-      "Wurfwaffen: +3",
-      "Initiative: -5 (Positiv)",
-      "Bombenbau: +2",
-      "Chemie: +2",
-      "Botanik: +2"
+      "Der Pestdoktor trägt nur ein leichtes Tuch, um möglichst weit vom Nahkampf entfernt zu sein. Aus der Entfernung schlägt er mit giftigen Beutel, die ihre Feinde blenden, desorientieren und vergiften können zu."
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f2x2f28x2fQmbhvf_Epdups.qohx2f561qy-Qmbhvf_Epdups.qohx3fwfstjpox3d2f053c6673bg4815615e07591bffb80cx26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "user": {
+        "ini": -5
+      },
+      "feature": {
+        "body": -1,
+        "parade": -2
+      },
+      "skill": {
+        "bomb": 2,
+        "botany": 2,
+        "chemistry": 2,
+        "medicine": 3,
+        "throwing": 3
+      }
+    }
   },
   "vestal": {
     "name": "Nonne",
     "description": [
       "- Eine Schwester der Schlacht. Fromm und unerbittlich. -",
-      "Eine gesegnete Rüstung umhüllt die Nonne, da sie gleichermaßen schreckliche Gewalt und heilenden Komfort liefert. Eine Keule in der einen Hand und ein heiliges Buch in der anderen - ein effektiver Kontrast für die heiligen!",
-      "Parade: +1",
-      "Exotische Waffen: +2",
-      "Medizin: +4",
-      "Begeistern / Führen: +2",
-      "Moral: +5",
-      "Beruhigen: +2",
-      "Handeln: +2"
+      "Eine gesegnete Rüstung umhüllt die Nonne, da sie gleichermaßen schreckliche Gewalt und heilenden Komfort liefert. Eine Keule in der einen Hand und ein heiliges Buch in der anderen - ein effektiver Kontrast für die heiligen!"
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f2x2f25x2fWftubm.qohx2f561qy-Wftubm.qohx3fwfstjpox3de748179f65c22eb18050c8d235e1d1ecx26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
-    "modify": []
+    "modify": {
+      "user": {
+        "mental": 5
+      },
+      "feature": {
+        "parade": 1
+      },
+      "skill": {
+        "calm": 2,
+        "exotic": 2,
+        "inspire": 2,
+        "medicine": 4,
+        "trading": 2
+      }
+    }
   }
 }

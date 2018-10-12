@@ -293,7 +293,7 @@ module.exports = class Storage {
     if (profession.modify.user) {
       const user = profession.modify.user;
 
-      if (user.live) descriptions.push('Lebenspunkte: ' + this._getNumber(user.live));
+      if (user.life) descriptions.push('Lebenspunkte: ' + this._getNumber(user.life));
       if (user.mental) descriptions.push('Moral: ' + this._getNumber(user.mental));
       if (user.ini) {
         if (user.ini > 0) {
