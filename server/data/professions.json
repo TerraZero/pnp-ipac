@@ -185,7 +185,7 @@
         "spiritual": -2
       },
       "skill": {
-        "calm": 2,
+        "calm": 1,
         "inspire": 1,
         "track_read": 3
       }
@@ -202,7 +202,7 @@
       "feature": {
         "body": -2,
         "charm": 2,
-        "parade": 3,
+        "parade": 2,
         "spiritual": -2
       },
       "skill": {
@@ -231,7 +231,9 @@
         "spiritual": 2
       },
       "skill": {
-        "bladed": 3
+        "bladed": 3,
+        "lie": 2,
+        "manipulate": 1
       }
     }
   },
@@ -247,14 +249,14 @@
         "ini": 10
       },
       "feature": {
-        "fight": 1,
         "parade": 2,
         "skill": -2
       },
       "skill": {
         "bladed": 2,
-        "combat": 2,
+        "combat": 1,
         "exotic": 2,
+        "ram": 1,
         "throwing": 2,
         "weapons_technology": 4
       }
@@ -268,9 +270,14 @@
     ],
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2ffx2ff9x2fPddvmujtu.qohx2f561qy-Pddvmujtu.qohx3fwfstjpox3d7g4ddcgbgfdec5b1ed609de2bb29bcg7x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
+      "user": {
+        "life": -5
+      },
       "feature": {
         "charm": -2,
-        "parade": -1
+        "intelligence": 3,
+        "parade": -1,
+        "spiritual": 1
       },
       "skill": {
         "exotic": 2,
@@ -292,11 +299,12 @@
       },
       "feature": {
         "body": -1,
-        "parade": -2
+        "charm": 1,
+        "parade": -2,
+        "skill": 2
       },
       "skill": {
-        "bomb": 2,
-        "botany": 2,
+        "botany": 1,
         "chemistry": 2,
         "medicine": 3,
         "throwing": 3
@@ -315,6 +323,7 @@
         "mental": 5
       },
       "feature": {
+        "fight": -2,
         "parade": 1
       },
       "skill": {

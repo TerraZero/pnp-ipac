@@ -1,14 +1,14 @@
 .page.page--skills(v-if="display === 'skills'")
   .page__header
     .headline
-      h1.headline__label
-        | {{ data.menu[data.select].name }}
       .headline__points
         span.headline__text
           | {{ data.user.points }}
       .headline__fullscreen(v-on:click.prevent="onClickFullscreen")
         img.headline__icon(v-if="fullscreen", v-bind:src="icon('fullscreen_open')")
         img.headline__icon(v-if="!fullscreen", v-bind:src="icon('fullscreen_close')")
+      h1.headline__label
+        | {{ data.menu[data.select].name }}
 
   .page__content
     include _character

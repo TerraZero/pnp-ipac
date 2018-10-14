@@ -1,5 +1,6 @@
 .headline
   display: flex
+  flex-wrap: wrap
   background: #CCC
   border-bottom: 20px solid #555
 
@@ -10,18 +11,24 @@
     line-height: 37px
 
   &__points
+    width: 50%
+    box-sizing: border-box
     text-align: center
     line-height: 57px
     font-size: 30px
     background: #AAA
     padding: 0 20px
+    border-bottom: 1px solid black
 
   &__fullscreen
+    width: 50%
+    box-sizing: border-box
     text-align: center
     line-height: 57px
     background: #AAA
     padding: 0 20px
     border-left: 1px solid black
+    border-bottom: 1px solid black
     cursor: pointer
 
   &__icon

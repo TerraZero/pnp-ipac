@@ -124,10 +124,8 @@ module.exports = class Storage {
 
   getUserProfession(user) {
     const professions = sys.loadData('professions');
-    const profession = professions[user.profession];
 
-    profession.description = this.getProfessionDescription(profession);
-    return profession;
+    return professions[user.profession];
   }
 
   getSkills(user) {
