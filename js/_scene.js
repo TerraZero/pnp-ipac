@@ -41,7 +41,7 @@ var app = new Vue({
     },
 
     onLoad: function(type, key) {
-      Animation.on.load(type, key);
+      Animation.on['load_' + type](key);
     },
 
   },
@@ -58,3 +58,12 @@ function send(event, args, loading) {
 }
 
 send('scene:register');
+
+setTimeout(function() {
+  Animation.setBackgroundVideo({
+    'videoId': 'mvr4dDP_8mw',
+    'startSeconds': 5,
+    'endSeconds': 60,
+    'suggestedQuality': 'large',
+  });
+}, 800);

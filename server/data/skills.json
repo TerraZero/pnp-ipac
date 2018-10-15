@@ -111,64 +111,56 @@
       "ram": {
         "type": "skill",
         "name": "Rammen",
-        "sample": [
-          "KK"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "combat": {
         "type": "skill",
         "name": "Nahkampf",
-        "sample": [
-          "KF"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "throwing": {
         "type": "skill",
         "name": "Wurfwaffen",
-        "sample": [
-          "KP"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "bladed": {
         "type": "skill",
-        "name": "Klingenwaffen",
-        "sample": [
-          "KP"
-        ],
+        "name": "Klingenwaffen Leicht",
+        "sample": [],
+        "value": 0,
+        "cost": 4
+      },
+      "bladed_heavy": {
+        "type": "skill",
+        "name": "Klingenwaffen Schwer",
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "pistol": {
         "type": "skill",
         "name": "Schusswaffen Nah",
-        "sample": [
-          "KF"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "rifles": {
         "type": "skill",
         "name": "Schusswaffen Fern",
-        "sample": [
-          "KF"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },
       "exotic": {
         "type": "skill",
         "name": "Exotische Waffen",
-        "sample": [
-          "KF",
-          "KP"
-        ],
+        "sample": [],
         "value": 0,
         "cost": 4
       },

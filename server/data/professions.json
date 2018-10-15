@@ -89,7 +89,7 @@
         "skill": -2
       },
       "skill": {
-        "bladed": 4,
+        "bladed_heavy": 4,
         "inspire": 2
       }
     }
@@ -137,7 +137,7 @@
         "skill": -2
       },
       "skill": {
-        "bladed": 2,
+        "bladed_heavy": 2,
         "exotic": 1
       }
     }
@@ -231,7 +231,7 @@
         "spiritual": 2
       },
       "skill": {
-        "bladed": 3,
+        "bladed_heavy": 3,
         "lie": 2,
         "manipulate": 1
       }

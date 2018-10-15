@@ -2,6 +2,10 @@ var Animation = {
 
   definitions: {},
 
+  current: {
+    videos: {},
+  },
+
   on: {
 
     playerReady: function(event, video, name) {
@@ -35,7 +39,7 @@ var Animation = {
       }
     },
 
-    load: function(type, key) {
+    load_images: function(key) {
       var first = Animation.data.background.images.first;
       var second = Animation.data.background.images.second;
 
@@ -63,6 +67,10 @@ var Animation = {
     } else if (isSecond) {
       Animation.data.background.images.second.src = src;
     }
+  },
+
+  setBackgroundVideo: function(video) {
+    videos.v_background.player.loadVideoById(video.id);
   },
 
 };
