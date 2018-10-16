@@ -164,6 +164,17 @@
         "value": 0,
         "cost": 4
       },
+      "force": {
+        "type": "skill",
+        "name": "Kraft",
+        "sample": [
+          "KK",
+          "KK",
+          "AU"
+        ],
+        "value": 0,
+        "cost": 2
+      },
       "weapons_technology": {
         "type": "skill",
         "name": "Waffentechnik",

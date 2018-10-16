@@ -59,11 +59,4 @@ function send(event, args, loading) {
 
 send('scene:register');
 
-setTimeout(function() {
-  Animation.setBackgroundVideo({
-    'videoId': 'mvr4dDP_8mw',
-    'startSeconds': 5,
-    'endSeconds': 60,
-    'suggestedQuality': 'large',
-  });
-}, 800);
+Animation.setBackgroundImage('https://img.wallpapersafari.com/desktop/1920/1080/49/92/r5ltTM.jpeg');
