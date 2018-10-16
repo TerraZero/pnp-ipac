@@ -101,6 +101,17 @@
         ],
         "value": 0,
         "cost": 2
+      },
+      "attention": {
+        "type": "skill",
+        "name": "Aufmerksamkeit",
+        "sample": [
+          "GE",
+          "GE",
+          "IN"
+        ],
+        "value": 0,
+        "cost": 2
       }
     }
   },
