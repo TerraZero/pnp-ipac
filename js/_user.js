@@ -129,6 +129,16 @@ var app = new Vue({
       }
     },
 
+    getNumberLabel: function(number) {
+      if (number > 0) {
+        return '+ ' + number;
+      } else if (number < 0) {
+        return '- ' + Math.abs(number);
+      } else {
+        return '+ ' + number;
+      }
+    },
+
     validSpecific: function(specific) {
       if (specific.active) {
         return this.calcPoints - this.getExtraPoints(specific) >= 0;
@@ -144,6 +154,12 @@ var app = new Vue({
         enterFullScreen();
       }
       this.fullscreen = !this.fullscreen;
+    },
+
+    getFeatureMod: function(feature) {
+      var mod = Math.floor((feature.total - 10) / 2);
+
+      return this.getNumberLabel(mod);
     },
 
   },

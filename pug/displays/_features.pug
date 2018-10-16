@@ -1,9 +1,9 @@
 include _updateFrame
 
 .table.table--skills
-  .table__row(v-for="feature in data.features", v-on:click.prevent="onClickSkill(feature)")
+  .table__row(v-for="feature in data.features", v-on:click.prevent="onClickSkill(feature)", v-bind:class="{'table__row--active': feature === frames.update.current}")
     .table__col.table__col__feature
       | {{ feature.name }} ({{ feature.symbol }})
     .table__col.table__col__value
-      | {{ feature.total }}
+      | {{ feature.total }} / {{ getFeatureMod(feature) }}
     +updateSkillFrame('feature')

@@ -3,7 +3,7 @@ include _updateFrame
 .page__content__skills(v-if="data.select != 'character' && data.select != 'specifics'")
   include _features
   .table.table--skills(v-if="data.skills[data.select]")
-    .table__row(v-for="propertie in data.skills[data.select].properties", v-on:click.prevent="onClickSkill(propertie)")
+    .table__row(v-for="propertie in data.skills[data.select].properties", v-on:click.prevent="onClickSkill(propertie)", v-bind:class="{'table__row--active': propertie === frames.update.current}")
       .table__col.table__col__propertie
         | {{ propertie.name }}
       .table__col.table__col__sample
