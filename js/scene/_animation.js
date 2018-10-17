@@ -1,19 +1,18 @@
 var Animation = {
 
-  definitions: {},
-
-  current: {
-    videos: {},
-  },
-
   on: {
 
     playerReady: function(event, video, name) {
-      console.log('player ready', name);
+      if (name === 'v_background') {
+        video.player.setVolume(0);
+      }
     },
 
     playerStateChange: function(event, video, name) {
-      console.log('player state change', name);
+      if (name === 'v_background') {
+        Animation.data.background.images.first.classes.stage__image__show = false;
+        Animation.data.background.images.second.classes.stage__image__show = false;
+      }
     },
 
     transitionend_videos: function(key) {

@@ -411,6 +411,17 @@
         ],
         "value": 0,
         "cost": 2
+      },
+      "summon": {
+        "type": "skill",
+        "name": "Beschwören",
+        "sample": [
+          "GS",
+          "GS",
+          "AU"
+        ],
+        "value": 0,
+        "cost": 2
       }
     }
   }

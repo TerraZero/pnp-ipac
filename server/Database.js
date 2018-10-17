@@ -101,7 +101,7 @@ module.exports = class Database {
   }
 
   insert(table, values) {
-    return this.run('INSERT INTO ' + table + ' VALUES (' + '?, '.repeat(values.length - 1) + '?)', values);
+    return this.run('INSERT INTO ' + table + ' VALUES (' + ('?, ').repeat(values.length - 1) + '?)', values);
   }
 
   update(table, where, values) {

@@ -26,7 +26,13 @@ var data = {
         },
       },
     }
-  }
+  },
+  texts: {
+    title: 'Darkest Mansion',
+    subline: 'Legend of the Darkest',
+    glitch: true,
+    style: {},
+  },
 };
 
 Animation.data = data;
@@ -45,6 +51,18 @@ var app = new Vue({
     },
 
   },
+  computed: {
+
+    textStyles: function() {
+      var styles = {};
+
+      if (this.texts.glitch) {
+        styles['animation'] = 'glitch 32s ease-in-out infinite';
+      }
+      return styles;
+    },
+
+  },
 });
 
 function send(event, args, loading) {
@@ -56,6 +74,10 @@ function send(event, args, loading) {
     args: args || null,
   });
 }
+
+socket.on('scene:image', (args) => {
+  console.log(args);
+});
 
 send('scene:register');
 
