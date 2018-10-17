@@ -5,7 +5,7 @@ module.exports = class RegisterForm {
     const features = sys.loadData('features');
 
     const build = {
-      points: 20,
+      points: 30,
       form: 'RegisterForm',
       title: 'Register',
       fields: {

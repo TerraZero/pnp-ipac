@@ -181,7 +181,7 @@ var app = new Vue({
   computed: {
 
     calcPoints: function() {
-      var points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5);
+      var points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5) * 2;
 
       for (var key in this.data.specifics) {
         if (this.data.specifics[key].active) {

@@ -1,6 +1,6 @@
 {
   "knowledge": {
-    "name": "Wissen",
+    "name": "Bildung",
     "icon": "knowledge",
     "properties": {
       "mechanics": {
@@ -127,7 +127,7 @@
     }
   },
   "body": {
-    "name": "Körperliches",
+    "name": "Tätigkeit",
     "icon": "battle",
     "properties": {
       "ram": {
@@ -310,7 +310,7 @@
     }
   },
   "social": {
-    "name": "Soziales",
+    "name": "Interaktion",
     "icon": "social",
     "properties": {
       "persuade": {

@@ -12,7 +12,7 @@ module.exports = class Skills {
         skills.select = data && data.select || 'character';
         skills.menu = {
           character: {
-            name: 'Eigenschaften',
+            name: 'Charakter',
             icon: 'character',
             key: 'character',
           },
@@ -25,7 +25,7 @@ module.exports = class Skills {
           };
         }
         skills.menu.specifics = {
-          name: 'Besonderheiten',
+          name: 'Merkmale',
           icon: 'dna',
           key: 'specifics',
         };
