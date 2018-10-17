@@ -62,6 +62,7 @@ module.exports = class Storage {
     user.ini = ini.total;
 
     promises.push(sys.db.insert('user', [user.name, user.age, user.gender, user.points, user.ini, user.profession]));
+
     for (const feature in user.features) {
       log.debug('Add feature [0] with value [1] for user [2]', feature, user.features[feature], user.name);
       promises.push(sys.db.insert('skill', [user.name, feature, user.features[feature]]));

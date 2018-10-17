@@ -112,6 +112,17 @@
         ],
         "value": 0,
         "cost": 2
+      },
+      "hunter_known": {
+        "type": "skill",
+        "name": "Jäger Wissen",
+        "sample": [
+          "IN",
+          "IN",
+          "AU"
+        ],
+        "value": 0,
+        "cost": 2
       }
     }
   },

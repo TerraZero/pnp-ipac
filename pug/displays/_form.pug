@@ -7,6 +7,9 @@
         .headline__points(v-if="data.points")
           span.headline__text
             | {{ calcPoints }}
+        .headline__random(v-if="data.form === 'RegisterForm'", v-on:click.prevent="setRandom()")
+          span.headline__text
+            img(v-bind:src="icon('dice')")
     .page__content
       form.form(v-on:submit.prevent="submit()")
         .form__fields

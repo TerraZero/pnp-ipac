@@ -50,9 +50,11 @@ module.exports = class RegisterForm {
     }
 
     for (const index in features) {
-      build.fields[index] = {
-        label: features[index].name + ' (' + features[index].symbol + ') [3 * d6]',
-        value: '',
+      if (features[index].show) {
+        build.fields[index] = {
+          label: features[index].name + ' (' + features[index].symbol + ') [3 * d6]',
+          value: '',
+        }
       }
     }
     console.log('send build');
@@ -95,8 +97,11 @@ module.exports = class RegisterForm {
     }
 
     for (const index in features) {
+      if (!features[index].show) continue;
+
       const field = data.fields[index];
       const number = parseInt(field.value);
+
       if (number + '' != field.value) {
         error = true;
         field.error = {
@@ -105,8 +110,6 @@ module.exports = class RegisterForm {
       }
       field.value = number;
     }
-
-
 
     if (error) return request.resend('Form error.');
 
@@ -121,8 +124,13 @@ module.exports = class RegisterForm {
     };
 
     for (const feature in features) {
-      user.features[feature] = data.fields[feature].value;
+      if (features[feature].show) {
+        user.features[feature] = data.fields[feature].value;
+      }
     }
+
+    user.features.fight = (user.features.body + user.features.body + user.features.endurance) / 3;
+    user.features.parade = (user.features.skill + user.features.skill + user.features.intelligence) / 3;
 
     sys.storage.addUser(request, user)
       .then(function() {

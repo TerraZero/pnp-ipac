@@ -36,3 +36,16 @@ function exitFullScreen() {
     funcExitFullscreen.call(document);
   }
 }
+
+function getRandom(min, max) {
+  return Math.round((Math.random() * (max - min)) + min);
+}
+
+function getOptionsRandom(definition) {
+  var options = [];
+
+  for (var name in definition) {
+    options.push(name);
+  }
+  return options[getRandom(0, options.length - 1)];
+}

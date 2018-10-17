@@ -162,6 +162,20 @@ var app = new Vue({
       return this.getNumberLabel(mod);
     },
 
+    setRandom: function() {
+      this.data.fields.age.value = getRandom(20, 80);
+      this.data.fields.profession.value = getOptionsRandom(this.data.fields.profession.options);
+      this.data.fields.gender.value = getOptionsRandom(this.data.fields.gender.options);
+
+      for (var field of ['body', 'endurance', 'skill', 'intelligence', 'spiritual', 'charm']) {
+        var number = getRandom(1, 6);
+
+        number += getRandom(1, 6);
+        number += getRandom(1, 6);
+        this.data.fields[field].value = number;
+      }
+    },
+
   },
 
   computed: {
