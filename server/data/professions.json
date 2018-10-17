@@ -15,9 +15,9 @@
         "spiritual": 3
       },
       "skill": {
+        "aura": 2,
         "chemistry": 2,
-        "exotic": 2,
-        "throwing": 2
+        "exotic": 2
       }
     }
   },
@@ -83,14 +83,14 @@
         "mental": 5
       },
       "feature": {
-        "charm": 1,
         "endurance": -1,
         "parade": 3,
         "skill": -2
       },
       "skill": {
+        "aura": 3,
         "bladed_heavy": 4,
-        "inspire": 2
+        "inspire": 4
       }
     }
   },
@@ -276,10 +276,10 @@
       "feature": {
         "charm": -2,
         "intelligence": 3,
-        "parade": -1,
-        "spiritual": 1
+        "parade": -1
       },
       "skill": {
+        "aura": 5,
         "exotic": 2,
         "lie": 2,
         "manipulate": 2
@@ -327,11 +327,11 @@
         "parade": 1
       },
       "skill": {
-        "calm": 2,
+        "aura": 3,
+        "calm": 1,
         "exotic": 2,
         "inspire": 2,
-        "medicine": 4,
-        "trading": 2
+        "medicine": 4
       }
     }
   }

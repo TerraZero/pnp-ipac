@@ -120,7 +120,7 @@ module.exports = class Storage {
     for (const key of define.sample) {
       base += symbols[key];
     }
-    return Math.max(Math.floor(base / define.sample.length) - 8, 0);
+    return Math.max(Math.floor(base / (define.sample.length || 1)) - 8, 0);
   }
 
   getUserProfession(user) {
