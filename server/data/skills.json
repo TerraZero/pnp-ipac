@@ -389,6 +389,17 @@
         ],
         "value": 0,
         "cost": 2
+      },
+      "aura": {
+        "type": "skill",
+        "name": "Aura erkennen",
+        "sample": [
+          "IN",
+          "IN",
+          "GS"
+        ],
+        "value": 0,
+        "cost": 2
       }
     }
   }
