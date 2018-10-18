@@ -28,9 +28,9 @@ var data = {
     }
   },
   texts: {
-    title: 'Darkest Mansion',
-    subline: 'Legend of the Darkest',
-    glitch: true,
+    title: 'Title Title',
+    subline: 'Subline sub line subline',
+    glitch: false,
     style: {},
   },
 };

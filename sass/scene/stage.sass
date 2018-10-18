@@ -1,20 +1,77 @@
 .stage
 
+  &__background,
+  &__images
+    height: 100%
+
   &__image
     opacity: 0
 
   &__video,
   &__image
     position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    width: 100%
-    height: auto
+    top: -20px
+    left: -20px
+    right: -20px
+    bottom: -20px
 
     &__transition
       transition: opacity .3s ease-in-out
 
     &__show
       opacity: 1
+
+  &__images
+    animation: imageShow 32s ease-in-out infinite
+
+    &__glossy
+      position: absolute
+      background-color: white
+      opacity: .2
+      filter: blur(20px)
+      transform: translateZ(100px) skew(-20deg)
+
+      &__one
+        top: -20px
+        left: 40%
+        width: 3vw
+        height: 30vh
+        opacity: .1
+
+      &__two
+        left: 65%
+        top: 50px
+        width: 2vw
+        height: 10vh
+
+      &__three
+        left: 10%
+        bottom: -20px
+        width: 2vw
+        height: 15vh
+
+      &__four
+        left: 80%
+        top: -20px
+        bottom: -20px
+        width: 2vw
+
+      &__five
+        left: 83%
+        top: -20px
+        bottom: -20px
+        width: 1vw
+
+@keyframes imageShow
+  0%
+    transform: rotateX(0) rotateY(0)
+  20%
+    transform: rotateX(10deg) rotateY(10deg)
+  40%
+    transform: rotateX(5deg) rotateY(-10deg)
+  60%
+    transform: rotateX(-10deg) rotateY(0deg)
+  80%
+    transform: rotateX(5deg) rotateY(-5deg)
+  100%
+    transform: rotateX(0) rotateY(0)

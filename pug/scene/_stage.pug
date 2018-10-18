@@ -6,3 +6,5 @@ include _video
       +video('background')
     .stage__images
       img.stage__image(v-for="(image, key) in background.images", v-bind:class="image.classes", v-bind:src="image.src", v-on:load="onLoad('images', key)", v-on:transitionend="onTransitionend('images', key)")
+      for i in ['one', 'two', 'three', 'four', 'five']
+        div.stage__images__glossy(class='stage__images__glossy__' + i)
