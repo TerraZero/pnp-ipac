@@ -335,6 +335,17 @@
         "value": 0,
         "cost": 2
       },
+      "steal": {
+        "type": "skill",
+        "name": "Stehlen",
+        "sample": [
+          "GE",
+          "GE",
+          "GS"
+        ],
+        "value": 0,
+        "cost": 2
+      },
       "lie": {
         "type": "skill",
         "name": "Lügen / Täuschen",
