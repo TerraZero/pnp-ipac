@@ -8,6 +8,10 @@ module.exports = class Menu {
       request.sendPage(args.button.type);
     }
 
+    if (args && args.level === 'first' && args.button.type === 'scene') {
+      request.sendPage('Scene');
+    }
+
     return {
       first: this.first(request, menu),
       second: this.second(request, menu),
@@ -65,20 +69,7 @@ module.exports = class Menu {
   static scene(request, menu) {
     const second = {
       select: menu && menu.second && menu.second.select || null,
-      buttons: {
-        stages: {
-          type: 'Stages',
-          text: 'Stages',
-        },
-        sounds: {
-          type: 'Sounds',
-          text: 'Sounds',
-        },
-        chapters: {
-          type: 'Chapters',
-          text: 'Chapters',
-        },
-      },
+      buttons: {},
     };
 
     return second;

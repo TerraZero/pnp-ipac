@@ -37,6 +37,12 @@ var app = new Vue({
       });
     },
 
+    scene: function(media) {
+      send('admin:scene:update', {
+        media: media,
+      }, false);
+    },
+
     setStage: function(stage) {
       this.data.select = stage;
       send('admin:stage', {
@@ -60,6 +66,32 @@ var app = new Vue({
     getYTImage: function(id, resolution) {
       resolution = resolution || 'sddefault';
       return 'http://img.youtube.com/vi/' + id + '/' + resolution + '.jpg';
+    },
+
+  },
+  computed: {
+
+    mediaOptions: function() {
+      var options = {};
+
+      for (var index in this.data.stages) {
+        options[this.data.stages[index].category] = {
+          value: this.data.stages[index].category,
+          text: this.data.stages[index].category,
+        };
+      }
+      return options;
+    },
+
+    mediaItems: function() {
+      var items = [];
+
+      for (var index in this.data.stages) {
+        if (this.data.stages[index].category === this.data.select) {
+          items.push(this.data.stages[index]);
+        }
+      }
+      return items;
     },
 
   },

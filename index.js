@@ -128,6 +128,14 @@ sys.db.init()
           });
         }
       });
+
+      socket.on('admin:scene:update', (args) => {
+        if (sys.storage.scene()) {
+          sys.storage.scene().emit('update:scene', {
+            data: args.args,
+          });
+        }
+      });
     });
 
     log.log('Ready');

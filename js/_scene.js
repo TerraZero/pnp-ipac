@@ -28,8 +28,8 @@ var data = {
     }
   },
   texts: {
-    title: 'Title Title',
-    subline: 'Subline sub line subline',
+    title: null,
+    subline: null,
     glitch: false,
     style: {},
   },
@@ -54,11 +54,8 @@ var app = new Vue({
   computed: {
 
     textStyles: function() {
-      var styles = {};
+      var styles = this.texts.style || {};
 
-      if (this.texts.glitch) {
-        styles['animation'] = 'glitch 32s ease-in-out infinite';
-      }
       return styles;
     },
 
@@ -75,8 +72,8 @@ function send(event, args, loading) {
   });
 }
 
-socket.on('scene:image', (args) => {
-  console.log(args);
+socket.on('update:scene', (args) => {
+  Animation.update(args.data.media);
 });
 
 send('scene:register');

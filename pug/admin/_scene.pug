@@ -1,0 +1,10 @@
+.admin(v-if="display == 'scene'")
+  .media
+    .media__ui
+      select.media__select(v-model="data.select")
+        option(v-for="option in this.mediaOptions", v-bind:value="option.value")
+          | {{ option.text }}
+    .media__content
+      .media__list
+        .media__item(v-for="media in this.mediaItems", v-on:click.prevent="scene(media)")
+          | {{ media.title }}
