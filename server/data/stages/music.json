@@ -1,0 +1,179 @@
+[
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Seiphan Katakomben",
+    "container": "v_music",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "mvr4dDP_8mw",
+        "start": 7,
+        "end": 300,
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Hinweis 1",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "DTf_VYDqPuE",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Hinweis 2",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "Izf1gZWFc8w",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Glockenturm Hinweis",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "ND4LUYPj324",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Final Hinweis",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "wNunc0UN2Jo",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Seiphan Intro",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "LO3LZohKCnE",
+        "start": 75,
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Friedhof",
+    "container": "v_music",
+    "shuffle": true,
+    "videos": [
+      {
+        "id": "cRWkYQ4ahcw",
+        "volume": 70
+      },
+      {
+        "id": "XCuy_yQHFAc",
+        "volume": 70
+      },
+      {
+        "id": "AJp-vhOlOVQ",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Rousa Saal",
+    "container": "v_music",
+    "shuffle": true,
+    "videos": [
+      {
+        "id": "WA4fWO7JHMY",
+        "volume": 70
+      },
+      {
+        "id": "H_PTUaAFLV0",
+        "volume": 70
+      },
+      {
+        "id": "9oansGOr1YE",
+        "volume": 70
+      },
+      {
+        "id": "UbQgXeY_zi4",
+        "volume": 70
+      },
+      {
+        "id": "_C7UgR_sIW0",
+        "volume": 70
+      },
+      {
+        "id": "Eco4z98nIQY",
+        "volume": 70
+      },
+      {
+        "id": "WXrdYwG17PE",
+        "volume": 70
+      },
+      {
+        "id": "D_JxMb8RLEY",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "videos": [
+      {
+        "id": "ZcoqR9Bwx1Y",
+        "volume": 70
+      }
+    ],
+    "repeat": true,
+    "container": "v_music",
+    "title": "Final Win"
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "videos": [
+      {
+        "id": "bXw8aKQqrRw",
+        "volume": 70
+      }
+    ],
+    "repeat": true,
+    "container": "v_music",
+    "title": "Glockenturm"
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "videos": [
+      {
+        "id": "U-iHnbPb60Y",
+        "volume": 70
+      }
+    ],
+    "repeat": true,
+    "container": "v_music",
+    "title": "Intro Musik"
+  }
+]

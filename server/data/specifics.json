@@ -33,13 +33,20 @@
       "Waffentechnik: +1"
     ]
   },
-  "fortune": {
+  "trapper": {
     "orientation": "positive",
-    "name": "Geschickt",
+    "name": "Fallensteller",
     "level": 1,
-    "modify": {},
+    "modify": {
+      "skill": {
+        "trap": 4,
+        "mechanics": 1
+      }
+    },
     "description": [
-      "Bei jeder Probe muss ein d12 geworfen werden, wird eine 12 geworfen, wird die Probe mit advantage geworfen."
+      "Kennt sich mit Fallen aus.",
+      "Fallen: +4",
+      "Mechanik: +1"
     ]
   },
   "courageous": {
@@ -100,13 +107,22 @@
       "IN: +1"
     ]
   },
-  "misfortune": {
+  "clumsy": {
     "orientation": "negative",
-    "name": "Unglückspilz",
+    "name": "Ungeschickt",
     "level": 1,
-    "modify": {},
+    "modify": {
+      "feature": {
+        "skill": -1
+      },
+      "skill": {
+        "run": -3
+      }
+    },
     "description": [
-      "Bei jeder Probe muss ein d8 geworfen werden, wird eine 8 geworfen, muss die Probe mit disadvantage geworfen werden."
+      "Du bist Ungeschickt",
+      "Rennen: -3",
+      "GE: -1"
     ]
   },
   "paranoid": {
@@ -124,6 +140,15 @@
       "GS: -1"
     ]
   },
+  "risktaker": {
+    "orientation": "negative",
+    "name": "Risikobereit",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Missachtet die eigene Gesundheit. Der erste Angriff deiner Gruppe kommt von dir und du nimmst den ersten Schaden, solange möglich."
+    ]
+  },
   "masochistic": {
     "orientation": "negative",
     "name": "Masochistisch",
@@ -135,8 +160,27 @@
       }
     },
     "description": [
+      "Wann immer du Heilst muss ein Würfel einer tieferen Stufe gewürfelt werden um den Schaden zu berechnen.",
       "KK: -1",
       "AU: -1"
+    ]
+  },
+  "rage": {
+    "orientation": "negative",
+    "name": "Wutrausch",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Beim flüchten kannst du in einen Wutrausch verfallen. (Probe: 15)"
+    ]
+  },
+  "phobophobie": {
+    "orientation": "negative",
+    "name": "Phobophobie",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Du erhälst mehr Stress wenn andere Angst haben."
     ]
   },
   "selfish": {
@@ -150,8 +194,16 @@
     },
     "description": [
       "Du musst dich überwinden um jemanden zu helfen (Probe: 15)",
-      "Du willst bei Begegnungen immer stehlen (Probe: 13)",
       "CH: -3"
+    ]
+  },
+  "arrogant": {
+    "orientation": "negative",
+    "name": "Überheblich",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Denkt das er alles kann oder alles Weiß. (Probe: 5)"
     ]
   },
   "hopeless": {
@@ -166,6 +218,42 @@
     "description": [
       "Du bist Hoffnungslos.",
       "GS: -4"
+    ]
+  },
+  "claustrophobia": {
+    "orientation": "negative",
+    "name": "Klaustrophobie",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Bei engen Orten steigt der Stress"
+    ]
+  },
+  "lygophobia": {
+    "orientation": "negative",
+    "name": "Angst im Dunkeln",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Im Dunkeln steigt der Stress"
+    ]
+  },
+  "badstrategy": {
+    "orientation": "negative",
+    "name": "Strategiebanause",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Würfle beim Angriff 1d12. Ist es eine 12 Macht der Held ein alternativ Angriff"
+    ]
+  },
+  "entomophobie": {
+    "orientation": "negative",
+    "name": "Angst vor Insekten",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Stress steigt beim kontakt mit Insekten"
     ]
   },
   "insane": {
@@ -183,6 +271,15 @@
       "Kann in einen Wahnanfall verfallen (Probe: 10)",
       "GS: -2",
       "CH: -1"
+    ]
+  },
+  "perfectionist": {
+    "orientation": "negative",
+    "name": "Perfektionist",
+    "level": 3,
+    "modify": {},
+    "description": [
+      "Bei misslungenden Proben steigt der Stress"
     ]
   },
   "physical_disability": {

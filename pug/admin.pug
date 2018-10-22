@@ -6,6 +6,9 @@ block append before
   - scripts.push('/js/_admin.js');
   - body = 'admin';
 
+block append font
+  link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro", rel="stylesheet")
+
 block app
   include admin/_menu
   include admin/_user

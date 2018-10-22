@@ -1,0 +1,24 @@
+[
+  {
+    "type": "video",
+    "category": "Background Video",
+    "clear": true,
+    "container": "v_background",
+    "title": "Clear Background Video"
+  },
+  {
+    "type": "video",
+    "category": "Background Video",
+    "container": "v_background",
+    "title": "Intro Video",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "mvr4dDP_8mw",
+        "volume": 0,
+        "start": 7,
+        "end": 300
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "type": "text",
+    "category": "Text",
+    "title": "Kein Text",
+    "headline": "",
+    "subline": ""
+  },
+  {
+    "type": "text",
+    "category": "Text",
+    "title": "Intro",
+    "headline": "Darkest Mansion",
+    "subline": "Legend of the Darkest"
+  },
+  {
+    "type": "text",
+    "category": "Text - Untergeschoss",
+    "title": "Katakomben",
+    "headline": "Katakomben",
+    "subline": ""
+  },
+  {
+    "type": "text",
+    "category": "Text - Untergeschoss",
+    "title": "Seiphan",
+    "headline": "Seiphan",
+    "subline": "Armis Aequitas Sancti"
+  },
+  {
+    "type": "text",
+    "category": "Text - Hinterhof",
+    "title": "Friedhof",
+    "headline": "Friedhof",
+    "subline": "Hinterhof"
+  },
+  {
+    "type": "text",
+    "category": "Text - Hinterhof",
+    "title": "Garten",
+    "headline": "Garten",
+    "subline": "Hinterhof"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
+    "title": "Eingangshalle West",
+    "headline": "Eingangshalle",
+    "subline": "Erdgeschoss / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
+    "title": "Eingangshalle Ost",
+    "headline": "Eingangshalle",
+    "subline": "Erdgeschoss / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
+    "title": "Badezimmer",
+    "headline": "Badezimmer",
+    "subline": "Erdgeschoss / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
+    "title": "Saal",
+    "headline": "Saal",
+    "subline": "Erdgeschoss"
+  }
+]

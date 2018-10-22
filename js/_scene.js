@@ -28,7 +28,7 @@ var data = {
     }
   },
   texts: {
-    title: null,
+    headline: null,
     subline: null,
     glitch: false,
     style: {},

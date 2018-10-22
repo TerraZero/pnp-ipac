@@ -1,7 +1,7 @@
 .scene__text(v-bind:style="textStyles")
   .scene__text__flexer
-    .scene__text__title(v-if="texts.title")
-      | {{ texts.title }}
-    .scene__text__seperate(v-if="texts.title")
+    .scene__text__title(v-if="texts.headline")
+      | {{ texts.headline }}
+    .scene__text__seperate(v-if="texts.headline")
     .scene__text__subline(v-if="texts.subline")
       | {{ texts.subline }}
