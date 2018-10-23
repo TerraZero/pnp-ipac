@@ -5,7 +5,10 @@
     height: 100%
 
   &__image
+    width: 100%
+    height: 100%
     opacity: 0
+    animation: imageShow 32s ease-in-out infinite
 
   &__video,
   &__image
@@ -22,7 +25,10 @@
       opacity: 1
 
   &__images
-    animation: imageShow 32s ease-in-out infinite
+
+    &--bg
+      position: relative
+      background: black
 
     &__glossy
       position: absolute

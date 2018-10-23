@@ -2,6 +2,7 @@ var socket = io();
 
 var data = {
   loading: true,
+  step_images: false,
   background: {
     videos: {
       video: {
@@ -14,14 +15,14 @@ var data = {
       first: {
         src: null,
         classes: {
-          stage__image__transition: false,
-          stage__image__show: false,
+          stage__image__transition: true,
+          stage__image__show: true,
         },
       },
       second: {
         src: null,
         classes: {
-          stage__image__transition: false,
+          stage__image__transition: true,
           stage__image__show: false,
         },
       },

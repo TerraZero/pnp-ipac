@@ -15,6 +15,20 @@
   },
   {
     "type": "text",
+    "category": "Text - Hinterhof",
+    "title": "Friedhof",
+    "headline": "Friedhof",
+    "subline": "Hinterhof"
+  },
+  {
+    "type": "text",
+    "category": "Text - Hinterhof",
+    "title": "Garten",
+    "headline": "Garten",
+    "subline": "Hinterhof"
+  },
+  {
+    "type": "text",
     "category": "Text - Untergeschoss",
     "title": "Katakomben",
     "headline": "Katakomben",
@@ -29,17 +43,10 @@
   },
   {
     "type": "text",
-    "category": "Text - Hinterhof",
-    "title": "Friedhof",
-    "headline": "Friedhof",
-    "subline": "Hinterhof"
-  },
-  {
-    "type": "text",
-    "category": "Text - Hinterhof",
-    "title": "Garten",
-    "headline": "Garten",
-    "subline": "Hinterhof"
+    "category": "Text - Untergeschoss",
+    "title": "Keller",
+    "headline": "Keller",
+    "subline": "Untergeschoss"
   },
   {
     "type": "text",
@@ -65,8 +72,106 @@
   {
     "type": "text",
     "category": "Text - Erdgeschoss",
-    "title": "Saal",
+    "title": "Saal Erdgeschoss",
     "headline": "Saal",
     "subline": "Erdgeschoss"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
+    "title": "Küche",
+    "headline": "Küche",
+    "subline": "Erdgeschoss"
+  },
+  {
+    "type": "text",
+    "category": "Text - 1. Etage",
+    "title": "Saal 1. Etage",
+    "headline": "Saal",
+    "subline": "1. Etage"
+  },
+  {
+    "type": "text",
+    "category": "Text - 1. Etage",
+    "title": "Zimmer West (Helden)",
+    "headline": "Zimmer",
+    "subline": "1. Etage / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 1. Etage",
+    "title": "Zimmer Ost (Falk)",
+    "headline": "Zimmer",
+    "subline": "1. Etage / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 2. Etage",
+    "title": "Flur West",
+    "headline": "Flur",
+    "subline": "2. Etage / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 2. Etage",
+    "title": "Flur Ost",
+    "headline": "Flur",
+    "subline": "2. Etage / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 2. Etage",
+    "title": "Zimmer von Fribois",
+    "headline": "Zimmer von Fribois",
+    "subline": "2. Etage / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 2. Etage",
+    "title": "Bibliothek 2. E.",
+    "headline": "Bibliothek",
+    "subline": "2. Etage / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 3. Etage",
+    "title": "Flur Ost",
+    "headline": "Flur",
+    "subline": "3. Etage / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 3. Etage",
+    "title": "Flur West",
+    "headline": "Flur",
+    "subline": "3. Etage / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 3. Etage",
+    "title": "Bibliothek 3. E.",
+    "headline": "Bibliothek",
+    "subline": "3. Etage / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - 3. Etage",
+    "title": "Arbeitszimmer",
+    "headline": "Arbeitszimmer",
+    "subline": "3. Etage / Westflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - Dach",
+    "title": "Dachboden",
+    "headline": "Dachboden",
+    "subline": "Dach"
+  },
+  {
+    "type": "text",
+    "category": "Text - Dach",
+    "title": "Glockenturm",
+    "headline": "Glockenturm",
+    "subline": "Dach"
   }
 ]

@@ -65,15 +65,17 @@ var Animation = {
     },
 
     transitionend_images: function(key) {
+      return;
       var first = Animation.data.background.images.first;
       var second = Animation.data.background.images.second;
+
+      console.log('transition', key, second.classes.stage__image__show);
 
       switch (key) {
         case 'first':
           break;
         case 'second':
           if (second.classes.stage__image__show) {
-            first.classes.stage__image__transition = false;
             first.classes.stage__image__show = false;
             first.src = null;
           } else {
@@ -81,20 +83,22 @@ var Animation = {
           }
           break;
       }
+      Animation.blocked = false;
     },
 
     load_images: function(key) {
+      return;
       var first = Animation.data.background.images.first;
       var second = Animation.data.background.images.second;
 
+      console.log('load', key, second.classes.stage__image__show);
+
       switch (key) {
         case 'first':
-          first.classes.stage__image__transition = !second.classes.stage__image__show;
           first.classes.stage__image__show = true;
           second.classes.stage__image__show = false;
           break;
         case 'second':
-          second.classes.stage__image__transition = true;
           second.classes.stage__image__show = true;
           break;
       }
@@ -103,6 +107,12 @@ var Animation = {
   },
 
   setBackgroundImage: function(src) {
+    Animation.data.background.images.first.src = src;
+    Animation.data.background.images.first.classes.stage__image__show = true;
+    return;
+    if (Animation.blocked) return;
+
+    Animation.blocked = true;
     var isFirst = Animation.data.background.images.first.src === null;
     var isSecond = Animation.data.background.images.second.src === null;
 
@@ -125,6 +135,7 @@ var Animation = {
 
     if (video.clear) {
       videos[video.container].player.stopVideo();
+      Animation.data.step_images = true;
       return;
     }
 
