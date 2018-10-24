@@ -4,9 +4,10 @@ module.exports = class Scene {
     const names = [
       'bg_video',
       'images',
+      'layers',
       'music',
       'narrator',
-      'sound',
+      'sounds',
       'texts',
     ];
 

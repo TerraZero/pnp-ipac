@@ -72,6 +72,13 @@
   {
     "type": "text",
     "category": "Text - Erdgeschoss",
+    "title": "Shop",
+    "headline": "Shop",
+    "subline": "Erdgeschoss / Ostflügel"
+  },
+  {
+    "type": "text",
+    "category": "Text - Erdgeschoss",
     "title": "Saal Erdgeschoss",
     "headline": "Saal",
     "subline": "Erdgeschoss"

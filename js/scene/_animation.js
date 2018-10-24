@@ -29,30 +29,28 @@ var Animation = {
       }
 
       if (event.data == YT.PlayerState.ENDED) {
-        console.log(name, 'ended');
 
         var media = Animation.videos[name];
 
         if (media.shuffle) {
-          console.log(name, 'shuffle');
           var current_index = media.index;
 
-          while (current_index === media.index) {
-            media.index = getRandom(0, media.videos.length - 1);
+          media.index = getRandom(0, media.videos.length - 1);
+          if (media.index === current_index) {
+            media.index = (media.index + 1) % media.videos.length;
           }
+
           Animation.setVideo(media);
           return;
         }
 
         if (media.videos[media.index + 1] === undefined && media.repeat) {
-          console.log(name, 'repeat');
           media.index = 0;
           Animation.setVideo(media);
           return;
         }
 
         if (media.videos[media.index + 1] !== undefined) {
-          console.log(name, 'next');
           media.index++;
           Animation.setVideo(media);
           return;

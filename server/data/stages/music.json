@@ -2,14 +2,23 @@
   {
     "type": "video",
     "category": "Musik",
-    "title": "Seiphan Katakomben",
+    "clear": true,
     "container": "v_music",
+    "title": "Clear Music Video"
+  },
+  {
+    "type": "video",
+    "category": "Musik",
     "repeat": true,
+    "container": "v_music",
+    "title": "Intro Musik",
     "videos": [
       {
-        "id": "mvr4dDP_8mw",
-        "start": 7,
-        "end": 300,
+        "id": "U-iHnbPb60Y",
+        "volume": 70
+      },
+      {
+        "id": "f_6_V57cOMo",
         "volume": 70
       }
     ]
@@ -17,11 +26,12 @@
   {
     "type": "video",
     "category": "Musik",
-    "title": "Hinweis 1",
+    "repeat": true,
     "container": "v_music",
+    "title": "Outro Musik",
     "videos": [
       {
-        "id": "DTf_VYDqPuE",
+        "id": "oN2Xs-MvxLw",
         "volume": 70
       }
     ]
@@ -29,49 +39,13 @@
   {
     "type": "video",
     "category": "Musik",
-    "title": "Hinweis 2",
+    "shuffle": true,
     "container": "v_music",
+    "title": "Garten",
     "videos": [
       {
-        "id": "Izf1gZWFc8w",
+        "id": "NknjE2SBPxw",
         "volume": 70
-      }
-    ]
-  },
-  {
-    "type": "video",
-    "category": "Musik",
-    "title": "Glockenturm Hinweis",
-    "container": "v_music",
-    "videos": [
-      {
-        "id": "ND4LUYPj324",
-        "volume": 70
-      }
-    ]
-  },
-  {
-    "type": "video",
-    "category": "Musik",
-    "title": "Final Hinweis",
-    "container": "v_music",
-    "videos": [
-      {
-        "id": "wNunc0UN2Jo",
-        "volume": 70
-      }
-    ]
-  },
-  {
-    "type": "video",
-    "category": "Musik",
-    "title": "Seiphan Intro",
-    "container": "v_music",
-    "videos": [
-      {
-        "id": "LO3LZohKCnE",
-        "start": 75,
-        "volume": 85
       }
     ]
   },
@@ -140,40 +114,347 @@
   {
     "type": "video",
     "category": "Musik",
-    "videos": [
-      {
-        "id": "ZcoqR9Bwx1Y",
-        "volume": 70
-      }
-    ],
     "repeat": true,
     "container": "v_music",
-    "title": "Final Win"
-  },
-  {
-    "type": "video",
-    "category": "Musik",
+    "title": "Glockenturm",
     "videos": [
       {
         "id": "bXw8aKQqrRw",
         "volume": 70
       }
-    ],
-    "repeat": true,
-    "container": "v_music",
-    "title": "Glockenturm"
+    ]
   },
   {
     "type": "video",
     "category": "Musik",
+    "container": "v_music",
+    "title": "Nacht",
+    "shuffle": true,
     "videos": [
       {
-        "id": "U-iHnbPb60Y",
+        "id": "_79MaU8sN8s",
+        "volume": 70
+      },
+      {
+        "id": "FOSOcDvbcyc",
+        "volume": 70
+      },
+      {
+        "id": "_iF7lkXKHlA",
+        "volume": 70
+      },
+      {
+        "id": "AJp-vhOlOVQ",
+        "volume": 70
+      },
+      {
+        "id": "CdeGWJJur00",
+        "volume": 70
+      },
+      {
+        "id": "QR28G204z5k",
+        "volume": 70
+      },
+      {
+        "id": "CTZhg7_2PIA",
+        "volume": 70
+      },
+      {
+        "id": "-zvQoPyY2XE",
+        "volume": 70
+      },
+      {
+        "id": "HpqbJMd6n-U",
         "volume": 70
       }
-    ],
-    "repeat": true,
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Seiphan Katakomben",
     "container": "v_music",
-    "title": "Intro Musik"
+    "repeat": true,
+    "videos": [
+      {
+        "id": "mvr4dDP_8mw",
+        "start": 7,
+        "end": 300,
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik",
+    "title": "Bestie Dungeon & Tempel",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "737dP6K6dd8",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "shuffle": true,
+    "container": "v_music",
+    "title": "Kampf Tag",
+    "videos": [
+      {
+        "id": "pHUHdprKIwo",
+        "volume": 70
+      },
+      {
+        "id": "au_8hDDifvM",
+        "volume": 70
+      },
+      {
+        "id": "fw9i11GzJS8",
+        "volume": 70
+      },
+      {
+        "id": "CiSeoX_4nzU",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "shuffle": true,
+    "container": "v_music",
+    "title": "Kampf Nacht",
+    "videos": [
+      {
+        "id": "ZcNyPdipjeU",
+        "volume": 70
+      },
+      {
+        "id": "6loWrABr8gA",
+        "volume": 70
+      },
+      {
+        "id": "c6MczzFi67M",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "container": "v_music",
+    "title": "Geist Kampf",
+    "shuffle": true,
+    "videos": [
+      {
+        "id": "-YmALTy6mY8",
+        "volume": 70
+      },
+      {
+        "id": "dhrem7GoRaM",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "title": "O'Falk Kampf",
+    "container": "v_music",
+    "shuffle": true,
+    "videos": [
+      {
+        "id": "EBWXGlvWmls",
+        "volume": 70
+      },
+      {
+        "id": "6DP6q_GlIWA",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "container": "v_music",
+    "title": "Bestie Intro",
+    "videos": [
+      {
+        "id": "EBWXGlvWmls",
+        "volume": 85
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "shuffle": true,
+    "container": "v_music",
+    "title": "Bestie Kampf",
+    "videos": [
+      {
+        "id": "KsZAnfR4ON4",
+        "volume": 70
+      },
+      {
+        "id": "zzUE9Cot2ag",
+        "volume": 70
+      },
+      {
+        "id": "Iy4iQvJo24U",
+        "volume": 70
+      },
+      {
+        "id": "n2lh3xrp_S4",
+        "volume": 70
+      },
+      {
+        "id": "TfJShQGMbTc",
+        "volume": 70
+      },
+      {
+        "id": "VK3Jp5eJ-Qo",
+        "volume": 70
+      },
+      {
+        "id": "9WUIsIQ93m0",
+        "volume": 70
+      },
+      {
+        "id": "fyF2XTAgqos",
+        "volume": 70
+      },
+      {
+        "id": "-YmALTy6mY8",
+        "volume": 70
+      },
+      {
+        "id": "AeWCcxt6rbg",
+        "volume": 70
+      },
+      {
+        "id": "7zU3OZ6ICnE",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "title": "Seiphan Intro",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "LO3LZohKCnE",
+        "start": 75,
+        "volume": 85
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Kampf",
+    "title": "Seiphan Kampf",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "VoF9HUvYPKs",
+        "volume": 70
+      },
+      {
+        "id": "yDsWPo4ONpo",
+        "volume": 70
+      },
+      {
+        "id": "YnHUOrQAQdI",
+        "volume": 70
+      },
+      {
+        "id": "HbTEWB_GrNo",
+        "volume": 70
+      },
+      {
+        "id": "Cgf8ECX4wjw",
+        "volume": 70
+      },
+      {
+        "id": "iGvzVrA9DxM",
+        "volume": 70
+      },
+      {
+        "id": "n2lh3xrp_S4",
+        "volume": 70
+      },
+      {
+        "id": "39xRAW3CpmE",
+        "volume": 70
+      },
+      {
+        "id": "pn4qswVQ_0U",
+        "volume": 70
+      },
+      {
+        "id": "uGIu6-WtwEs",
+        "volume": 70
+      },
+      {
+        "id": "xIDHYqE0Jg4",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Hinweis",
+    "title": "Hinweis 1",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "DTf_VYDqPuE",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Hinweis",
+    "title": "Hinweis 2",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "Izf1gZWFc8w",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Hinweis",
+    "title": "Glockenturm Hinweis",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "ND4LUYPj324",
+        "volume": 70
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Hinweis",
+    "title": "Final Hinweis",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "wNunc0UN2Jo",
+        "volume": 70
+      }
+    ]
   }
 ]

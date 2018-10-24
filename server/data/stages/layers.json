@@ -1,0 +1,87 @@
+[
+  {
+    "type": "video",
+    "category": "Layer",
+    "clear": true,
+    "container": "v_layer",
+    "title": "Clear Layer Video"
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Bibliothek",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "4vIQON2fDWM",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Regen - Zimmer",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "3sL0omwElxw",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Regen - Draußen",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "q76bMs-NwRk",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Küchen Betrieb",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "JCIfDCxakPE",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Garten",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "xNN7iTA57jM",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Layer",
+    "title": "Wind",
+    "container": "v_layer",
+    "repeat": true,
+    "videos": [
+      {
+        "id": "RBUtBrk7yzo",
+        "volume": 80
+      }
+    ]
+  }
+]
