@@ -101,16 +101,6 @@ module.exports = class Storage {
     log.debug('Add health [0] with value [1] for user [2]', 'life', life.total, user.name);
     promises.push(sys.db.insert('health', [user.name, 'life', life.total, life.total]));
 
-    const mental = {
-      type: 'user',
-      key: 'mental',
-      total: user.features.spiritual + user.features.spiritual + user.features.intelligence + user.features.charm,
-    };
-
-    this._applyModifiers(modifiers, mental);
-    log.debug('Add health [0] with value [1] for user [2]', 'mental', mental.total, user.name);
-    promises.push(sys.db.insert('health', [user.name, 'mental', mental.total, mental.total]));
-
     return Promise.all(promises);
   }
 
@@ -150,7 +140,7 @@ module.exports = class Storage {
         profession: data.profession.modify,
       };
 
-      data.specifics = sys.loadData('specifics');
+      data.specifics = this.getSpecifics();
       for (const key in data.specifics) {
         data.specifics[key].key = key;
         data.specifics[key].type = 'specific';
@@ -269,31 +259,41 @@ module.exports = class Storage {
     return flatten;
   }
 
+  getSpecifics() {
+    const skills = this.getSkillsFlatten();
+    const features = sys.loadData('features');
+    const specifics = sys.loadData('specifics');
+
+    for (const index in specifics) {
+      specifics[index].description = this.getDataDescription(specifics[index], skills, features);
+    }
+    return specifics;
+  }
+
   getProfessions() {
     const skills = this.getSkillsFlatten();
     const features = sys.loadData('features');
     const professions = sys.loadData('professions');
 
     for (const index in professions) {
-      professions[index].description = this.getProfessionDescription(professions[index], skills, features);
+      professions[index].description = this.getDataDescription(professions[index], skills, features);
     }
     return professions;
   }
 
-  getProfessionDescription(profession, skills = null, features = null) {
+  getDataDescription(data, skills = null, features = null) {
     if (skills === null) skills = this.getSkillsFlatten();
     if (features === null) features = sys.loadData('features');
     const descriptions = [];
 
-    for (const line of profession.description) {
+    for (const line of data.description) {
       descriptions.push(line);
     }
 
-    if (profession.modify.user) {
-      const user = profession.modify.user;
+    if (data.modify.user) {
+      const user = data.modify.user;
 
       if (user.life) descriptions.push('Lebenspunkte: ' + this._getNumber(user.life));
-      if (user.mental) descriptions.push('Moral: ' + this._getNumber(user.mental));
       if (user.ini) {
         if (user.ini > 0) {
           descriptions.push('Initiative: ' + this._getNumber(user.ini) + ' (Negativ)');
@@ -302,14 +302,14 @@ module.exports = class Storage {
         }
       }
     }
-    if (profession.modify.feature) {
-      for (const key in profession.modify.feature) {
-        descriptions.push(features[key].name + ': ' + this._getNumber(profession.modify.feature[key]));
+    if (data.modify.feature) {
+      for (const key in data.modify.feature) {
+        descriptions.push(features[key].name + ': ' + this._getNumber(data.modify.feature[key]));
       }
     }
-    if (profession.modify.skill) {
-      for (const key in profession.modify.skill) {
-        descriptions.push(skills[key].name + ': ' + this._getNumber(profession.modify.skill[key]));
+    if (data.modify.skill) {
+      for (const key in data.modify.skill) {
+        descriptions.push(skills[key].name + ': ' + this._getNumber(data.modify.skill[key]));
       }
     }
     return descriptions;

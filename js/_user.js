@@ -125,7 +125,7 @@ var app = new Vue({
         case 'neutral':
           return '+/- ' + extraPoints + ' Talent';
         case 'positive':
-          return '- ' + extraPoints + ' Talent';
+          return '- ' + Math.abs(extraPoints) + ' Talent';
       }
     },
 
@@ -181,7 +181,8 @@ var app = new Vue({
   computed: {
 
     calcPoints: function() {
-      var points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5) * 2;
+      // var points = this.data.points + Math.floor((parseInt(this.data.fields.age.value || 20) - 20) / 5) * 2;
+      var points = this.data.points;
 
       for (var key in this.data.specifics) {
         if (this.data.specifics[key].active) {

@@ -62,7 +62,7 @@ module.exports = class RegisterForm {
   }
 
   static getSpecifics() {
-    const specifics = sys.loadData('specifics');
+    const specifics = sys.storage.getSpecifics();
 
     for (const key in specifics) {
       specifics[key].open = false;

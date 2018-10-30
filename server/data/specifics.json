@@ -11,10 +11,7 @@
       }
     },
     "description": [
-      "Kennt sich mit allen Waffenarten aus.",
-      "Schusswaffen Pistole: +2",
-      "Schusswaffen Gewehre: +2",
-      "Waffentechnik: +1"
+      "Kennt sich mit allen Waffenarten aus."
     ]
   },
   "sharpshooter": {
@@ -28,9 +25,7 @@
       }
     },
     "description": [
-      "Ist als Scharfschütze ausgebildet worden.",
-      "Schusswaffen Gewehre: +4",
-      "Waffentechnik: +1"
+      "Ist als Scharfschütze ausgebildet worden."
     ]
   },
   "trapper": {
@@ -44,9 +39,7 @@
       }
     },
     "description": [
-      "Kennt sich mit Fallen aus.",
-      "Fallen: +4",
-      "Mechanik: +1"
+      "Kennt sich mit Fallen aus."
     ]
   },
   "courageous": {
@@ -60,9 +53,7 @@
       }
     },
     "description": [
-      "Du bist besonders Mutig.",
-      "GS: +3",
-      "CH: +1"
+      "Du bist besonders Mutig."
     ]
   },
   "focused": {
@@ -76,9 +67,7 @@
       }
     },
     "description": [
-      "Behalte auch im Chaos den Überblick.",
-      "IN: +2",
-      "GS: +1"
+      "Behalte auch im Chaos den Überblick."
     ]
   },
   "lucky": {
@@ -102,9 +91,7 @@
     },
     "description": [
       "Hat leicht Angst im Dunkeln",
-      "Glaubt schnell an Geister",
-      "GS: -1",
-      "IN: +1"
+      "Glaubt schnell an Geister"
     ]
   },
   "clumsy": {
@@ -120,9 +107,7 @@
       }
     },
     "description": [
-      "Du bist Ungeschickt",
-      "Rennen: -3",
-      "GE: -1"
+      "Du bist Ungeschickt"
     ]
   },
   "paranoid": {
@@ -136,8 +121,7 @@
     },
     "description": [
       "Du bist Paranoid",
-      "Kann in einen Wahnanfall verfallen (Probe: 15)",
-      "GS: -1"
+      "Kann in einen Wahnanfall verfallen (Probe: 15)"
     ]
   },
   "risktaker": {
@@ -160,9 +144,7 @@
       }
     },
     "description": [
-      "Wann immer du Heilst muss ein Würfel einer tieferen Stufe gewürfelt werden um den Schaden zu berechnen.",
-      "KK: -1",
-      "AU: -1"
+      "Wann immer du Heilst muss ein Würfel einer tieferen Stufe gewürfelt werden um den Schaden zu berechnen."
     ]
   },
   "rage": {
@@ -193,8 +175,7 @@
       }
     },
     "description": [
-      "Du musst dich überwinden um jemanden zu helfen (Probe: 15)",
-      "CH: -3"
+      "Du musst dich überwinden um jemanden zu helfen (Probe: 15)"
     ]
   },
   "arrogant": {
@@ -216,8 +197,7 @@
       }
     },
     "description": [
-      "Du bist Hoffnungslos.",
-      "GS: -4"
+      "Du bist Hoffnungslos."
     ]
   },
   "claustrophobia": {
@@ -268,9 +248,7 @@
     },
     "description": [
       "Hat leichte Wahnvorstellungen",
-      "Kann in einen Wahnanfall verfallen (Probe: 10)",
-      "GS: -2",
-      "CH: -1"
+      "Kann in einen Wahnanfall verfallen (Probe: 10)"
     ]
   },
   "perfectionist": {
@@ -294,10 +272,7 @@
       }
     },
     "description": [
-      "Definiere eine Physische Behinderung",
-      "KK: -4",
-      "AU: -2",
-      "GS: +1"
+      "Definiere eine Physische Behinderung"
     ]
   },
   "speech_defect": {
@@ -311,9 +286,7 @@
       }
     },
     "description": [
-      "Definiere einen Sprachfehler und benutze ihn.",
-      "CH: -4",
-      "GS: -1"
+      "Definiere einen Sprachfehler und benutze ihn."
     ]
   }
 }

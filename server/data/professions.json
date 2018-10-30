@@ -57,7 +57,7 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f2x2f24x2fCpvouzIvoufs.qohx2f561qy-CpvouzIvoufs.qohx3fwfstjpox3d80d9gd9gc60e0cg0c440g022b1b99792x26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
       "user": {
-        "mental": -5
+        "ini": 3
       },
       "feature": {
         "charm": -3,
@@ -83,8 +83,7 @@
     "modify": {
       "user": {
         "ini": 10,
-        "life": 5,
-        "mental": 5
+        "life": 10
       },
       "feature": {
         "endurance": -1,
@@ -232,7 +231,7 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2fex2fe0x2fMfqfs.qohx2f486qy-Mfqfs.qohx3fwfstjpox3dg86fb1e1e6fggcbggbb17d9d646f4b9fx26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
       "user": {
-        "mental": -5
+        "ini": -5
       },
       "feature": {
         "charm": -4,
@@ -334,7 +333,7 @@
     "image": "https://c-7npsfqifvt34x24e2v6q4m5x78qbz4lx2edmpvegspoux2eofu.g00.gamepedia.com/g00/3_c-7ebslftuevohfpo.hbnfqfejb.dpn_/c-7NPSFQIFVT34x24iuuqtx3ax2fx2fe2v6q4m5x78qbz4l.dmpvegspou.ofux2febslftuevohfpo_hbnfqfejbx2fuivncx2f2x2f25x2fWftubm.qohx2f561qy-Wftubm.qohx3fwfstjpox3de748179f65c22eb18050c8d235e1d1ecx26j21d.nbslx3djnbhf_$/$/$/$/$/$/$",
     "modify": {
       "user": {
-        "mental": 5
+        "life": 5
       },
       "feature": {
         "fight": -2,
