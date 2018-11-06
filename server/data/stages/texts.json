@@ -10,7 +10,21 @@
     "type": "text",
     "category": "Text",
     "title": "Intro",
+    "headline": "",
+    "subline": "Legend of the Darkest"
+  },
+  {
+    "type": "text",
+    "category": "Text",
+    "title": "Darkest Mansion",
     "headline": "Darkest Mansion",
+    "subline": "Legend of the Darkest"
+  },
+  {
+    "type": "text",
+    "category": "Text",
+    "title": "Darkest Village",
+    "headline": "Darkest Village",
     "subline": "Legend of the Darkest"
   },
   {

@@ -267,6 +267,18 @@
     "type": "video",
     "category": "Narrator",
     "container": "v_sound",
+    "title": "Ambushed!!!",
+    "videos": [
+      {
+        "id": "ZA8xYQo_08A",
+        "volume": 80
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Narrator",
+    "container": "v_sound",
     "title": "The cost!!!",
     "videos": [
       {

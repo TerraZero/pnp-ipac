@@ -14,18 +14,19 @@ var data = {
     images: {
       first: {
         src: null,
+        index: 0,
         classes: {
           stage__image__transition: true,
           stage__image__show: true,
         },
       },
-      second: {
-        src: null,
-        classes: {
-          stage__image__transition: true,
-          stage__image__show: false,
-        },
-      },
+      // second: {
+      //   src: null,
+      //   classes: {
+      //     stage__image__transition: true,
+      //     stage__image__show: false,
+      //   },
+      // },
     }
   },
   texts: {
@@ -79,4 +80,8 @@ socket.on('update:scene', (args) => {
 
 send('scene:register');
 
-Animation.setBackgroundImage('https://img.wallpapersafari.com/desktop/1920/1080/49/92/r5ltTM.jpeg');
+Animation.setBackgroundImage({
+  images: [
+    "https://img.wallpapersafari.com/desktop/1920/1080/49/92/r5ltTM.jpeg",
+  ],
+});

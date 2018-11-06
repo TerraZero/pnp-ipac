@@ -18,7 +18,7 @@ var Animation = {
 
   images: {},
 
-  speed: 1000,
+  speed: 3000,
 
   imageInterval: null,
 
@@ -30,8 +30,13 @@ var Animation = {
 
     playerStateChange: function(event, video, name) {
       if (name === 'v_background' && event.data == YT.PlayerState.PLAYING) {
+        if (Animation.imageInterval !== null) {
+          clearInterval(Animation.imageInterval);
+          Animation.imageInterval = null;
+        }
         Animation.data.background.images.first.classes.stage__image__show = false;
-        Animation.data.background.images.second.classes.stage__image__show = false;
+        Animation.data.background.images.first.src = "";
+        // Animation.data.background.images.second.classes.stage__image__show = false;
       }
 
       if (event.data == YT.PlayerState.ENDED) {
@@ -111,15 +116,15 @@ var Animation = {
   },
 
   setBackgroundInterval: function() {
-    var current = Animation.image.index;
-    var index = getRandom(0, Animation.image.length);
+    var current = Animation.images.index;
+    var index = getRandom(0, Animation.images.images.length);
 
     if (index === current) {
       index++;
     }
 
-    Animation.image.index = index % Animation.image.length;
-    Animation.data.background.images.first.src = image.images[Animation.image.index];
+    Animation.images.index = index % Animation.images.images.length;
+    Animation.data.background.images.first.src = Animation.images.images[Animation.images.index];
   },
 
   setBackgroundImage: function(image) {
