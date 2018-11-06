@@ -8,6 +8,59 @@
   {
     "type": "image",
     "category": "Background",
+    "title": "Wald",
+    "images": [
+      "https://external-preview.redd.it/6jETJzN4zM9zUWikSn1XDPN2T6d80Aj3apV70Xsor8Q.jpg?auto=webp&s=c5de1ba4b48aec7e23ad52360382ad87d83a9339",
+      "https://i.pinimg.com/originals/23/ed/57/23ed57e8790bcce933c997c1538a3006.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "category": "Background",
+    "title": "Waldschrat - Gefangen",
+    "images": [
+      "https://cdnb.artstation.com/p/assets/images/images/006/342/293/large/syncraft-studio-darkforest-sketch-wip-kinsun-r2.jpg?1497882213",
+      "http://loveyourstory.org/wp-content/uploads/2014/02/wolf-with-antlers-in-a-dark-forest.jpg",
+      "http://getwallpapers.com/wallpaper/full/a/4/4/1159018-dark-forest-iphone-wallpaper-1920x1200-for-phones.jpg",
+      "http://getwallpapers.com/wallpaper/full/f/6/5/1159079-download-free-dark-forest-iphone-wallpaper-1920x1080-mobile.jpg",
+      "https://external-preview.redd.it/4xSxD8boizTQ5vP5-KfuoEBN2EWJeRmISEO582g-sH0.jpg?auto=webp&s=601f9449700e1f0c19633772bc188d0380fe4f9c",
+      "https://cdnb.artstation.com/p/assets/images/images/006/342/293/large/syncraft-studio-darkforest-sketch-wip-kinsun-r2.jpg?1497882213",
+      "https://vignette.wikia.nocookie.net/animal-jam-clans-1/images/e/e7/Dark-forest-widescreen-wallpaper.jpg/revision/latest?cb=20160810173356"
+    ]
+  },
+  {
+    "type": "image",
+    "category": "Background",
+    "title": "Waldschrat - Wahnsinn",
+    "images": [
+      "https://cdna.artstation.com/p/assets/images/images/012/232/318/large/y-o-k-e-6d185089-38be-430a-buejsov260-9ae138046ec0.jpg?1533731761",
+      "https://www.desktopbackground.org/download/2560x1600/2010/05/07/13598_haunted-forest-wallpapers_2560x1600_h.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "category": "Background",
+    "title": "Dorf",
+    "images": [
+      "https://i.pinimg.com/originals/a6/f7/52/a6f752fd339a77d961ba928f7e263882.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "category": "Background",
+    "title": "Waldschrat",
+    "images": [
+      "https://bloody-disgusting.com/wp-content/uploads/2018/10/witcher-bestiary.jpg",
+      "https://staticdelivery.nexusmods.com/images/952/18399694-1503044657.png",
+      "http://www.wduwant.com/index_uploads/uploads/ea06d3cb7326.jpg",
+      "http://www.wduwant.com/index_uploads/uploads/30ef600965d1.jpg",
+      "https://i.pinimg.com/originals/cb/6b/b5/cb6bb5a69c55ad0c333420efd68c3fdf.jpg",
+      "https://i.ytimg.com/vi/vSwG6sAPX-s/maxresdefault.jpg"
+    ]
+  },
+  {
+    "type": "image",
+    "category": "Background",
     "image": "https://www.comunidadxbox.com/wp-content/imagenes/black-mirror.jpg",
     "title": "Darkest Mansion - Hinten"
   },
