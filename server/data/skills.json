@@ -149,42 +149,42 @@
         "name": "Wurfwaffen",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "bladed": {
         "type": "skill",
         "name": "Klingenwaffen Leicht",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "bladed_heavy": {
         "type": "skill",
         "name": "Klingenwaffen Schwer",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "pistol": {
         "type": "skill",
         "name": "Schusswaffen Nah",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "rifles": {
         "type": "skill",
         "name": "Schusswaffen Fern",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "exotic": {
         "type": "skill",
         "name": "Exotische Waffen",
         "sample": [],
         "value": 0,
-        "cost": 4
+        "cost": 8
       },
       "force": {
         "type": "skill",

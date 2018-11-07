@@ -130,7 +130,7 @@ module.exports = class RegisterForm {
     }
 
     user.features.fight = (user.features.body + user.features.body + user.features.endurance) / 3;
-    user.features.parade = (user.features.skill + user.features.skill + user.features.intelligence) / 3;
+    user.features.parade = Math.max(Math.min((user.features.skill + user.features.skill + user.features.intelligence) / 6 - 3, 10), 0);
 
     sys.storage.addUser(request, user)
       .then(function() {

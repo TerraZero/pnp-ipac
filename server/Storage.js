@@ -101,16 +101,6 @@ module.exports = class Storage {
     log.debug('Add health [0] with value [1] for user [2]', 'life', life.total, user.name);
     promises.push(sys.db.insert('health', [user.name, 'life', life.total, life.total]));
 
-    const mental = {
-      type: 'user',
-      key: 'mental',
-      total: user.features.spiritual + user.features.spiritual + user.features.intelligence + user.features.charm,
-    };
-
-    this._applyModifiers(modifiers, mental);
-    log.debug('Add health [0] with value [1] for user [2]', 'mental', mental.total, user.name);
-    promises.push(sys.db.insert('health', [user.name, 'mental', mental.total, mental.total]));
-
     return Promise.all(promises);
   }
 
@@ -293,7 +283,6 @@ module.exports = class Storage {
       const user = profession.modify.user;
 
       if (user.life) descriptions.push('Lebenspunkte: ' + this._getNumber(user.life));
-      if (user.mental) descriptions.push('Moral: ' + this._getNumber(user.mental));
       if (user.ini) {
         if (user.ini > 0) {
           descriptions.push('Initiative: ' + this._getNumber(user.ini) + ' (Negativ)');
