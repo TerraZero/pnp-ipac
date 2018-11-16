@@ -2,8 +2,10 @@
   {
     "type": "image",
     "category": "Background",
-    "image": "https://wallpaper-house.com/data/out/9/wallpaper2you_311582.jpg",
-    "title": "Darkest Mansion - Vorne"
+    "title": "Darkest Mansion - Vorne",
+    "images": [
+      "https://wallpaper-house.com/data/out/9/wallpaper2you_311582.jpg"
+    ]
   },
   {
     "type": "image",
@@ -61,67 +63,89 @@
   {
     "type": "image",
     "category": "Background",
-    "image": "https://www.comunidadxbox.com/wp-content/imagenes/black-mirror.jpg",
-    "title": "Darkest Mansion - Hinten"
+    "title": "Darkest Mansion - Hinten",
+    "images": [
+      "https://www.comunidadxbox.com/wp-content/imagenes/black-mirror.jpg"
+    ]
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://d.wattpad.com/story_parts/272040084/images/14591d9c989d8be9.jpg",
+    "images": [
+      "https://d.wattpad.com/story_parts/272040084/images/14591d9c989d8be9.jpg"
+    ],
     "title": "Bibliothek"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://findingtimetowrite.files.wordpress.com/2017/03/hlclipgood.jpg",
+    "images": [
+      "https://findingtimetowrite.files.wordpress.com/2017/03/hlclipgood.jpg"
+    ],
     "title": "Bibliothek - 2"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://i.pinimg.com/originals/04/ab/87/04ab87024652db7b2338f7636e46edd9.jpg",
+    "images": [
+      "https://i.pinimg.com/originals/04/ab/87/04ab87024652db7b2338f7636e46edd9.jpg"
+    ],
     "title": "Friedhof"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "http://i.imgur.com/m3JYOH4.jpg",
+    "images": [
+      "http://i.imgur.com/m3JYOH4.jpg"
+    ],
     "title": "Dachboden"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "http://acousmaticindustries.us/wp-content/uploads/2018/05/architecture-vintage-antique-retro-mansion-rhpxherecom-whatus-it-like-living-in-a-haunted-houserhzillowcom-whatus-Old-Mansion-Living-Room-it-like-living.jpg",
+    "images": [
+      "http://acousmaticindustries.us/wp-content/uploads/2018/05/architecture-vintage-antique-retro-mansion-rhpxherecom-whatus-it-like-living-in-a-haunted-houserhzillowcom-whatus-Old-Mansion-Living-Room-it-like-living.jpg"
+    ],
     "title": "Zimmer von Fribois"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://camerich.co.uk/public/site/gallery/blogs15/goth3.jpg",
+    "images": [
+      "https://camerich.co.uk/public/site/gallery/blogs15/goth3.jpg"
+    ],
     "title": "Arbeitszimmer"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://cdnb.artstation.com/p/assets/images/images/010/483/105/large/eugen-zvonimir-canic-highresscreenshot00053.jpg?1524668291",
+    "images": [
+      "https://cdnb.artstation.com/p/assets/images/images/010/483/105/large/eugen-zvonimir-canic-highresscreenshot00053.jpg?1524668291"
+    ],
     "title": "Keller"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://static1.squarespace.com/static/551476dfe4b00e32840be79b/t/55408113e4b01d5bf73a9c4d/1430290708517/belfry2.jpg?format=1500w",
+    "images": [
+      "https://static1.squarespace.com/static/551476dfe4b00e32840be79b/t/55408113e4b01d5bf73a9c4d/1430290708517/belfry2.jpg?format=1500w"
+    ],
     "title": "Glockenturm"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/90/2018/03/24075914/sofitel-phnompenh-phokeethra-events-ballroom.jpg",
+    "images": [
+      "https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/90/2018/03/24075914/sofitel-phnompenh-phokeethra-events-ballroom.jpg"
+    ],
     "title": "Saal - Tag"
   },
   {
     "type": "image",
     "category": "Background",
-    "image": "https://i.pinimg.com/originals/38/8f/57/388f57d1fb67afd005a7796ca70d0596.jpg",
+    "images": [
+      "https://i.pinimg.com/originals/38/8f/57/388f57d1fb67afd005a7796ca70d0596.jpg"
+    ],
     "title": "Saal - Nacht"
   }
 ]

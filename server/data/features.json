@@ -53,7 +53,7 @@
     "symbol": "KF",
     "value": 0,
     "show": false,
-    "cost": 10
+    "cost": 15
   },
   "parade": {
     "type": "feature",
@@ -61,6 +61,6 @@
     "symbol": "KP",
     "value": 0,
     "show": false,
-    "cost": 10
+    "cost": 15
   }
 }

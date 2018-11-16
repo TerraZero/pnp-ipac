@@ -29,6 +29,48 @@
   },
   {
     "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Darkest Village",
+    "headline": "Darkest Village",
+    "subline": ""
+  },
+  {
+    "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Wald",
+    "headline": "Wald",
+    "subline": ""
+  },
+  {
+    "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Wald Dorf",
+    "headline": "Dorf",
+    "subline": "Wald"
+  },
+  {
+    "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Kräuterhütte",
+    "headline": "Kräuterhütte",
+    "subline": "Wald"
+  },
+  {
+    "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Lichtung",
+    "headline": "Lichtung",
+    "subline": "Wald"
+  },
+  {
+    "type": "text",
+    "category": "Text - Darkest Village",
+    "title": "Banditen Dorf",
+    "headline": "Banditen Dorf",
+    "subline": "Wald"
+  },
+  {
+    "type": "text",
     "category": "Text - Hinterhof",
     "title": "Friedhof",
     "headline": "Friedhof",

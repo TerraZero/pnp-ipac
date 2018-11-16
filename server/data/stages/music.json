@@ -20,6 +20,10 @@
       {
         "id": "f_6_V57cOMo",
         "volume": 50
+      },
+      {
+        "id": "eduwBgDcMwY",
+        "volume": 50
       }
     ]
   },
@@ -66,6 +70,14 @@
       },
       {
         "id": "AJp-vhOlOVQ",
+        "volume": 50
+      },
+      {
+        "id": "pTjTs5AbVIg",
+        "volume": 50
+      },
+      {
+        "id": "ZiyNa6JEupg",
         "volume": 50
       }
     ]
@@ -181,6 +193,10 @@
         "start": 7,
         "end": 300,
         "volume": 50
+      },
+      {
+        "id": "WuNgnC25k5w",
+        "volume": 50
       }
     ]
   },
@@ -240,6 +256,10 @@
       {
         "id": "c6MczzFi67M",
         "volume": 50
+      },
+      {
+        "id": "XtVWapeHCPU",
+        "volume": 50
       }
     ]
   },
@@ -252,10 +272,23 @@
     "videos": [
       {
         "id": "-YmALTy6mY8",
-        "volume": 50
+        "volume": 50,
+        "start": 5
       },
       {
         "id": "dhrem7GoRaM",
+        "volume": 50
+      },
+      {
+        "id": "VnAfxCDy-mg",
+        "volume": 50
+      },
+      {
+        "id": "E-QLXkPmcnk",
+        "volume": 50
+      },
+      {
+        "id": "hNYrvcSNFYo",
         "volume": 50
       }
     ]
@@ -345,12 +378,16 @@
   {
     "type": "video",
     "category": "Musik - Kampf",
-    "title": "Seiphan Intro",
+    "title": "Seiphan Intro (bug)",
     "container": "v_music",
     "videos": [
       {
         "id": "LO3LZohKCnE",
         "start": 75,
+        "volume": 65
+      },
+      {
+        "id": "LzXrNQ-EHsg",
         "volume": 65
       }
     ]
@@ -453,6 +490,227 @@
     "videos": [
       {
         "id": "wNunc0UN2Jo",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Paladin Battle",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "VoF9HUvYPKs",
+        "volume": 50
+      },
+      {
+        "id": "v8Qah9A1vhU",
+        "volume": 50
+      },
+      {
+        "id": "7iRxthfjf0c",
+        "volume": 50
+      },
+      {
+        "id": "c6MczzFi67M",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Gold Eye",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "JXlXnwpqtRI",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Kritischer Kampf",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "l8_CmQL_fok",
+        "volume": 50
+      },
+      {
+        "id": "uLe-UGvfSFY",
+        "volume": 50
+      },
+      {
+        "id": "A0rkfT6R4pM",
+        "volume": 50
+      },
+      {
+        "id": "QxlxHk3QQ5k",
+        "volume": 50
+      },
+      {
+        "id": "98mnM1uL76U",
+        "volume": 50
+      },
+      {
+        "id": "pn4qswVQ_0U",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Berserk",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "dbQCNZuzJ14",
+        "volume": 50
+      },
+      {
+        "id": "0WMvJ5zjvLU",
+        "volume": 50
+      },
+      {
+        "id": "mk_ub7HSq18",
+        "volume": 50
+      },
+      {
+        "id": "LP8jgNkU5HE",
+        "volume": 50
+      },
+      {
+        "id": "2HFh0XlK5gE",
+        "volume": 50
+      },
+      {
+        "id": "ENaYHuuq6kc",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Seiphanen Lichtung",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "SfdHyiJsz2w",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Muhmen",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "KsZAnfR4ON4",
+        "volume": 50
+      },
+      {
+        "id": "ZiyNa6JEupg",
+        "volume": 50
+      },
+      {
+        "id": "ilBhEb-s7GI",
+        "volume": 50
+      },
+      {
+        "id": "VhkuJ7hcKIY",
+        "volume": 50
+      },
+      {
+        "id": "A0rkfT6R4pM",
+        "volume": 50
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Final Bandit Intro",
+    "container": "v_music",
+    "videos": [
+      {
+        "id": "EPsynM2MNV4",
+        "volume": 50,
+        "start": 43
+      }
+    ]
+  },
+  {
+    "type": "video",
+    "category": "Musik - Darkest Village",
+    "title": "Final Bandit",
+    "container": "v_music",
+    "shuffle": true,
+    "index": 0,
+    "videos": [
+      {
+        "id": "A6ZhapZuRdo",
+        "volume": 50
+      },
+      {
+        "id": "XQUwb3-HGLQ",
+        "volume": 50
+      },
+      {
+        "id": "_gVfhYsqWm8",
+        "volume": 50
+      },
+      {
+        "id": "Xkkt5X_ydmI",
+        "volume": 50
+      },
+      {
+        "id": "ob9F1lsULIA",
+        "volume": 50
+      },
+      {
+        "id": "BFK6YM4JU6I",
+        "volume": 50
+      },
+      {
+        "id": "CZJeaR1tXw0",
+        "volume": 50
+      },
+      {
+        "id": "x5YsxJZttmA",
+        "volume": 50
+      },
+      {
+        "id": "27k3ue5C6HQ",
+        "volume": 50
+      },
+      {
+        "id": "YnHUOrQAQdI",
+        "volume": 50
+      },
+      {
+        "id": "CiSeoX_4nzU",
+        "volume": 50
+      },
+      {
+        "id": "Z92URPS4otQ",
         "volume": 50
       }
     ]

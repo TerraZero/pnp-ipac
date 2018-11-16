@@ -90,6 +90,15 @@
       "Einmal am Tag, bei einer Probe, werden alle Charaktereigenschaften so behandelt als wären sie auf 19."
     ]
   },
+  "read_write": {
+    "orientation": "positive",
+    "name": "Lesen / Schreiben",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Du kannst Lesen und Schreiben"
+    ]
+  },
   "gullible": {
     "orientation": "neutral",
     "name": "Leichtgläubig",
@@ -183,6 +192,24 @@
       "Du erhälst mehr Stress wenn andere Angst haben."
     ]
   },
+  "greedy": {
+    "orientation": "negative",
+    "name": "Gierig",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Du kannst keine Items aufgeben."
+    ]
+  },
+  "lecher": {
+    "orientation": "negative",
+    "name": "Lüstling",
+    "level": 1,
+    "modify": {},
+    "description": [
+      "Du kannst einer attraktiven Person nicht widerstehen."
+    ]
+  },
   "selfish": {
     "orientation": "negative",
     "name": "Selbstsüchtig",
@@ -195,6 +222,15 @@
     "description": [
       "Du musst dich überwinden um jemanden zu helfen (Probe: 15)",
       "CH: -3"
+    ]
+  },
+  "unlucky": {
+    "orientation": "negative",
+    "name": "Pechvogel",
+    "level": 2,
+    "modify": {},
+    "description": [
+      "Du hast extrem viel Pech."
     ]
   },
   "arrogant": {

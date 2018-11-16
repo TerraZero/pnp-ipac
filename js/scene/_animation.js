@@ -39,8 +39,20 @@ var Animation = {
         // Animation.data.background.images.second.classes.stage__image__show = false;
       }
 
-      if (event.data == YT.PlayerState.ENDED) {
+      if (event.data == YT.PlayerState.PLAYING) {
+        var media = Animation.videos[name];
 
+        if (media.reduce) {
+          for (var index in Animation.videos) {
+            if (index == name || videos[Animation.videos[index].container].player === undefined) continue;
+            var volume = videos[Animation.videos[index].container].player.getVolume();
+
+            videos[Animation.videos[index].container].player.setVolume(volume - media.reduce);
+          }
+        }
+      }
+
+      if (event.data == YT.PlayerState.ENDED) {
         var media = Animation.videos[name];
 
         if (media.shuffle) {
@@ -65,6 +77,15 @@ var Animation = {
           media.index++;
           Animation.setVideo(media);
           return;
+        }
+
+        if (media.reduce) {
+          for (var index in Animation.videos) {
+            if (index == name || videos[Animation.videos[index].container].player === undefined) continue;
+            var volume = videos[Animation.videos[index].container].player.getVolume();
+
+            videos[Animation.videos[index].container].player.setVolume(volume + media.reduce);
+          }
         }
       }
     },
@@ -192,6 +213,7 @@ var Animation = {
     }
     videos[video.container].player.setVolume(volume);
 
+    console.log(options);
     videos[video.container].player.loadVideoById(options);
   },
 
