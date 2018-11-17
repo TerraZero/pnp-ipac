@@ -17,7 +17,7 @@ module.exports = class Database {
   init() {
     log.log('init database');
     this._new = !fs.existsSync(file);
-    if (!this._new) {
+    if (!this._new && false) {
       fs.unlinkSync(file);
       this._new = true;
       log.debug('Delete existing database');
